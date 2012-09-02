@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c1e8d312-b067-4a1e-8a2d-2f4bdede4fb6" name="DUsuarios" linkedPackageId="ea27989c-2b66-49d6-824f-a9862acf8034" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="3565624f-86be-4ecf-8871-99ad6d81860b" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cdb5a3b6-72ad-4e9a-9309-d84cef8130e8" />
+        <targetEnds>
+          <association Id="8801ebfb-58c1-43be-8c3d-1923f6cac6ec" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c4a1c2c8-da5c-4ff3-8d4d-8db564f3253e" LastKnownName="Guardar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="adf4d71a-30cf-42e4-84f6-cd8f33abd1ce" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e816e836-9d5c-483a-be36-c5ece607e63e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d14cc4b4-9a6e-4b55-a44a-cd505d776b31" name="Guardar Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ff0dbc8-3458-47d8-9cb5-beb7566b4fb5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="070bed02-d6ff-49d4-855a-7d1d667a9277" />
+          </association>
+          <association Id="64e8ceac-cc45-457e-b055-255127693afc" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Consultar Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="400cd232-eec3-4f24-839f-699a97f9ddaf" LastKnownName="Consultar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8009cd2d-2489-4a86-bdee-bfc26d5d968a" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ffa7db35-0c11-4780-833b-8f50aeaf74a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5faffed-ee5e-40e0-ab33-023a512b330c" name="Consultar Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a1cf12e0-278d-4f66-aceb-e2c6f2b3536a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="940438be-e5e1-4ce5-8fd0-7b3f1b6fca65" />
+          </association>
+          <association Id="0949f59c-46ba-4d4b-869b-966028c83c7d" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="20e7ba61-ca3e-400d-9eba-305b0aab2161" LastKnownName="Eliminar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31c947c6-efd8-468b-b608-4fac5db228ab" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ca9ac9d-1c29-4e49-b341-c2313dce1081" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a04673e-78ed-4b34-a78f-9c6578cb4bb7" name="Eliminar Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2521d5a6-5a12-456c-b6d9-62dae62c2a37" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b052571f-173e-4ea5-9845-b05a5b0ebe26" />
+          </association>
+          <association Id="18057fff-a2c9-4b4d-b325-643754d5690f" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Inactivar Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2efba063-ffcb-4971-a493-c484194acd7e" LastKnownName="Inactivar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6a77e07-1263-4dec-9703-779c2217dc6e" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="07e65d32-d23d-400b-a4bb-64a7240587e9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="07e9109f-ac27-4f10-8bb2-434941b17f58" name="Inactivar Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20a70fa4-6db2-411a-8c4b-a931795565a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7523d9a2-3b39-4afe-bbd7-7c556adb8710" />
+          </association>
+          <association Id="d1d93004-0a94-417a-8757-2463408be7ac" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar Usuarios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1328c957-e19b-4f9f-a005-83e20288871d" LastKnownName="Actualizar Usuarios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89e2badb-82e9-41d2-ac9f-e3e142d44a57" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="45c0d974-7cd9-4cfc-b8ab-2824d6a2e018" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9322c51-dce7-4038-a296-70ad60dd2775" name="Actualizar Usuarios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2893d336-4666-4390-b3a4-26e2b48ce6c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1d36b6d3-4904-4cd9-a192-474c44798b22" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c4a1c2c8-da5c-4ff3-8d4d-8db564f3253e" name="Guardar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c1798b93-d0d4-4000-b524-13ac92563724" />
+        <additions>
+          <include Id="e7bc1fb1-fc62-4cb9-87ba-4ee47b8f22c4">
+            <useCaseMoniker Id="f2e70d99-7cc7-441e-9e22-b54275b358ac" LastKnownName="Indicar si ya existe el nombre del usuario" />
+            <elementDefinition Id="cbb49cde-bf52-4a55-b89a-c57f54ec3027" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="400cd232-eec3-4f24-839f-699a97f9ddaf" name="Consultar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8769447d-9531-48f5-b675-4ef2781a2a8f" />
+        <additions>
+          <include Id="6ecab2ae-7e93-4ed4-ab48-0f4fd41b5e43">
+            <useCaseMoniker Id="0caa93ee-10fe-4c7a-870a-6d2b39c2736c" LastKnownName="Ingresar nombre de usuario" />
+            <elementDefinition Id="6ff9aebe-16cf-4d5a-a77b-454787d4e008" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="20e7ba61-ca3e-400d-9eba-305b0aab2161" name="Eliminar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="37cb8632-1329-4020-ad84-05b2a7e30ac8" />
+        <additions>
+          <include Id="70dc080f-cec2-48c9-854d-17ec989a417c">
+            <useCaseMoniker Id="b9d03053-bcc9-48f8-baca-276b65b0116b" LastKnownName="Indicar si tiene operaciones asociadas, si es asi no se puede eliminar" />
+            <elementDefinition Id="f15c03b5-4fea-4639-9897-d499632fa5be" />
+          </include>
+          <include Id="48eca1ff-1d94-4a9d-8a30-929f9ad8febf">
+            <useCaseMoniker Id="0caa93ee-10fe-4c7a-870a-6d2b39c2736c" LastKnownName="Ingresar nombre de usuario" />
+            <elementDefinition Id="d7f4821c-204b-4311-8507-a508a4452c2e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1328c957-e19b-4f9f-a005-83e20288871d" name="Actualizar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bbf33d7b-8fbd-4d2f-856b-d482f1f3b061" />
+        <additions>
+          <include Id="c1ad9049-eb36-449c-a52f-dea73e210294">
+            <useCaseMoniker Id="0caa93ee-10fe-4c7a-870a-6d2b39c2736c" LastKnownName="Ingresar nombre de usuario" />
+            <elementDefinition Id="88b01edd-87a1-4e2e-bff1-813aecfe0018" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2efba063-ffcb-4971-a493-c484194acd7e" name="Inactivar Usuarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="47ea6635-1a1f-4581-bb9b-8c8f91a4ac9c" />
+        <additions>
+          <include Id="5f35dce5-e6be-48ff-8a2d-9d7f59d9ce19">
+            <useCaseMoniker Id="0caa93ee-10fe-4c7a-870a-6d2b39c2736c" LastKnownName="Ingresar nombre de usuario" />
+            <elementDefinition Id="b0438e36-3266-4806-b999-9c303c631fef" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f2e70d99-7cc7-441e-9e22-b54275b358ac" name="Indicar si ya existe el nombre del usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e683731a-5439-4644-b6b7-eb98564e4140" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0caa93ee-10fe-4c7a-870a-6d2b39c2736c" name="Ingresar nombre de usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5998e0a9-db7c-4f6b-9eaf-4ba08b0c29fd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b9d03053-bcc9-48f8-baca-276b65b0116b" name="Indicar si tiene operaciones asociadas, si es asi no se puede eliminar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84d05f07-4789-4435-8256-220dc4347928" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ea27989c-2b66-49d6-824f-a9862acf8034" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3e01aeff-c88e-433c-9f68-7bd7e19d33ab">
+        <profileInstance Id="41e40853-cade-4e21-85bf-d47e6b1e78b9" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3013357e-0d91-40ea-8491-b01c7f6b615f">
+        <profileInstance Id="9b4d870f-c8b4-4d00-961d-80bbd1a73f48" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

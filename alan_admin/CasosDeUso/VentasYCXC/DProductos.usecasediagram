@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2bcb7363-c292-4f4a-b98d-b75815cedf7d" name="DProductos" linkedPackageId="6bce112b-c6a4-4ed5-a57e-cb4b1be73b0c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="92563e6a-12ed-4b64-9950-453c976066ec">
+      <profileInstance Id="1802ea28-de7c-4e90-b6dd-ce4fff11c125" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="73d3c793-ddbf-45a5-a3a7-15cb79bbb1f4">
+      <profileInstance Id="2a9d3893-dd19-4196-8359-11168dc9b93d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="24872faa-e3eb-44b4-a485-16de1142266a" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bae7d8ed-dd68-4c06-8d6e-67bb02870ca8" />
+        <targetEnds>
+          <association Id="e3748173-d088-41de-a7c1-301834f18bee" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f3f56079-66fb-4f56-931c-28560970242d" LastKnownName="Guardar Productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1b63c8a7-5549-48b5-a435-739cb25d9409" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2916afbb-06bb-421f-aeec-07852d85292d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1079b4e-290d-4e50-83f0-ad8fdbf60d16" name="Guardar Productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bae016f3-9bdd-4d8d-974a-c25f9a00bc64" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0aaad1e7-0e0c-4f7a-aeb3-f5fce57ee663" />
+          </association>
+          <association Id="3b47dcd0-6770-49cf-8928-62dcdc3bd5ac" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Manejar Distintos tipos de precio" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f593b3d7-8db6-4c40-89b4-6c7bb39b3cee" LastKnownName="Manejar Distintos tipos de precio" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89540847-f282-4b71-b5a1-8aced7c51849" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e8a321c6-804a-4bb5-ac52-875f931a888d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="394e3ae8-10bc-4349-b3af-40631c01cd6a" name="Manejar Distintos tipos de precio" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67b6ba46-049a-4f65-8e9a-a8723e7e22da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b04d65d4-28bb-4e04-8125-9cf9acf02da9" />
+          </association>
+          <association Id="f684c489-788c-498a-baee-f20d96f3c5c7" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Manejar Varios tipos de unidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="55860d95-d82c-4c43-883d-322eb3c7ec6b" LastKnownName="Manejar Varios tipos de unidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c835ae2-252b-4acd-a948-267e91c8a601" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a9da943-749b-4537-b7a1-f374d5a9764a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1009a416-f405-44c2-b756-b4253b577b72" name="Manejar Varios tipos de unidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b0853d9-b153-42b8-a2d2-f8f6db6b4246" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ae132749-4496-4c12-b051-906728dbc465" />
+          </association>
+          <association Id="0c5e46b7-a21b-425d-945a-1e33ce73f9dc" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar Productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5dd607f0-6e4e-4bbc-8408-9d3f2b7c96a5" LastKnownName="Actualizar Productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1109f0b3-afbe-44da-8ee4-e569bd4e1099" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cb8fae16-7dfe-42d3-92df-ad8ba7ba9445" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25b82194-e76c-42da-bf22-a825ac169fcd" name="Actualizar Productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d779ef37-3dc2-4f12-b18b-1958666cd237" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f86259a3-f2e2-43fa-bd46-a5354edc0356" />
+          </association>
+          <association Id="026a6d21-507e-4057-83db-739f06223063" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3eccbf1b-38cb-4e31-8601-37d85965de91" LastKnownName="Eliminar Productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f1a8e1c-68ca-4baf-8c38-ad9de0531e15" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0280408f-716c-4fb5-bbe3-bee0948002b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4fe88f79-6e39-421d-a11a-190aad7937ac" name="Eliminar Productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46b50321-51d9-47a3-b43a-6bbdb5293bd9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="39472626-2e10-44ad-a60f-545370bc0393" />
+          </association>
+          <association Id="fc6af978-fed6-4a80-9dca-8a0fd0483f13" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Inactivar Productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="34b0e89d-eaee-42b8-baf6-5914afbe85fb" LastKnownName="Inactivar Productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6aa8724c-5187-448b-a6f2-f71212f7a76c" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c14faaae-e0f7-492f-b417-2e45c691d5be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a9df23b-972a-4082-b4f7-cc802544be79" name="Inactivar Productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="533833db-30ba-47d5-84fa-ca61d25f0633" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9b9a9ef9-b302-4b15-af60-5493cf3fe551" />
+          </association>
+          <association Id="de2d7a4e-f314-4ebf-a781-6b2f908a14ff" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Consultar Productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f4da7365-e05a-4ffc-90be-2635dca44004" LastKnownName="Consultar Productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72256721-d6d6-4d62-b07f-d53160ff3017" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cc354e99-21ab-42cd-85cd-1455c6748ba2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2eee136-b88e-4d0c-91ed-6cc833ae532a" name="Consultar Productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="26268d1b-398e-41ef-b064-4c17d653849f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0fccbfab-7cf0-45c9-b977-d05a655c898e" />
+          </association>
+          <association Id="e23e008a-122e-4d96-9755-c7b0466a551c" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Imprimir lista de productos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eaf12b42-8137-4058-8f35-b6ae36734d54" LastKnownName="Imprimir lista de productos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0697059d-8e70-4cd9-8e4b-bee40f4d49ea" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eb635cca-3155-40ab-92a0-572784fede15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8bf2f275-bef1-4c11-a1f8-eee50723928b" name="Imprimir lista de productos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a15a5b3b-d5a6-4b3f-8c81-5b2d4534a97d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="84163e61-ebf1-419f-8ecc-1fcec16a5394" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f3f56079-66fb-4f56-931c-28560970242d" name="Guardar Productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1d2f915a-bd9f-4992-8a7b-cbc375656083" />
+        <additions>
+          <include Id="b58d4571-e44c-4742-a521-e84bcffe2ce4">
+            <useCaseMoniker Id="0465abaf-4f6c-4f0d-8067-606ecd66055a" LastKnownName="Validar que el codigo del producto no exista" />
+            <elementDefinition Id="3c8d8f90-e226-43ab-9637-7b9a3f322d37" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0465abaf-4f6c-4f0d-8067-606ecd66055a" name="Validar que el codigo del producto no exista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4614e4d-8fcb-49e0-9e2c-41cd13019642" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="34b0e89d-eaee-42b8-baf6-5914afbe85fb" name="Inactivar Productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6884b4cc-b4ea-460e-a937-96a9c811351c" />
+        <additions>
+          <include Id="d1be1ed0-2fae-4150-a02b-a45b35fc1b38">
+            <useCaseMoniker Id="be4e220e-0c67-4c82-be16-1097e2cbb6c3" LastKnownName="Buscar por codigo o descripción" />
+            <elementDefinition Id="35fd72c0-258f-4230-b430-653b915cc754" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3eccbf1b-38cb-4e31-8601-37d85965de91" name="Eliminar Productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af1fa63c-c22c-4e24-9b1e-da297818648c" />
+        <additions>
+          <include Id="ae755114-0bf4-459f-90cb-55c35c666dbd">
+            <useCaseMoniker Id="aa06868f-c780-4318-a5ba-a7b066e69e04" LastKnownName="Validar que el producto no este asociado a  algun documento" />
+            <elementDefinition Id="22399fec-eccc-4505-8872-ae2ce4596b49" />
+          </include>
+          <include Id="41b11aaa-593b-423c-8d62-7a6b227acada">
+            <useCaseMoniker Id="be4e220e-0c67-4c82-be16-1097e2cbb6c3" LastKnownName="Buscar por codigo o descripción" />
+            <elementDefinition Id="809ec45a-4a2f-4210-911c-8646184ac9f6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5dd607f0-6e4e-4bbc-8408-9d3f2b7c96a5" name="Actualizar Productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ed44cf45-0f2a-43d8-a35e-9827007415a7" />
+        <additions>
+          <include Id="a8a20ef5-78cc-4b63-a090-e07e85df8ff3">
+            <useCaseMoniker Id="be4e220e-0c67-4c82-be16-1097e2cbb6c3" LastKnownName="Buscar por codigo o descripción" />
+            <elementDefinition Id="131b23bb-4204-4ff0-9447-d8f4b4257af1" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="55860d95-d82c-4c43-883d-322eb3c7ec6b" name="Manejar Varios tipos de unidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf9891cd-496c-4af3-881f-a35262e79257" />
+        <additions>
+          <include Id="82ef8feb-6703-401d-a513-db17ee1a02d4">
+            <useCaseMoniker Id="d6830550-a6bf-484d-b804-284d3ffb717e" LastKnownName="Seleccionar tipo de unidad" />
+            <elementDefinition Id="49213c34-66f6-4a96-869d-11fe9893cdb8" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f593b3d7-8db6-4c40-89b4-6c7bb39b3cee" name="Manejar Distintos tipos de precio" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac4ac90a-c216-457b-ae76-67a0f747035a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f4da7365-e05a-4ffc-90be-2635dca44004" name="Consultar Productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a0b76e87-bc56-46ec-b4e4-9e22dcd18f96" />
+        <additions>
+          <include Id="d8ddc593-b771-4786-a046-dfd9394f49fc">
+            <useCaseMoniker Id="be4e220e-0c67-4c82-be16-1097e2cbb6c3" LastKnownName="Buscar por codigo o descripción" />
+            <elementDefinition Id="ef337b1a-6a1f-4934-8a65-bab71ad3e600" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eaf12b42-8137-4058-8f35-b6ae36734d54" name="Imprimir lista de productos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2adee7de-a611-4c78-a72c-7049e91acf57" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d6830550-a6bf-484d-b804-284d3ffb717e" name="Seleccionar tipo de unidad" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b00f642e-9524-4e51-82dc-3e427a0a3ff4" />
+        <extendedCases>
+          <extend Id="1a88accf-d0a6-4a20-ab25-91b3f49dc4af">
+            <useCaseMoniker Id="fddbdad4-d381-42e1-b388-5cb0b74808fa" LastKnownName="Ir a pantalla de tipo de unidades para crearla" />
+            <elementDefinition Id="a208273e-214a-439a-baf1-f964c2c8204a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fddbdad4-d381-42e1-b388-5cb0b74808fa" name="Ir a pantalla de tipo de unidades para crearla" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2517f02c-f839-4027-b719-de9d320dcfc9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="be4e220e-0c67-4c82-be16-1097e2cbb6c3" name="Buscar por codigo o descripción" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9992686-0fa7-48f7-8cba-95dfc76b809d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aa06868f-c780-4318-a5ba-a7b066e69e04" name="Validar que el producto no este asociado a  algun documento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c3b3e08-663b-4a97-84a9-d6533874e832" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="6bce112b-c6a4-4ed5-a57e-cb4b1be73b0c" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

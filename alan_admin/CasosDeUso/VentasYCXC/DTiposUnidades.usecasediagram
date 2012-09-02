@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f971e862-d24f-4191-bd69-8a37d8e91de2" name="DTiposUnidades" linkedPackageId="cc13d810-0108-4fde-adb1-bc1972ee84b5" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="4917a149-9a44-40d3-9062-2ac7f4a0dd86">
+      <profileInstance Id="d58bc4ab-8834-4184-ada0-6091c8898e0a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4edd4e58-d077-42de-b7db-6a29e0fce775">
+      <profileInstance Id="01a64f4c-3acc-47a7-8d99-151105d2b70a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8c51b829-ba01-4b04-874c-e927c7b38730" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="556435c6-b347-4cba-9d50-0d11a4990c47" />
+        <targetEnds>
+          <association Id="bf436481-b966-4a3d-8cca-3d437c8790d1" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Guardar Tipos de unidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="33e5d158-5660-4f61-a94b-4662c9211221" LastKnownName="Guardar Tipos de unidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e48f1346-0a8b-41a6-bd1f-a4a44cabe1e7" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e67fa7d1-795b-4583-b480-e0437df50233" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6336c40-c418-4fa3-a6ff-12accd882ba0" name="Guardar Tipos de unidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5c40e9db-bf15-4bfd-9798-8dd63b97b00c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="46b4c027-4e44-41c6-848e-db4dca93a578" />
+          </association>
+          <association Id="3c4833ed-288d-4920-b7e9-b60fa59b8aeb" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Consultar Tipos de unidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="37c9059f-d83a-467d-8ee8-4d2d0584dea2" LastKnownName="Consultar Tipos de unidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c6d64123-872d-4212-b1de-4ab1ed184ec4" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86e787fc-f07f-43e3-aa02-4eb3c8ac3dec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62353bd5-683c-4773-ae8f-29bf5ed0dde2" name="Consultar Tipos de unidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6e6aed7-6fec-4c8f-aabb-8fa9cf245da5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0e07235a-b7ce-4bcb-85aa-33c5684a2a9a" />
+          </association>
+          <association Id="b23d94ab-526c-461d-8442-5db7407737c0" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Eliminar Tipos de unidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0976f8a6-838a-49b0-a127-f5cc42394c3f" LastKnownName="Eliminar Tipos de unidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c33b63f-391e-4a3d-bb50-026161313277" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ea23381e-e274-42d2-8990-83fbe35e6cda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="abb65b2a-2e50-4a31-997c-d6ff6db25b69" name="Eliminar Tipos de unidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f8a1caa4-522d-40e7-a6be-a5ebe54f87da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="43e4a5cb-2867-4fbe-bca0-2603e8b9a2a1" />
+          </association>
+          <association Id="24e539cc-6d9f-401c-bbb9-bcfcd12904d3" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Actualizar Tipos de unidades" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6fb0a067-97c3-460c-bbd2-6198ee6d3e0d" LastKnownName="Actualizar Tipos de unidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d48d292e-2f4b-40f9-9b73-48ead9ecc366" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d477dd07-4471-4695-bbe9-e981be21201b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4a6cb22-0cb8-492f-bb28-935600f51606" name="Actualizar Tipos de unidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="98a27df7-093b-4768-9068-224c5d0e013f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="63db2713-c610-43b1-9d71-26342c73cec3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="33e5d158-5660-4f61-a94b-4662c9211221" name="Guardar Tipos de unidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3a8f400-1e8c-4000-86de-5aa31ec790fb" />
+        <additions>
+          <include Id="9ccf53cd-f553-4a7e-8014-2c9def612f20">
+            <useCaseMoniker Id="6778d798-f7ac-4b71-939f-9ac9c4901b45" LastKnownName="Indicar si ya existe el tipo de unidad" />
+            <elementDefinition Id="0db758eb-624c-44ae-b4e2-8abdb29a9ac0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="37c9059f-d83a-467d-8ee8-4d2d0584dea2" name="Consultar Tipos de unidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="23170a84-21a1-4215-837c-1f49d137e484" />
+        <additions>
+          <include Id="60caa16d-8b48-4dc0-b4f2-0c4df850b75c">
+            <useCaseMoniker Id="29bb6149-d482-4402-800f-d9ab7454cd7c" LastKnownName="Ingresar nombre de tipo de unidad" />
+            <elementDefinition Id="9907f649-8513-487a-8e5f-9b88900cc0a5" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6fb0a067-97c3-460c-bbd2-6198ee6d3e0d" name="Actualizar Tipos de unidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ab587ffb-28e6-4951-b0e8-e2567df67bcf" />
+        <additions>
+          <include Id="ab74ded2-92bd-41ef-90de-9098987db382">
+            <useCaseMoniker Id="29bb6149-d482-4402-800f-d9ab7454cd7c" LastKnownName="Ingresar nombre de tipo de unidad" />
+            <elementDefinition Id="214aa602-d88d-4be8-89b4-b0bac4060881" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6778d798-f7ac-4b71-939f-9ac9c4901b45" name="Indicar si ya existe el tipo de unidad" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e2ac2102-847e-4fe1-90d5-8c1083ae43a1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="29bb6149-d482-4402-800f-d9ab7454cd7c" name="Ingresar nombre de tipo de unidad" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e84bab1-22e3-4278-a2e2-7bf88e1ff363" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0976f8a6-838a-49b0-a127-f5cc42394c3f" name="Eliminar Tipos de unidades" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="afd48b68-8629-40c1-8d7f-98e6bb6116e3" />
+        <additions>
+          <include Id="4e7ac384-516f-42e9-a7b2-014c650639b2">
+            <useCaseMoniker Id="9a6537ac-2c23-45df-a4e9-e28facfb9668" LastKnownName="Indicar si está asociada a algun producto, sino no eliminarlo" />
+            <elementDefinition Id="a1a24ed6-2dee-4437-a191-a7ca5bff373d" />
+          </include>
+          <include Id="3804d2ab-265e-4f53-ae0c-c97022a92a9a">
+            <useCaseMoniker Id="29bb6149-d482-4402-800f-d9ab7454cd7c" LastKnownName="Ingresar nombre de tipo de unidad" />
+            <elementDefinition Id="78bc0c34-8a24-4969-9bbc-161d41db1b8e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9a6537ac-2c23-45df-a4e9-e28facfb9668" name="Indicar si está asociada a algun producto, sino no eliminarlo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9e9607cf-fa0d-424b-9dcd-fcbc3f1962b4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="cc13d810-0108-4fde-adb1-bc1972ee84b5" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

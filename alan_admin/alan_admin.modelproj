@@ -17,9 +17,32 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
+    <Folder Include="CasosDeUso\VentasYCXC" />
     <Folder Include="ModelDefinition\" />
+    <Content Include="CasosDeUso\VentasYCXC\DProductos.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\DProductos.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CasosDeUso\VentasYCXC\DProductos.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\DUsuarios.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\DUsuarios.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CasosDeUso\VentasYCXC\DUsuarios.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\alan_admin.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="CasosDeUso" />
   </ItemGroup>
 </Project>
