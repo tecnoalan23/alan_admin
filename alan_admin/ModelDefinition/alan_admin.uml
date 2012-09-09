@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="dc776d9d-203a-4c97-8961-7fbe79ca3710"
   name="alan_admin" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1119,6 +1119,681 @@
       <useCase
         Id="a8ddfb64-6ba2-47a4-aded-0e15dfe9fc39"
         name="Buscar por Descripcion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="12c9f2cb-8d0f-4ffb-aa3d-46970a398dcb"
+        name="Usuario Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="78c7496c-5eb4-4937-91da-a216e7156d9d"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Importar datos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="27777fec-d1ff-4550-958c-6d58938251fa"
+              LastKnownName="Importar datos"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58ef4697-fe7a-4464-be9b-627d99f5789e"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aadfe874-6ef5-4e01-8966-d86c3e053aad"
+                  name="Importar datos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="abec2014-8907-4895-841b-7aa6dbf0fd0d"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..."
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d61d4126-471e-4130-b7a1-6a1e81ddc0f3"
+              LastKnownName="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..."
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e76c5156-c322-44ce-9ba6-cd62b2c54baa"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="84822054-82b3-4e61-bf48-d63384365a4c"
+                  name="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..."
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="39eaadf6-561d-4d6c-b801-a128533e4e33"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Guardar Factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="41e8f41d-a994-4f5d-95c0-4be7eee21e10"
+              LastKnownName="Guardar Factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6001246a-47ff-43de-a509-b45b61042b85"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ca263e1-4b15-4839-aab6-d48c3a312adf"
+                  name="Guardar Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b83fe100-0fd3-4bf7-b0e6-96d38e5697d2"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Actualizar datos de la factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40b5183f-d02d-4e79-b2ae-d82dc4b64d35"
+              LastKnownName="Actualizar datos de la factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5fbd243-889f-451d-9358-10797e9ce817"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8e0a2e9-ab0d-4653-bb22-9c88b48c39c2"
+                  name="Actualizar datos de la factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b740a211-51ad-4af9-ba30-8e87a194390f"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Imprimir Factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f7c7bf48-e22d-4bf6-a685-046a0f29e82d"
+              LastKnownName="Imprimir Factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a7b97d2c-a933-4af3-920b-d2a5165d9a49"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46c18175-3032-4145-be03-051a8bcbea33"
+                  name="Imprimir Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2bcfbfcf-b036-4feb-a1d4-20b3f6b1317b"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Anular Factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd"
+              LastKnownName="Anular Factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="230fad6c-1c9a-4802-bc3b-14858471e562"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="88f8abf9-5b31-45c7-a53e-aee1b82569df"
+                  name="Anular Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fb805877-9d5f-4df3-a71b-5e7da572e4aa"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Eliminar Factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="df8be72e-3906-4414-9dcf-2723bbf70eb6"
+              LastKnownName="Eliminar Factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71f48783-c8cf-4b82-8d26-734208c7334a"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="487a28c6-e498-446d-b980-d1c3a2586c68"
+                  name="Eliminar Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="27777fec-d1ff-4550-958c-6d58938251fa"
+        name="Importar datos"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="329b18d8-e3fd-42a7-bf9e-6f643f7769c9">
+            <useCaseMoniker
+              Id="dff902c6-b53d-491a-9743-cbf5726a36c4"
+              LastKnownName="Importar datos de Presupuesto"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="eabd8aff-640d-48bb-865c-4cbb6e15e122">
+            <useCaseMoniker
+              Id="31b18410-7f6b-4f6c-bbca-2025207fe03d"
+              LastKnownName="Importar datos de Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="500ac01b-53cd-4b58-8c5e-ed8f11128acb">
+            <useCaseMoniker
+              Id="af7d6353-970d-4977-ae67-7c54a2af2590"
+              LastKnownName="Importar datos de Facturacion"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dff902c6-b53d-491a-9743-cbf5726a36c4"
+        name="Importar datos de Presupuesto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="31b18410-7f6b-4f6c-bbca-2025207fe03d"
+        name="Importar datos de Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="af7d6353-970d-4977-ae67-7c54a2af2590"
+        name="Importar datos de Facturacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d61d4126-471e-4130-b7a1-6a1e81ddc0f3"
+        name="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..."
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="f36bff10-8968-449c-a9d0-18ef5fcab54b">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+        name="Buscar Factura"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="e30cf8b0-a8f8-42fb-9ed8-4f4802463c48">
+            <useCaseMoniker
+              Id="0a5c40f7-100a-4feb-be8a-23bfebc33576"
+              LastKnownName="Buscar por número de Factura o Control"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="0aab9a80-4460-4ca8-934b-04ea05809814">
+            <useCaseMoniker
+              Id="fef9da49-52f5-4adf-874b-9aa0efc78894"
+              LastKnownName="Filtrar por cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="4e3c9890-1936-4e16-8ea8-f684f3021689">
+            <useCaseMoniker
+              Id="54a78555-f00e-4a59-9113-eb7d171458f9"
+              LastKnownName="Filtrar por producto"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="41e8f41d-a994-4f5d-95c0-4be7eee21e10"
+        name="Guardar Factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="f047d130-50d9-4a9b-a996-8acc0f3c5c71">
+            <useCaseMoniker
+              Id="e9446180-81d1-4c63-955d-bda5913d6b21"
+              LastKnownName="Seleccionar Cliente buscando por nombre o RIF"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="0f83f976-9103-48b2-9d35-8d6d6a8c202a">
+            <useCaseMoniker
+              Id="815e9102-efca-4724-821c-94c5dc13e77b"
+              LastKnownName="Seleccionar producto por Codigo o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="efb69032-ce84-46a3-82e2-5dd4c43d7936">
+            <useCaseMoniker
+              Id="62c8b1d8-00ca-46ad-9df1-a5840794ae3f"
+              LastKnownName="Al guardar, actualizar el saldo actual del cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e9446180-81d1-4c63-955d-bda5913d6b21"
+        name="Seleccionar Cliente buscando por nombre o RIF"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="15013a99-e1c4-4648-be77-03c5ba436547">
+            <useCaseMoniker
+              Id="e43d6924-a29f-4265-bcb2-0b2766104157"
+              LastKnownName="Indicar si el cliente tiene descuento"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="ff4a8917-10ac-4fb5-a0b1-3d78f607b5b7">
+            <useCaseMoniker
+              Id="21cded75-3f15-4346-9089-0c4fb4096398"
+              LastKnownName="Indicar la Condicion de pago del cliente pero que se pueda editar"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="b9496517-8b05-4899-ba73-12dd41322af9">
+            <useCaseMoniker
+              Id="fb3c0ac7-86b7-48a8-89d3-8197a67b0cab"
+              LastKnownName="Indicar el tipo de precio relacionado con el cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="21cded75-3f15-4346-9089-0c4fb4096398"
+        name="Indicar la Condicion de pago del cliente pero que se pueda editar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="15bd4523-48ff-48ee-9e0a-5bac42b2b465">
+            <useCaseMoniker
+              Id="ee9a7fdc-0428-4a0b-b84a-24d462c1e502"
+              LastKnownName="Si la condicion de pago es credito, indicar la fecha de vencimiento."
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="815e9102-efca-4724-821c-94c5dc13e77b"
+        name="Seleccionar producto por Codigo o nombre"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9f52319a-acb6-45cf-95cc-773468a5de59">
+            <useCaseMoniker
+              Id="9c1d6095-06b7-468f-9c19-c3db7e3fcb05"
+              LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="e56ad687-59ce-4b71-944c-37dadcce4db9">
+            <useCaseMoniker
+              Id="c5c2942b-b212-4fac-a29b-ecfda159d80c"
+              LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="7d4095e6-f71a-4b52-b7d5-b7e6ad18238c">
+            <useCaseMoniker
+              Id="84601359-7085-4420-9c27-5aae5eb9ff6b"
+              LastKnownName="Indicar descuentos"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c1d6095-06b7-468f-9c19-c3db7e3fcb05"
+        name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c5c2942b-b212-4fac-a29b-ecfda159d80c"
+        name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="84601359-7085-4420-9c27-5aae5eb9ff6b"
+        name="Indicar descuentos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e43d6924-a29f-4265-bcb2-0b2766104157"
+        name="Indicar si el cliente tiene descuento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ee9a7fdc-0428-4a0b-b84a-24d462c1e502"
+        name="Si la condicion de pago es credito, indicar la fecha de vencimiento."
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b5183f-d02d-4e79-b2ae-d82dc4b64d35"
+        name="Actualizar datos de la factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ab36680b-ee95-41ac-a420-a514f0903995">
+            <useCaseMoniker
+              Id="a8335438-468d-43d1-944e-494627100e1b"
+              LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="8908e375-c848-48fb-816d-a7d47098594e">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a8335438-468d-43d1-944e-494627100e1b"
+        name="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f7c7bf48-e22d-4bf6-a685-046a0f29e82d"
+        name="Imprimir Factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2c560c99-9322-4106-9b55-cafd5497e189">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c69f39b9-bc0e-4b82-9705-f18445f0eeca"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="62c8b1d8-00ca-46ad-9df1-a5840794ae3f"
+        name="Al guardar, actualizar el saldo actual del cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fb3c0ac7-86b7-48a8-89d3-8197a67b0cab"
+        name="Indicar el tipo de precio relacionado con el cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd"
+        name="Anular Factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d8fc1af3-1414-47d1-ac99-2f16b6c3f749">
+            <useCaseMoniker
+              Id="a8335438-468d-43d1-944e-494627100e1b"
+              LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="a24cbd8c-7968-47e2-920d-41dfe32a32c6">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="df8be72e-3906-4414-9dcf-2723bbf70eb6"
+        name="Eliminar Factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6b0a3869-17b0-423d-86bd-53b59784e88f">
+            <useCaseMoniker
+              Id="a8335438-468d-43d1-944e-494627100e1b"
+              LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="7dc949ca-2f01-433e-80e4-70724984b668">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0a5c40f7-100a-4feb-be8a-23bfebc33576"
+        name="Buscar por número de Factura o Control"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fef9da49-52f5-4adf-874b-9aa0efc78894"
+        name="Filtrar por cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="54a78555-f00e-4a59-9113-eb7d171458f9"
+        name="Filtrar por producto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2a3472e5-d8a1-44ee-bfec-52fb4da9e068"
+        name="Buscar por "
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

@@ -1,1 +1,386 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="566ab1b7-3e90-4b14-8386-d645dfef78f4" name="PFacturacion" linkedPackageId="2c35e90f-10eb-4216-bbab-c7f82c3059af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="5227f1bd-0ee9-49f8-8199-6eca48b2ac07">
+      <profileInstance Id="8f381684-10c4-463f-8756-1abf1333febe" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3e2fbca2-7511-4f12-98d6-6da2d354e6ed">
+      <profileInstance Id="b1b953b0-ebe4-4cb9-9285-1acfc1fd9f6e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="63e3d722-c3e4-4c24-afb0-e8bbec3baac1" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12c9f2cb-8d0f-4ffb-aa3d-46970a398dcb" />
+        <targetEnds>
+          <association Id="61a9ffa6-b22c-4c09-ac52-c303ea685876" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Importar datos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8360c4f4-89b6-423b-83d8-6d694d77719e" LastKnownName="Importar datos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="064e18fa-5be5-4a99-a168-0da824b2c43f" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58ef4697-fe7a-4464-be9b-627d99f5789e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71a3f118-9d2a-47b4-ac47-f292724bdbe6" name="Importar datos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aadfe874-6ef5-4e01-8966-d86c3e053aad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="78c7496c-5eb4-4937-91da-a216e7156d9d" />
+          </association>
+          <association Id="d7110105-4d4f-4b77-bd6a-78cb5fa95514" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..." isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="11eed8fe-db72-450f-bbfa-933130c8e701" LastKnownName="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..." />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48b5bff9-b103-446b-8bd9-a393221e7631" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e76c5156-c322-44ce-9ba6-cd62b2c54baa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c91b5a4e-851f-4d51-8c98-f29103ab35a3" name="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..." isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84822054-82b3-4e61-bf48-d63384365a4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="abec2014-8907-4895-841b-7aa6dbf0fd0d" />
+          </association>
+          <association Id="c4b9f764-ffba-4998-9fff-36e85f1595dd" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="abb47cba-1817-4d8e-bbdb-d99b3a003ec1" LastKnownName="Guardar Factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="663658fe-51d2-4ddb-91c9-cbdc016af29f" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6001246a-47ff-43de-a509-b45b61042b85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="095337bc-6b0b-44ca-806f-be27a757318e" name="Guardar Factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2ca263e1-4b15-4839-aab6-d48c3a312adf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="39eaadf6-561d-4d6c-b801-a128533e4e33" />
+          </association>
+          <association Id="fac9c19c-1b58-40f4-817b-620ba3b8b9a9" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar datos de la factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a407efb9-e321-4337-97f1-c708d027bad0" LastKnownName="Actualizar datos de la factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="522e137e-b438-45fd-8a72-0e50d0b3b531" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b5fbd243-889f-451d-9358-10797e9ce817" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fad9bb74-c0a6-4521-af4b-abac44b8abd6" name="Actualizar datos de la factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8e0a2e9-ab0d-4653-bb22-9c88b48c39c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b83fe100-0fd3-4bf7-b0e6-96d38e5697d2" />
+          </association>
+          <association Id="64f298c2-0950-4e85-bd6f-0dfff9b4b6e1" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Imprimir Factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="41ad4252-35f7-40dc-962f-c2c5fda1dea1" LastKnownName="Imprimir Factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="def3a52b-cdb1-4ff0-8be2-d3f0bd30e00a" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a7b97d2c-a933-4af3-920b-d2a5165d9a49" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="620aafd1-a47c-444e-83ab-7c9e6331bc1f" name="Imprimir Factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46c18175-3032-4145-be03-051a8bcbea33" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b740a211-51ad-4af9-ba30-8e87a194390f" />
+          </association>
+          <association Id="84e3092d-c4c2-4911-b2ec-cdf460094eb3" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Anular Factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b9ecc469-5699-41ab-9887-71d67b6ae625" LastKnownName="Anular Factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44f18aa4-532d-42d7-a76c-febba7430c7b" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="230fad6c-1c9a-4802-bc3b-14858471e562" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e60071b-5369-40fe-9753-80d269890c55" name="Anular Factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88f8abf9-5b31-45c7-a53e-aee1b82569df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2bcfbfcf-b036-4feb-a1d4-20b3f6b1317b" />
+          </association>
+          <association Id="02ade576-d5d8-4828-91c0-98f700e2b7ac" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4b665069-b7e1-4f70-8b33-98ffc8ea33c3" LastKnownName="Eliminar Factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52edbbdb-03a5-4fed-886e-6eb85bf49eb1" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="71f48783-c8cf-4b82-8d26-734208c7334a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ec0e9b1-302a-4f7f-b666-60362c02a1df" name="Eliminar Factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="487a28c6-e498-446d-b980-d1c3a2586c68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fb805877-9d5f-4df3-a71b-5e7da572e4aa" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8360c4f4-89b6-423b-83d8-6d694d77719e" name="Importar datos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="27777fec-d1ff-4550-958c-6d58938251fa" />
+        <extendedCases>
+          <extend Id="330570dc-ff2d-4a34-9ba0-eb6e1a33fce7">
+            <useCaseMoniker Id="5584042b-d244-4d94-a419-d037ead4e9b2" LastKnownName="Importar datos de Presupuesto" />
+            <elementDefinition Id="329b18d8-e3fd-42a7-bf9e-6f643f7769c9" />
+          </extend>
+          <extend Id="16fe6d32-d483-4272-8193-15a068c11903">
+            <useCaseMoniker Id="a2087929-0cee-449c-b7aa-d0a2ee89cc4a" LastKnownName="Importar datos de Nota de Entrega" />
+            <elementDefinition Id="eabd8aff-640d-48bb-865c-4cbb6e15e122" />
+          </extend>
+          <extend Id="f64fc49c-ff37-4c76-8d11-d26974446d4c">
+            <useCaseMoniker Id="d6ad9b0c-f6de-46d5-91f0-4f38dc7e20de" LastKnownName="Importar datos de Facturacion" />
+            <elementDefinition Id="500ac01b-53cd-4b58-8c5e-ed8f11128acb" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5584042b-d244-4d94-a419-d037ead4e9b2" name="Importar datos de Presupuesto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dff902c6-b53d-491a-9743-cbf5726a36c4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a2087929-0cee-449c-b7aa-d0a2ee89cc4a" name="Importar datos de Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="31b18410-7f6b-4f6c-bbca-2025207fe03d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d6ad9b0c-f6de-46d5-91f0-4f38dc7e20de" name="Importar datos de Facturacion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af7d6353-970d-4977-ae67-7c54a2af2590" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11eed8fe-db72-450f-bbfa-933130c8e701" name="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar..." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d61d4126-471e-4130-b7a1-6a1e81ddc0f3" />
+        <additions>
+          <include Id="e9997118-07f5-469d-8c9e-d071254b18d3">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="f36bff10-8968-449c-a9d0-18ef5fcab54b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" name="Buscar Factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2347d514-6f7f-4830-a98b-42caec9be8ca" />
+        <extendedCases>
+          <extend Id="eabe4d5c-3652-4073-8118-60490f4f9a7c">
+            <useCaseMoniker Id="0217d6b0-ee30-4a79-889a-0653728b40b9" LastKnownName="Buscar por número de Factura o Control" />
+            <elementDefinition Id="e30cf8b0-a8f8-42fb-9ed8-4f4802463c48" />
+          </extend>
+          <extend Id="3fe8807c-ae04-49a1-8eaf-fe2719655115">
+            <useCaseMoniker Id="fd0b0d2d-9f44-40f1-98c2-580d963d6a5f" LastKnownName="Filtrar por cliente" />
+            <elementDefinition Id="0aab9a80-4460-4ca8-934b-04ea05809814" />
+          </extend>
+          <extend Id="358cfe2c-d11f-4a7a-832e-d4e6bd9fc8c4">
+            <useCaseMoniker Id="4a973e8c-b831-46e7-99fc-6aa301bf7485" LastKnownName="Filtrar por producto" />
+            <elementDefinition Id="4e3c9890-1936-4e16-8ea8-f684f3021689" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="abb47cba-1817-4d8e-bbdb-d99b3a003ec1" name="Guardar Factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="41e8f41d-a994-4f5d-95c0-4be7eee21e10" />
+        <additions>
+          <include Id="9d9d25a5-5adc-4603-bc10-5caa691dc8a1">
+            <useCaseMoniker Id="eddfed86-957b-48d0-b002-c40e4950d622" LastKnownName="Seleccionar Cliente buscando por nombre o RIF" />
+            <elementDefinition Id="f047d130-50d9-4a9b-a996-8acc0f3c5c71" />
+          </include>
+          <include Id="375c82b8-c2ae-4a72-8705-3ada9d402216">
+            <useCaseMoniker Id="0252a5bf-12c1-436d-bce5-8ae1a60ff26c" LastKnownName="Seleccionar producto por Codigo o nombre" />
+            <elementDefinition Id="0f83f976-9103-48b2-9d35-8d6d6a8c202a" />
+          </include>
+          <include Id="e7a1b74e-1aa8-4bca-ab98-8151916582ef">
+            <useCaseMoniker Id="6bfe06d2-68b4-415b-95de-eac59228508d" LastKnownName="Al guardar, actualizar el saldo actual del cliente" />
+            <elementDefinition Id="efb69032-ce84-46a3-82e2-5dd4c43d7936" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eddfed86-957b-48d0-b002-c40e4950d622" name="Seleccionar Cliente buscando por nombre o RIF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9446180-81d1-4c63-955d-bda5913d6b21" />
+        <extendedCases>
+          <extend Id="af780857-8413-43d0-a182-86cfa7371f25">
+            <useCaseMoniker Id="9f0c3b3e-63da-4e4a-bd75-5c611f816a75" LastKnownName="Indicar si el cliente tiene descuento" />
+            <elementDefinition Id="15013a99-e1c4-4648-be77-03c5ba436547" />
+          </extend>
+          <extend Id="32eb3479-9df0-4ecb-9546-699c34081724">
+            <useCaseMoniker Id="076db038-3688-41f2-8ccb-384e90255942" LastKnownName="Indicar la Condicion de pago del cliente pero que se pueda editar" />
+            <elementDefinition Id="ff4a8917-10ac-4fb5-a0b1-3d78f607b5b7" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="a63c2461-cd97-4108-97a1-93df84f167d2">
+            <useCaseMoniker Id="0e133041-c827-4e87-9be6-27ec83df9ad7" LastKnownName="Indicar el tipo de precio relacionado con el cliente" />
+            <elementDefinition Id="b9496517-8b05-4899-ba73-12dd41322af9" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="076db038-3688-41f2-8ccb-384e90255942" name="Indicar la Condicion de pago del cliente pero que se pueda editar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="21cded75-3f15-4346-9089-0c4fb4096398" />
+        <additions>
+          <include Id="89e3456a-60b9-4a14-add4-798b9da449b9">
+            <useCaseMoniker Id="b9baf555-3459-4243-befd-1e47f002d46a" LastKnownName="Si la condicion de pago es credito, indicar la fecha de vencimiento." />
+            <elementDefinition Id="15bd4523-48ff-48ee-9e0a-5bac42b2b465" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0252a5bf-12c1-436d-bce5-8ae1a60ff26c" name="Seleccionar producto por Codigo o nombre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="815e9102-efca-4724-821c-94c5dc13e77b" />
+        <extendedCases>
+          <extend Id="cd3fe1dc-78a5-43da-9532-ab0e0967ae7d">
+            <useCaseMoniker Id="81ebb6d2-485b-4425-b212-dfae00b4e49f" LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" />
+            <elementDefinition Id="9f52319a-acb6-45cf-95cc-773468a5de59" />
+          </extend>
+          <extend Id="dfe808f5-6f1b-425e-abe7-4f034d1fce5e">
+            <useCaseMoniker Id="24ccea61-7e94-4daa-a753-adc13ddc403d" LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" />
+            <elementDefinition Id="e56ad687-59ce-4b71-944c-37dadcce4db9" />
+          </extend>
+          <extend Id="bf0d88b9-20fc-400a-afe8-c60ef7c21d2f">
+            <useCaseMoniker Id="a441a5d7-a800-4c49-83e3-a4db91e5286a" LastKnownName="Indicar descuentos" />
+            <elementDefinition Id="7d4095e6-f71a-4b52-b7d5-b7e6ad18238c" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="81ebb6d2-485b-4425-b212-dfae00b4e49f" name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c1d6095-06b7-468f-9c19-c3db7e3fcb05" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="24ccea61-7e94-4daa-a753-adc13ddc403d" name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c5c2942b-b212-4fac-a29b-ecfda159d80c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a441a5d7-a800-4c49-83e3-a4db91e5286a" name="Indicar descuentos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84601359-7085-4420-9c27-5aae5eb9ff6b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9f0c3b3e-63da-4e4a-bd75-5c611f816a75" name="Indicar si el cliente tiene descuento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e43d6924-a29f-4265-bcb2-0b2766104157" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b9baf555-3459-4243-befd-1e47f002d46a" name="Si la condicion de pago es credito, indicar la fecha de vencimiento." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ee9a7fdc-0428-4a0b-b84a-24d462c1e502" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a407efb9-e321-4337-97f1-c708d027bad0" name="Actualizar datos de la factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40b5183f-d02d-4e79-b2ae-d82dc4b64d35" />
+        <additions>
+          <include Id="ac99a1f2-f40a-4b7f-ba7c-5666362411bd">
+            <useCaseMoniker Id="bce0b3c6-f6a5-4b1e-9ea2-f0fb0430116b" LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar" />
+            <elementDefinition Id="ab36680b-ee95-41ac-a420-a514f0903995" />
+          </include>
+          <include Id="bbbaa8a2-0c45-4f92-973c-f73e1efde61b">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="8908e375-c848-48fb-816d-a7d47098594e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bce0b3c6-f6a5-4b1e-9ea2-f0fb0430116b" name="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a8335438-468d-43d1-944e-494627100e1b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="41ad4252-35f7-40dc-962f-c2c5fda1dea1" name="Imprimir Factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f7c7bf48-e22d-4bf6-a685-046a0f29e82d" />
+        <additions>
+          <include Id="7af7ac22-7df4-4de9-837e-fbee05e91279">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="2c560c99-9322-4106-9b55-cafd5497e189" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6bfe06d2-68b4-415b-95de-eac59228508d" name="Al guardar, actualizar el saldo actual del cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62c8b1d8-00ca-46ad-9df1-a5840794ae3f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0e133041-c827-4e87-9be6-27ec83df9ad7" name="Indicar el tipo de precio relacionado con el cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb3c0ac7-86b7-48a8-89d3-8197a67b0cab" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b9ecc469-5699-41ab-9887-71d67b6ae625" name="Anular Factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd" />
+        <additions>
+          <include Id="ff0a2d95-fca1-4177-b0c4-c7c207fca65b">
+            <useCaseMoniker Id="bce0b3c6-f6a5-4b1e-9ea2-f0fb0430116b" LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar" />
+            <elementDefinition Id="d8fc1af3-1414-47d1-ac99-2f16b6c3f749" />
+          </include>
+          <include Id="48450708-99ed-4912-a38f-24f9e4034179">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="a24cbd8c-7968-47e2-920d-41dfe32a32c6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4b665069-b7e1-4f70-8b33-98ffc8ea33c3" name="Eliminar Factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="df8be72e-3906-4414-9dcf-2723bbf70eb6" />
+        <additions>
+          <include Id="36f37981-9e6e-4988-9daa-fd8567f45e15">
+            <useCaseMoniker Id="bce0b3c6-f6a5-4b1e-9ea2-f0fb0430116b" LastKnownName="Si ya esta parcial o totalmente cancelada que no se pueda modificar, Anular o Eliminar" />
+            <elementDefinition Id="6b0a3869-17b0-423d-86bd-53b59784e88f" />
+          </include>
+          <include Id="69567186-a305-4d5d-8927-6e3dee73bd22">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="7dc949ca-2f01-433e-80e4-70724984b668" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0217d6b0-ee30-4a79-889a-0653728b40b9" name="Buscar por número de Factura o Control" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a5c40f7-100a-4feb-be8a-23bfebc33576" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fd0b0d2d-9f44-40f1-98c2-580d963d6a5f" name="Filtrar por cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fef9da49-52f5-4adf-874b-9aa0efc78894" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4a973e8c-b831-46e7-99fc-6aa301bf7485" name="Filtrar por producto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="54a78555-f00e-4a59-9113-eb7d171458f9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="2c35e90f-10eb-4216-bbab-c7f82c3059af" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>
