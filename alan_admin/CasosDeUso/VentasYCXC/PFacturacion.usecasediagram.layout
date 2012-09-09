@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.75" name="PFacturacion">
+  <useCaseModelRootMoniker Id="9dc78ece-786d-4ad5-8fa9-8a33aa6765a4" />
+  <nestedChildShapes>
+    <actorShape Id="5ee6eddf-9bfb-4fee-9bd3-8f2a9820903d" absoluteBounds="0.75, 2.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="6a74a74b-1266-4ed4-a634-e207b672cdb5" LastKnownName="Usuario Registrado" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="8cb96171-159b-49c1-a6ed-8ed73cd35b11" absoluteBounds="2.875, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="4a5416f3-5a58-49e4-a615-6ead9ac8f585" LastKnownName="Guardar Facturas" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="097eb272-51f4-4580-a13f-469477ea7515" absoluteBounds="5.625, 0.75, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="38ee4319-5265-4090-abba-bab5f5a4bc11" LastKnownName="Buscar Cliente por RIF o nombre" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.875 : 1); (5.625 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="209e2015-9975-4fdd-9e15-f90f9374ecfb" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="8cb96171-159b-49c1-a6ed-8ed73cd35b11" />
+        <useCaseShapeMoniker Id="097eb272-51f4-4580-a13f-469477ea7515" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="d9ea5479-da48-483f-bd3c-ef3d0f43f59c" absoluteBounds="1.625, 8.5, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="360ae7ae-46bc-4d3c-b219-ce8c9016a0a8" LastKnownName="Importar datos de otros documentos" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.0570652173913 : 3.25); (2.25563035249272 : 8.50085678234904)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="de577b0b-7933-434a-b9a0-e4c62b1bcd0e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="5ee6eddf-9bfb-4fee-9bd3-8f2a9820903d" />
+        <useCaseShapeMoniker Id="d9ea5479-da48-483f-bd3c-ef3d0f43f59c" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="67642c8d-4eea-4801-8af7-04e10744c24b" absoluteBounds="5, 7.875, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="38faf5d5-f0d4-4672-b688-80501fbe67fd" LastKnownName="Importar datos de una factura" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(2.92513293769235 : 8.6365494559829); (5.07486706230765 : 8.2384505440171)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extender»">
+      <extendMoniker Id="6476e58a-abae-4dfc-a0b6-f12301c5297c" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="d9ea5479-da48-483f-bd3c-ef3d0f43f59c" />
+        <useCaseShapeMoniker Id="67642c8d-4eea-4801-8af7-04e10744c24b" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="2c3d6e1d-4761-427b-b7b3-03daa4905564" absoluteBounds="5, 10, 1.5, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="8af14b7e-d97a-4d5d-a8c7-67a389ebccf9" LastKnownName="Importar datos de un presupuestos" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(2.75262677476933 : 8.94205531989934); (5.29471973534847 : 10.0513322481521)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extender»">
+      <extendMoniker Id="8e9d1dab-c45a-467f-854d-5132a65ac057" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="d9ea5479-da48-483f-bd3c-ef3d0f43f59c" />
+        <useCaseShapeMoniker Id="2c3d6e1d-4761-427b-b7b3-03daa4905564" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="0babbedc-bba8-4140-bf7c-e66b939144a2" absoluteBounds="5, 8.875, 1.625, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="81551271-320d-48e9-b285-592e050ebcb6" LastKnownName="Importar datos de una nota de entrega" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(2.97196994534766 : 8.82065749414439); (5.0451888235393 : 9.04278808823635)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extender»">
+      <extendMoniker Id="23e11ca4-15e4-4746-834c-f7a748ee7347" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="2.969767947871278, 8.92655691969796, 0.61212378740310669, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <useCaseShapeMoniker Id="d9ea5479-da48-483f-bd3c-ef3d0f43f59c" />
+        <useCaseShapeMoniker Id="0babbedc-bba8-4140-bf7c-e66b939144a2" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="b8837988-8d96-4bf4-85d3-e5d1ea6d7297" absoluteBounds="5.625, 1.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="67f151d3-6a3c-46c9-a6eb-6cd449202ba4" LastKnownName="Seleccionar condicion" />
+      <relativeChildShapes />
+    </useCaseShape>
+  </nestedChildShapes>
+</useCaseDiagram>

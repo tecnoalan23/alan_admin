@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9dc78ece-786d-4ad5-8fa9-8a33aa6765a4" name="PFacturacion" linkedPackageId="a2cbaa96-18e4-46cb-9d63-2dc9b947dd4c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="7300f107-1983-479b-987d-2b11cdea02dd">
+      <profileInstance Id="24a89f90-5afe-43db-a972-cb8c833b46de" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c1518dcb-4f7d-46ec-87ef-9eec2a57aa9c">
+      <profileInstance Id="c7cbd361-c3c5-41c7-8003-14b282b37f8b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6a74a74b-1266-4ed4-a634-e207b672cdb5" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a8fb947e-13b7-4ad5-8d06-b1652e4c0a92" />
+        <targetEnds>
+          <association Id="de577b0b-7933-434a-b9a0-e4c62b1bcd0e" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Importar datos de otros documentos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="360ae7ae-46bc-4d3c-b219-ce8c9016a0a8" LastKnownName="Importar datos de otros documentos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6662ae25-9f90-4903-ab59-b1db052f9480" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a990407e-a714-4b02-b8d3-0669a5672693" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="96f6d6ad-eace-41c8-8744-c6488bb33a86" name="Importar datos de otros documentos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b1ed548c-ac6a-43cb-bb50-16794fd78760" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9db913f4-d381-44d2-9b0c-67cd5583129d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4a5416f3-5a58-49e4-a615-6ead9ac8f585" name="Guardar Facturas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a15ca872-8976-4499-8e2c-f21bac54c0fa" />
+        <additions>
+          <include Id="209e2015-9975-4fdd-9e15-f90f9374ecfb">
+            <useCaseMoniker Id="38ee4319-5265-4090-abba-bab5f5a4bc11" LastKnownName="Buscar Cliente por RIF o nombre" />
+            <elementDefinition Id="40e4c9d3-8988-45b7-b61d-770b14aef3c0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38ee4319-5265-4090-abba-bab5f5a4bc11" name="Buscar Cliente por RIF o nombre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e8063e66-6dab-4969-88de-7f04c8107a23" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="360ae7ae-46bc-4d3c-b219-ce8c9016a0a8" name="Importar datos de otros documentos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a724bfc6-ee9c-4877-a98f-d011ba8f357a" />
+        <extendedCases>
+          <extend Id="6476e58a-abae-4dfc-a0b6-f12301c5297c">
+            <useCaseMoniker Id="38faf5d5-f0d4-4672-b688-80501fbe67fd" LastKnownName="Importar datos de una factura" />
+            <elementDefinition Id="acd309a5-8cad-4ea2-b301-83949b0cb666" />
+          </extend>
+          <extend Id="23e11ca4-15e4-4746-834c-f7a748ee7347">
+            <useCaseMoniker Id="81551271-320d-48e9-b285-592e050ebcb6" LastKnownName="Importar datos de una nota de entrega" />
+            <elementDefinition Id="d9ee0598-5693-4a1e-824e-6300d13665fe" />
+          </extend>
+          <extend Id="8e9d1dab-c45a-467f-854d-5132a65ac057">
+            <useCaseMoniker Id="8af14b7e-d97a-4d5d-a8c7-67a389ebccf9" LastKnownName="Importar datos de un presupuestos" />
+            <elementDefinition Id="4a055a66-8e5b-4190-be9f-b08fb14f65f9" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38faf5d5-f0d4-4672-b688-80501fbe67fd" name="Importar datos de una factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18c50ca0-4ea4-4f69-99da-b51b2bd26f53" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8af14b7e-d97a-4d5d-a8c7-67a389ebccf9" name="Importar datos de un presupuestos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="60060a3c-80dd-4166-9de2-6ffeaf4828b8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="81551271-320d-48e9-b285-592e050ebcb6" name="Importar datos de una nota de entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18df7d64-9376-4cb9-b6fd-cd77caa7362f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="67f151d3-6a3c-46c9-a6eb-6cd449202ba4" name="Seleccionar condicion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ba2c8d0-ffee-47c5-bdea-3e0d105a5f0f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="a2cbaa96-18e4-46cb-9d63-2dc9b947dd4c" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

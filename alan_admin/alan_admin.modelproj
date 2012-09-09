@@ -40,6 +40,13 @@
       <SubType>Content</SubType>
       <DependentUpon>CasosDeUso\VentasYCXC\DUsuarios.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="CasosDeUso\VentasYCXC\PFacturacion.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CasosDeUso\VentasYCXC\PFacturacion.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CasosDeUso\VentasYCXC\PFacturacion.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\alan_admin.uml">
       <SubType>Content</SubType>
     </Content>

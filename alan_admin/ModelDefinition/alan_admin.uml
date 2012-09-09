@@ -1122,6 +1122,138 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a8fb947e-13b7-4ad5-8d06-b1652e4c0a92"
+        name="Usuario Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9db913f4-d381-44d2-9b0c-67cd5583129d"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Importar datos de otros documentos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a724bfc6-ee9c-4877-a98f-d011ba8f357a"
+              LastKnownName="Importar datos de otros documentos"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a990407e-a714-4b02-b8d3-0669a5672693"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b1ed548c-ac6a-43cb-bb50-16794fd78760"
+                  name="Importar datos de otros documentos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a15ca872-8976-4499-8e2c-f21bac54c0fa"
+        name="Guardar Facturas"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="40e4c9d3-8988-45b7-b61d-770b14aef3c0">
+            <useCaseMoniker
+              Id="e8063e66-6dab-4969-88de-7f04c8107a23"
+              LastKnownName="Buscar Cliente por RIF o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e8063e66-6dab-4969-88de-7f04c8107a23"
+        name="Buscar Cliente por RIF o nombre"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a724bfc6-ee9c-4877-a98f-d011ba8f357a"
+        name="Importar datos de otros documentos"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="acd309a5-8cad-4ea2-b301-83949b0cb666">
+            <useCaseMoniker
+              Id="18c50ca0-4ea4-4f69-99da-b51b2bd26f53"
+              LastKnownName="Importar datos de una factura"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="d9ee0598-5693-4a1e-824e-6300d13665fe">
+            <useCaseMoniker
+              Id="18df7d64-9376-4cb9-b6fd-cd77caa7362f"
+              LastKnownName="Importar datos de una nota de entrega"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="4a055a66-8e5b-4190-be9f-b08fb14f65f9">
+            <useCaseMoniker
+              Id="60060a3c-80dd-4166-9de2-6ffeaf4828b8"
+              LastKnownName="Importar datos de un presupuestos"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="18c50ca0-4ea4-4f69-99da-b51b2bd26f53"
+        name="Importar datos de una factura"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="60060a3c-80dd-4166-9de2-6ffeaf4828b8"
+        name="Importar datos de un presupuestos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="18df7d64-9376-4cb9-b6fd-cd77caa7362f"
+        name="Importar datos de una nota de entrega"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ba2c8d0-ffee-47c5-bdea-3e0d105a5f0f"
+        name="Seleccionar condicion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
