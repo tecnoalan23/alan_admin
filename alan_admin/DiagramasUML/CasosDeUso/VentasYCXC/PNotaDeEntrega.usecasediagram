@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="be04ae5c-05ee-4ca8-ab2f-01b82cca6914" name="PNotaDeEntrega" linkedPackageId="7215f9b2-84c0-4263-8b32-9189f14da8d3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e9537414-cbb2-4d30-b207-437a0f0f5588" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="31384076-7a13-42e3-8d38-e3aaeca9914a" />
+        <targetEnds>
+          <association Id="d740418e-efd4-421f-9728-d5415544cc36" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Importar datos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2620c95a-e458-44f9-ab73-6483339b061b" LastKnownName="Importar datos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce8cd0a0-10fc-4d7c-b128-82083998c1ca" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c046a9e0-ce48-4598-b3dc-f6e975334a5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b64ff4bd-f4d9-4563-a98b-926ba74a700f" name="Importar datos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9afc7fcc-45bb-46ee-8d2e-5ff1ef629be8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd0f9d7e-a292-4d1b-8934-8472965adfbd" />
+          </association>
+          <association Id="b619091a-193a-4f4d-b0e9-96e1f38dae80" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Nota de Entrega" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2889aa5f-bca0-40db-a797-aa891da28f73" LastKnownName="Guardar Nota de Entrega" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="edf4cf98-2aff-4f22-b804-f817776d5e3a" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="846624a6-57e0-4122-8078-7ce78f68c13c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b43c86d-3dbd-4a28-b52c-a993f4c23dc1" name="Guardar Nota de Entrega" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f52b822-c4e2-4016-a5a6-dbccdb3f552f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf267f27-bc0c-454b-819a-bcb23a63bff5" />
+          </association>
+          <association Id="acc9f7f1-0eb0-460a-81ef-80cc07b710c2" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar datos de la Nota de Entrega" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="23c67baf-123a-45db-b6c8-75f6ff60ac2b" LastKnownName="Actualizar datos de la Nota de Entrega" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b003598-5205-4463-a11b-8898017a6fa7" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="263b65e3-1e41-4deb-a15a-a371de60e3c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="654fb367-923e-4172-b319-158f2f714d30" name="Actualizar datos de la Nota de Entrega" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="117e4767-3928-4859-bf40-00803c62c977" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d2367d78-66f8-4ce5-b880-54bc694e5e22" />
+          </association>
+          <association Id="c0c24cd9-cffc-4e42-b5d6-34c263f80a0a" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Nota de Entrega" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1e7f6904-07db-4f78-bfab-62a1b4b7ad68" LastKnownName="Eliminar Nota de Entrega" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ebe021bc-e6b0-4198-b658-11a35c3f09b3" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e5f92cfe-243b-4e0c-aecf-d3d11359b73d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c2bd3fc-cba4-41e0-931a-f589361c4016" name="Eliminar Nota de Entrega" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c374454d-94ec-40bc-add0-832bcbcadac8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="37829541-aac7-4b1e-8d31-1690d06769d3" />
+          </association>
+          <association Id="427f5850-b516-4592-b422-0a0e3240da62" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Anular Nota de Entrega" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="118ebdad-0f1b-458d-9868-aa6ee54de0c5" LastKnownName="Anular/Reactivar Nota de Entrega" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e67b58f5-a808-407a-bc86-43c50a78c685" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9286ee45-1f87-40ea-84b8-e19ce0e16a8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c47bead-aae1-40b3-8400-6fb615b3e429" name="Anular Nota de Entrega" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="11ef7946-8132-46a0-90dd-4113ae1aee04" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8ff2f076-6273-4f46-bc9a-f11d613ffe9e" />
+          </association>
+          <association Id="3daf2c82-f3ad-48d6-860c-4b3ea91d10c1" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..." isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="38b1eec4-5815-4769-b8f5-a755e981c305" LastKnownName="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..." />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd49ec37-c33d-465e-9413-3f5a16d53055" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="72ee79f6-8e33-47bf-ad8e-72ea4c5b0dc2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a40cab45-9ab5-4146-bad2-23762fb566c0" name="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..." isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba2bcb5f-c3b5-4eae-ad3c-a40a0f5d4a8f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bfd7d2a0-fdce-4de5-a68e-4485be86e6e8" />
+          </association>
+          <association Id="89463ec8-2b5a-418b-86a9-f40542238d25" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Buscar Notas de Entregas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b65184f-3298-492a-a164-86d0b7b26527" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98ee8b3a-5ec9-480d-bb51-fbb0be5792ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e35e8692-5ccd-456c-8f81-5d722041b509" name="Buscar Notas de Entregas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d00af5d6-f353-4503-a5d2-73fb05be6c20" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d1a67a5-9140-49e2-a3d6-dd3596fdce7b" />
+          </association>
+          <association Id="cc7ce447-4813-4c43-aed3-d2527506273f" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Imprimir Nota de Entrega" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d65edbd3-57b6-4347-bf7f-8a1e6da250f4" LastKnownName="Imprimir Nota de Entrega" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c681bf83-d66b-447d-aa0e-4d3f2ec68aed" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d4c6a1ed-6400-4053-8acb-e969e1733e23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29c9ad3a-75a4-4b1d-a369-61fc793807f8" name="Imprimir Nota de Entrega" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7bc12853-b6e5-48df-a77d-d85c57507ed7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c38db739-e2ac-4d2a-a1b5-7f6786adbdd3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2620c95a-e458-44f9-ab73-6483339b061b" name="Importar datos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5fa45d97-8a56-4255-96ff-1c6cf71fb968" />
+        <extendedCases>
+          <extend Id="33603f61-0df2-476a-b200-d45cd73e7a70">
+            <useCaseMoniker Id="3e85b44d-74fd-4b97-961e-8f7b3d90ffef" LastKnownName="Importar datos de Presupuesto" />
+            <elementDefinition Id="bfc9d0d0-d36e-4492-a0aa-b1fc5307769d" />
+          </extend>
+          <extend Id="f8c93264-8146-4e6c-b857-e116a3fed475">
+            <useCaseMoniker Id="d22ccdf5-39c1-4ecf-87ef-affde7eea4ac" LastKnownName="Importar datos de Facturacion" />
+            <elementDefinition Id="38da771b-3527-4289-b7b2-ffd1ed77c203" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3e85b44d-74fd-4b97-961e-8f7b3d90ffef" name="Importar datos de Presupuesto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9969970-08d6-4d81-8b79-b7c6535c347f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d22ccdf5-39c1-4ecf-87ef-affde7eea4ac" name="Importar datos de Facturacion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7e31abb-e614-434d-a8c5-c434a63cc1d2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2889aa5f-bca0-40db-a797-aa891da28f73" name="Guardar Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6ea8a93-b6cb-4412-86a1-e234aa7b751d" />
+        <additions>
+          <include Id="7460183e-9f7d-485a-88e6-9c8e6db05b5e">
+            <useCaseMoniker Id="62660e8e-e1d9-4600-b1cf-5ee780cb5fbf" LastKnownName="Seleccionar Cliente buscando por nombre o RIF" />
+            <elementDefinition Id="5aedd3fc-ef3c-49a6-a359-5c840aa51481" />
+          </include>
+          <include Id="089901e3-abba-48b0-825a-6475ba60c2d8">
+            <useCaseMoniker Id="0e11824b-d23c-4dc3-8bf1-a3468fd9d662" LastKnownName="Seleccionar producto por Codigo o nombre" />
+            <elementDefinition Id="cd24bc0c-40e9-4966-b291-af9e2dd58d33" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="62660e8e-e1d9-4600-b1cf-5ee780cb5fbf" name="Seleccionar Cliente buscando por nombre o RIF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9476081e-d5fc-425a-bb52-65ce504656e3" />
+        <extendedCases>
+          <extend Id="8d92b4af-b09f-4a7d-b269-6ad58f157b7f">
+            <useCaseMoniker Id="70160103-be78-44e0-a0b7-a4937690b3e9" LastKnownName="Indicar si el cliente tiene descuento" />
+            <elementDefinition Id="ac76a6f8-8c67-4f87-a11b-9c1a1e09a0c9" />
+          </extend>
+          <extend Id="dccf0e79-37ce-417e-a455-af5d1ee6430f">
+            <useCaseMoniker Id="e3676c43-55dd-485b-854d-191cb87f5b4c" LastKnownName="Indicar la Condicion de pago del cliente pero que se pueda editar" />
+            <elementDefinition Id="9c9e38ab-2e4f-4d21-ad21-b75c4c7df93d" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="46599999-a86b-4a29-88d8-6584f47daffd">
+            <useCaseMoniker Id="d8d27c5b-153b-44b2-a785-c2997af1544c" LastKnownName="Indicar el tipo de precio relacionado con el cliente" />
+            <elementDefinition Id="04f2696a-901c-488d-a569-a38f8a1e7b92" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="70160103-be78-44e0-a0b7-a4937690b3e9" name="Indicar si el cliente tiene descuento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9475c405-853c-4916-8e1b-b6623b279585" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e3676c43-55dd-485b-854d-191cb87f5b4c" name="Indicar la Condicion de pago del cliente pero que se pueda editar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71c5f804-bbee-4b58-b07c-a74f212095ae" />
+        <additions>
+          <include Id="afeb4640-d6ac-4943-a4ea-50dee9f63129">
+            <useCaseMoniker Id="747f3685-6d33-4018-9cf3-6e0133ca5d3e" LastKnownName="Si la condicion de pago es credito, indicar la fecha de vencimiento." />
+            <elementDefinition Id="f9ee8d79-d026-40df-b021-2480ff7ddbe3" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d8d27c5b-153b-44b2-a785-c2997af1544c" name="Indicar el tipo de precio relacionado con el cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1fbeaece-7367-47a2-889e-d7efd5885aee" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="747f3685-6d33-4018-9cf3-6e0133ca5d3e" name="Si la condicion de pago es credito, indicar la fecha de vencimiento." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a41a2c3c-53f0-4e81-bb3d-f1c38d5c7643" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0e11824b-d23c-4dc3-8bf1-a3468fd9d662" name="Seleccionar producto por Codigo o nombre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb09f29d-e0a9-4119-a3ab-b693cab3d0ba" />
+        <extendedCases>
+          <extend Id="aa088f29-5fc7-4446-9fc9-03a5ee62e944">
+            <useCaseMoniker Id="29bc72b7-ffeb-4285-a161-b0653cc11c82" LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" />
+            <elementDefinition Id="f5ee75c7-db14-4d5d-9df0-db7e8c6e2395" />
+          </extend>
+          <extend Id="2b17286f-0da3-43d2-a06f-afc5ad3a9e6f">
+            <useCaseMoniker Id="b7f992ce-dc4e-4dd6-bb5d-434d8f7c2fca" LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" />
+            <elementDefinition Id="02a3e95e-72bc-4a68-b9f7-118bdde3fd17" />
+          </extend>
+          <extend Id="3386392f-0c5e-433b-b7b3-415e9264575b">
+            <useCaseMoniker Id="9e493ca9-ddd7-454b-b215-0e15f924ad24" LastKnownName="Indicar descuentos" />
+            <elementDefinition Id="48757ee8-616c-4bf2-989e-5c2492de5cc4" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="29bc72b7-ffeb-4285-a161-b0653cc11c82" name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e939039d-9530-4665-95a9-f16a0ec20d37" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b7f992ce-dc4e-4dd6-bb5d-434d8f7c2fca" name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3de0893-518f-4c2c-a8b7-51367b581fbc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9e493ca9-ddd7-454b-b215-0e15f924ad24" name="Indicar descuentos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb3c9b0f-f31d-42a5-a69d-7a4fb04b3211" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="23c67baf-123a-45db-b6c8-75f6ff60ac2b" name="Actualizar datos de la Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06e3c1a1-273d-4b95-b2d1-14dfe118aae8" />
+        <additions>
+          <include Id="1d4a8ef0-22cf-4598-acbe-2f02ad3c5692">
+            <useCaseMoniker Id="ea6b75b3-5170-4bfe-976e-4b8a1d3b833c" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="56b8e2cb-e1f6-4cdc-8bb3-1e2590392563" />
+          </include>
+          <include Id="03af9f35-4ecb-4ae4-99e2-2c806e3466e1">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <elementDefinition Id="028de621-9bae-4679-8746-5607c0d18e79" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea6b75b3-5170-4bfe-976e-4b8a1d3b833c" name="Si ya esta procesada No se puede Modificar, Anular o Eliminar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6e727013-281e-4c4c-96cc-a04313eaa0bc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1e7f6904-07db-4f78-bfab-62a1b4b7ad68" name="Eliminar Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="789e1209-4b13-4614-ac7b-718a19422cfc" />
+        <additions>
+          <include Id="1f222381-034c-4b95-8dd4-464b05dea475">
+            <useCaseMoniker Id="ea6b75b3-5170-4bfe-976e-4b8a1d3b833c" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="eda3a809-c597-4f69-8eb2-2ad3bbce724d" />
+          </include>
+          <include Id="0183eb47-10ae-4ab3-87a5-51ef4c915542">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <elementDefinition Id="b3400389-5c31-4f37-b678-9b4bddbd190a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="118ebdad-0f1b-458d-9868-aa6ee54de0c5" name="Anular/Reactivar Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06f7324e-4f14-41cb-99e6-9559b38a3b55" />
+        <additions>
+          <include Id="e419d089-cc06-4680-b6d8-0b90d98f0ead">
+            <useCaseMoniker Id="ea6b75b3-5170-4bfe-976e-4b8a1d3b833c" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="6ae6014e-06a4-4928-8a5b-1fe386fd6411" />
+          </include>
+          <include Id="eca16737-fb48-4f70-af4a-2f61fe502fc9">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <elementDefinition Id="ff0c2909-5d1a-4c3b-a7f7-94d4f1ddcb2b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e25da40d-48e2-4350-8b97-bee7225eed0b" name="Buscar Notas de Entregas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70" />
+        <extendedCases>
+          <extend Id="1b80be9c-73ee-4ca7-ae84-16f05dd84bea">
+            <useCaseMoniker Id="652be3a7-32e6-4b66-82bd-20aadba07f45" LastKnownName="Buscar por número de Nota de Entrega o Control" />
+            <elementDefinition Id="b654a4af-fcf7-4c2b-8473-7b90146e4fa7" />
+          </extend>
+          <extend Id="734992a2-54ed-4402-a270-54b70527bbc8">
+            <useCaseMoniker Id="c9d5225b-714a-429d-914e-afccf6d554e6" LastKnownName="Filtrar por cliente" />
+            <elementDefinition Id="8e9a8a09-f807-4f3f-97a0-63474c1c772b" />
+          </extend>
+          <extend Id="60eff460-a881-4de6-b7ad-3e0036b5ca29">
+            <useCaseMoniker Id="8b692aa0-1905-4898-89ce-c1bc7a04a148" LastKnownName="Filtrar por producto" />
+            <elementDefinition Id="4069d902-6816-4b4c-bd98-f09dbf8e21a4" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="652be3a7-32e6-4b66-82bd-20aadba07f45" name="Buscar por número de Nota de Entrega o Control" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1c798505-e436-49c3-8f42-d1eabda4e491" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9d5225b-714a-429d-914e-afccf6d554e6" name="Filtrar por cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e08cb435-bd3c-4039-acb6-3569894e2f21" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8b692aa0-1905-4898-89ce-c1bc7a04a148" name="Filtrar por producto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a061b730-a17c-4fca-84d8-b4837733c719" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38b1eec4-5815-4769-b8f5-a755e981c305" name="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da231359-95a6-4fe2-8728-2e8c4dd141e8" />
+        <additions>
+          <include Id="6ff48100-f9b7-4c9e-ae7c-186f632174de">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <elementDefinition Id="cc5229a9-6c2a-42fc-9d3f-ac0ebce46c0e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d65edbd3-57b6-4347-bf7f-8a1e6da250f4" name="Imprimir Nota de Entrega" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5f37a8b5-57c7-40b8-b5c1-0afbb274c702" />
+        <additions>
+          <include Id="26430c91-11ec-4b91-8c58-1b321971a56d">
+            <useCaseMoniker Id="e25da40d-48e2-4350-8b97-bee7225eed0b" LastKnownName="Buscar Notas de Entregas" />
+            <elementDefinition Id="52a29d37-a8df-4467-abb6-c22a5c43d295" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="7215f9b2-84c0-4263-8b32-9189f14da8d3" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4e1867f5-4fa3-466c-a633-caedf08693c9">
+        <profileInstance Id="e13ca06c-27e0-4d29-8969-9a52d86c666a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d5e18df5-4e75-4cba-b8bb-de052136108e">
+        <profileInstance Id="e8dcd591-cbca-429e-a670-d846da4b671c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

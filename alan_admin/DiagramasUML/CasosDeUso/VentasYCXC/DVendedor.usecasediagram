@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7b982e95-45a9-48a9-9ab4-0e4d39d276f2" name="DVendedor" linkedPackageId="1f289690-686f-4fc1-a22b-63aea8aadcdc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="f130ab38-e2e9-488c-828f-74d0deebd43a">
+      <profileInstance Id="47aae31b-67de-4735-a9f9-e1d718f40f9e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a6d9468c-c51c-4c1e-a456-2df67736e903">
+      <profileInstance Id="d378c613-4bbe-4552-9a97-5e763e87ed09" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8668ff55-36f8-41d5-96f2-7df84f8be12b" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="87d2dc4f-eb77-436d-a30b-8322751df4eb" />
+        <targetEnds>
+          <association Id="68a2458a-bea8-4000-ad25-9df1adaeb2f9" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Vendedor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6a440d8c-f7c6-4b06-ad68-85df7c2611d7" LastKnownName="Guardar Vendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c193d9bf-e931-4f9c-a74f-cd25d559135b" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5f7b0a3-4da1-4ff9-9655-9e6f34abe959" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4008f998-8081-45d9-a6b3-b6e9a45fc543" name="Guardar Vendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f980e682-aeb6-4863-b760-b10168d77898" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8644a43a-a51d-4b39-a32d-fdfcde5519b7" />
+          </association>
+          <association Id="5fc55b0e-861c-4e11-b036-1788a2b1837b" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Vendedor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6da9995d-0644-4fdb-8eab-9d5ef9b83878" LastKnownName="Eliminar Vendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f818f19-c67f-4efe-b80d-385352a45713" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36b88300-fa69-4f30-b808-e2e67ea2baa1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="feb6bc11-9c10-4978-af76-6e4f40920c21" name="Eliminar Vendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="347299cf-e20a-48e2-88df-d93b95168ac3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b746355e-d76a-461b-a71a-8200adb5656f" />
+          </association>
+          <association Id="40c4197c-bb38-456e-93a8-9ea66ce7313d" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Inactivar/Reactivar Vendedor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="23945c0e-51a6-4231-9c62-953210800969" LastKnownName="Inactivar/Reactivar Vendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ae9f96b-74df-4bca-83f3-6362a5300a85" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f13e013a-5eba-46e8-9b8f-9991dd72287b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e796558-2cff-45ed-a74f-750f3ca6ca4b" name="Inactivar/Reactivar Vendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02713fa9-f6e2-4cca-86ec-5a1100a7c66a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="936d0eca-16e9-40ea-9b0c-8a0ddd0f297d" />
+          </association>
+          <association Id="744c6ff7-caee-4055-a3f2-35ff66e56380" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Buscar Vendedor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="96923831-3cc4-4310-9c1b-259fa7c800fb" LastKnownName="Buscar Vendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e636a34-1eb3-435f-9f55-60ea968e952c" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b11cb37c-3ab4-4b9d-bdb3-58cf6eed47c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="19a934fb-0b6a-4622-a62c-0a0b03ea9bb3" name="Buscar Vendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d89b4495-5f21-457c-8790-78925e39e4da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2bc6d0e7-a09a-4e52-8bc9-e38d31faa81f" />
+          </association>
+          <association Id="4f581f21-174a-4633-91d4-b37a2c0c18ac" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar Vendedor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2897c382-119b-4620-abe5-12a4183a7baf" LastKnownName="Actualizar Vendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d603c74e-f25f-46a6-bcc2-38eb7b050755" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="33401c35-f60e-4bbb-942f-408ac438f609" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2279d52f-3e1f-480a-8a55-cfbe2eacb4ce" name="Actualizar Vendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="baef3930-baf4-48f9-aa74-d8ce0774df60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89bfdfab-6621-444d-af83-3fba26427229" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6a440d8c-f7c6-4b06-ad68-85df7c2611d7" name="Guardar Vendedor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d19a9e3f-cb65-4a9d-ae07-8e3bca25652d" />
+        <additions>
+          <include Id="2890d60d-193b-49d6-832d-b02d2c0ff923">
+            <useCaseMoniker Id="8d91877e-6c7e-4f5d-8158-f67f733cf4d6" LastKnownName="Verificar que la cedula no exista" />
+            <elementDefinition Id="772def7e-13f6-49d1-a665-3fa10ce1b01e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="96923831-3cc4-4310-9c1b-259fa7c800fb" name="Buscar Vendedor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="04c8c142-4a20-405d-ba18-17fa56d5194e" />
+        <additions>
+          <include Id="f7d31b9c-4910-4ec3-9ed1-57cca08b2899">
+            <useCaseMoniker Id="57fb15fb-e991-445a-8c7f-00c7a1d9a115" LastKnownName="Filtrar por cedula o nombre" />
+            <elementDefinition Id="4e4c265c-7f94-4d7f-a535-dc702d382e46" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6da9995d-0644-4fdb-8eab-9d5ef9b83878" name="Eliminar Vendedor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a46c93b-45eb-445b-a479-0724db500d5b" />
+        <additions>
+          <include Id="cd489dfb-c630-4c67-8b19-e1ea9d9919aa">
+            <useCaseMoniker Id="57fb15fb-e991-445a-8c7f-00c7a1d9a115" LastKnownName="Filtrar por cedula o nombre" />
+            <elementDefinition Id="2bb23aa7-e3c3-4f82-94ce-b2506a854c66" />
+          </include>
+          <include Id="17437231-4983-4fd5-a705-1f6974febbb5">
+            <useCaseMoniker Id="4381d121-6da8-4a23-a2a0-4b3a3dd909a4" LastKnownName="Verificar que no esté asociado a ningun proceso" />
+            <elementDefinition Id="17a94754-1b34-46a7-be50-a6273bb707dd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="23945c0e-51a6-4231-9c62-953210800969" name="Inactivar/Reactivar Vendedor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac36d1ee-566d-4c43-84fe-4e285ef618cc" />
+        <additions>
+          <include Id="fdd55f18-e00d-4ec4-9476-d76ec8f2c6e4">
+            <useCaseMoniker Id="57fb15fb-e991-445a-8c7f-00c7a1d9a115" LastKnownName="Filtrar por cedula o nombre" />
+            <elementDefinition Id="9f553ef2-5a05-455c-b9af-f50af4801e33" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2897c382-119b-4620-abe5-12a4183a7baf" name="Actualizar Vendedor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6133bec1-59fc-4ddd-9bc8-5bdd207f4299" />
+        <additions>
+          <include Id="798cdc3a-e404-43e2-948d-a4c3e3c3975a">
+            <useCaseMoniker Id="57fb15fb-e991-445a-8c7f-00c7a1d9a115" LastKnownName="Filtrar por cedula o nombre" />
+            <elementDefinition Id="7d93208a-2954-4ed1-8bf7-f386ebadba41" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8d91877e-6c7e-4f5d-8158-f67f733cf4d6" name="Verificar que la cedula no exista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b25de033-e8b5-43db-a62b-696ef0f29c05" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="57fb15fb-e991-445a-8c7f-00c7a1d9a115" name="Filtrar por cedula o nombre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe1dd4ec-2028-4959-b29e-2181a8fde178" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4381d121-6da8-4a23-a2a0-4b3a3dd909a4" name="Verificar que no esté asociado a ningun proceso" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac176367-ad9f-427a-9e4e-b61d2f8476a4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="1f289690-686f-4fc1-a22b-63aea8aadcdc" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

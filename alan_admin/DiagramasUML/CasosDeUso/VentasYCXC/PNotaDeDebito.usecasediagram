@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="cbc8bef7-7352-4a4b-80c5-ede3bde22ad0" name="PNotaDeDebito" linkedPackageId="95a62a66-4c9e-4e90-af2f-bfb8ee3eb021" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="390bb861-04ba-4aea-907f-a399d3d1c795">
+      <profileInstance Id="b5f2c37f-2916-47df-b32d-15f02d81f031" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f95d6c09-15ae-499c-9762-edf7b99aa160">
+      <profileInstance Id="e9783376-9d7b-4be5-a080-b89c6e853b5d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="50ba4173-0806-47a4-b228-6c20cf64fd0a" name="Usuario Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7adc8450-f6d8-4978-976e-b7531819e52d" />
+        <targetEnds>
+          <association Id="3253b849-a51f-4b50-8a56-4b841b920409" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Guardar Nota de Entrega1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="64107be1-6e9e-4cf2-aca5-922603ae43b2" LastKnownName="Guardar Nota de Débito" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1e5e907-2dbd-47dc-b138-8723a1e3eb66" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4315196a-e169-4a0b-bb1e-b31b93ce982a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25d8766d-a1d9-48ab-8e1d-46cba1c001ee" name="Guardar Nota de Entrega1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f51d069-fb59-4796-8941-dac9bcf291e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="69cd571c-141f-4b41-be10-fabe95f3c7b9" />
+          </association>
+          <association Id="0886be6b-a44a-41a1-a8e7-428e9e227160" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Actualizar datos de la Nota de Débito" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3d3eccd9-16b7-40bd-bd32-864477c05687" LastKnownName="Actualizar datos de la Nota de Débito" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f50376ce-4a5e-4621-99c3-cab79985d020" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d6f12f27-a479-4bd3-909f-a50439faf166" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41527319-645b-4f25-b16c-b3b53fe6e62d" name="Actualizar datos de la Nota de Débito" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bcd2a8b9-d4b0-4515-8fba-70f594f34dd5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5316e723-9121-4b81-8309-084c6a1affbc" />
+          </association>
+          <association Id="318a8b03-c452-44a2-99ac-3119563d6e3f" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Eliminar Nota de Débito" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92fcfcb2-d38b-4826-849f-4c48121397d7" LastKnownName="Eliminar Nota de Débito" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c6f027c-e2c8-4777-9b22-b3b419933ba3" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f95aa4b3-e021-45b0-8268-a012be811bec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="58f76b00-c888-4c7d-bd49-30520ec7e936" name="Eliminar Nota de Débito" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd2043ae-d1a3-4750-85ec-5ae2790d584a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87b5830a-6f8c-428e-a8d7-43f7bfa289b3" />
+          </association>
+          <association Id="b53e806d-fc8a-4ba4-90f0-549d3e02d5d5" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Anular/Reactivar Nota de Débito" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d4856721-25a8-459c-bd6f-3cb05c2ed698" LastKnownName="Anular/Reactivar Nota de Débito" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8a73a05-3340-47c7-a5e5-d1417873a3df" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="46c45c5d-d2cd-4432-918a-a5dd2ac344d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bbcb4a15-4c81-4d05-a397-ae4ab13c5067" name="Anular/Reactivar Nota de Débito" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bae49a0d-1c97-46fd-ab70-5d4c81123496" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6db87ef-3ad5-453e-9eac-7564fb1e0c9c" />
+          </association>
+          <association Id="08e3c62e-57fa-48b6-b882-4db5b3996a9c" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..." isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4f9b0a2e-ab0d-490d-a900-78aba8587abf" LastKnownName="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..." />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2dfe3fdd-2ede-4c8e-a513-146c6149ceab" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="51a74726-12a7-4618-a0cc-5929f0fb8eba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52705cc4-eb3b-4e41-a24f-188310677204" name="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..." isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7720d415-8b97-46a7-95b3-cb51d3e2422b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bbf7abd3-378e-4680-85d2-3b1b422e4470" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="64107be1-6e9e-4cf2-aca5-922603ae43b2" name="Guardar Nota de Débito" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da62f1ac-9030-4abe-944f-5b179a611209" />
+        <additions>
+          <include Id="f162f6d4-d4f4-4436-9d76-1754f89a2514">
+            <useCaseMoniker Id="7b337059-d489-4cbc-af37-6b2c4127e51f" LastKnownName="Seleccionar Cliente buscando por nombre o RIF" />
+            <elementDefinition Id="5001373d-c435-454e-b9e6-67c7c1b1cae4" />
+          </include>
+          <include Id="f5ba297f-3b92-4e64-93ab-21c5a98ea648">
+            <useCaseMoniker Id="d7d0355b-d23a-4f62-9a5e-2eea0346489d" LastKnownName="Seleccionar producto por Codigo o nombre" />
+            <elementDefinition Id="53a9c137-eba4-4562-b2d1-723942a17fc2" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7b337059-d489-4cbc-af37-6b2c4127e51f" name="Seleccionar Cliente buscando por nombre o RIF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2df25dfc-c837-41d4-8d15-dbbb22f7f6f0" />
+        <extendedCases>
+          <extend Id="00a84d39-646e-42df-b596-2eebbb5f527d">
+            <useCaseMoniker Id="9139de18-3968-4ddb-821d-5f0d1cd2873b" LastKnownName="Indicar si el cliente tiene descuento" />
+            <elementDefinition Id="9ff9a244-f973-4d56-9071-f8e89450f535" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="4c7ed99c-30d3-449e-8208-0b9ab40aa1a4">
+            <useCaseMoniker Id="36333000-fcaf-4956-8e6a-58d31687cdf4" LastKnownName="Indicar el tipo de precio relacionado con el cliente" />
+            <elementDefinition Id="48b33f51-17c7-49cf-9f04-3d7f8d2ec4e0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9139de18-3968-4ddb-821d-5f0d1cd2873b" name="Indicar si el cliente tiene descuento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6ff69d9-4fe8-4bc9-b3d3-0255f3cd1561" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36333000-fcaf-4956-8e6a-58d31687cdf4" name="Indicar el tipo de precio relacionado con el cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b380885c-c357-4acb-b5e6-d31ea89c4efa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d7d0355b-d23a-4f62-9a5e-2eea0346489d" name="Seleccionar producto por Codigo o nombre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ddab0076-ebfc-42ec-8994-0b8c32497444" />
+        <extendedCases>
+          <extend Id="287cb078-202e-4a5e-92c8-bde48856c42e">
+            <useCaseMoniker Id="34092028-5f4e-4563-9096-9a6c6c633691" LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" />
+            <elementDefinition Id="d56dddfc-c8ee-4bf7-9f33-6cb3d7fe34e2" />
+          </extend>
+          <extend Id="14560a3b-02cb-492d-b0b6-39ab6a125218">
+            <useCaseMoniker Id="c01426f1-2c01-4b1a-90e0-0c7fa58c4faf" LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" />
+            <elementDefinition Id="065055e9-07c2-41df-813c-9b19bfc43f04" />
+          </extend>
+          <extend Id="e2aaa0ab-ff20-42c8-ba00-407e1ecc4825">
+            <useCaseMoniker Id="c5f8b3c3-f5e4-42fe-9e91-ffb553f54d96" LastKnownName="Indicar descuentos" />
+            <elementDefinition Id="baeeb594-c1f2-41b5-9cdd-f49de354df73" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="34092028-5f4e-4563-9096-9a6c6c633691" name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8630e30a-2a7c-4cea-8a45-78a9dd775f37" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c01426f1-2c01-4b1a-90e0-0c7fa58c4faf" name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8d92819c-74c4-408d-a63b-72135c322cc3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c5f8b3c3-f5e4-42fe-9e91-ffb553f54d96" name="Indicar descuentos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da4f691f-6d88-4e36-84df-0d0b2962830f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3d3eccd9-16b7-40bd-bd32-864477c05687" name="Actualizar datos de la Nota de Débito" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="51614c28-aa28-40bf-a1b9-2263c7ab6446" />
+        <additions>
+          <include Id="9c27a787-6ec4-4928-b103-bfa11a4cfb99">
+            <useCaseMoniker Id="50162e61-1ed5-41d3-a695-006d5a0b96b8" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="608effc8-2c58-496c-93b2-a66278b5eac3" />
+          </include>
+          <include Id="f68d645c-034f-44a2-9f2a-e2289d3cce66">
+            <useCaseMoniker Id="fbe24d24-a5fb-46a0-a36f-9dc9b226c189" LastKnownName="Buscar Notas de Débito" />
+            <elementDefinition Id="41260560-0b2d-4f01-80d5-5c98a06adeb4" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fbe24d24-a5fb-46a0-a36f-9dc9b226c189" name="Buscar Notas de Débito" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4ef2172-5440-4292-80ef-b2693b283f5b" />
+        <extendedCases>
+          <extend Id="e4e2c797-0ec1-4da2-81b3-0bfe0ef82afd">
+            <useCaseMoniker Id="e745b06d-788d-47b9-b9ad-b873d14144d9" LastKnownName="Buscar por número de Nota de Débito o Control" />
+            <elementDefinition Id="9d833c42-e7ee-407e-82ef-2ff1fbb76efb" />
+          </extend>
+          <extend Id="600eb814-02e4-4455-af3d-43170d622335">
+            <useCaseMoniker Id="9d3dd007-31bf-4d60-9943-93f0d3d460db" LastKnownName="Filtrar por cliente" />
+            <elementDefinition Id="33f36e8d-5228-4887-b6d3-7ede76b46166" />
+          </extend>
+          <extend Id="0d1a000b-7825-44ee-be5e-ca2526098e27">
+            <useCaseMoniker Id="7137196c-13c9-4d50-902a-8b234c538300" LastKnownName="Filtrar por producto" />
+            <elementDefinition Id="b9b0876c-ee05-4420-b176-65c3b5fbfdcc" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="92fcfcb2-d38b-4826-849f-4c48121397d7" name="Eliminar Nota de Débito" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4023a74c-2c24-4e6c-aab5-8faf477ea24a" />
+        <additions>
+          <include Id="592b535b-0895-4fa7-8d97-0e065db797f5">
+            <useCaseMoniker Id="50162e61-1ed5-41d3-a695-006d5a0b96b8" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="9a9082ed-9017-4839-9901-cbd2ad81811f" />
+          </include>
+          <include Id="7978d158-9144-4768-8862-8f063f0a6014">
+            <useCaseMoniker Id="fbe24d24-a5fb-46a0-a36f-9dc9b226c189" LastKnownName="Buscar Notas de Débito" />
+            <elementDefinition Id="cd354090-1d41-4e08-bed9-f15d585e8bef" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="50162e61-1ed5-41d3-a695-006d5a0b96b8" name="Si ya esta procesada No se puede Modificar, Anular o Eliminar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9dbc7fba-dedc-4779-a58b-820c85df7dcf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e745b06d-788d-47b9-b9ad-b873d14144d9" name="Buscar por número de Nota de Débito o Control" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="266e6e81-7e7d-4ff3-b70f-12778bf4f19f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d3dd007-31bf-4d60-9943-93f0d3d460db" name="Filtrar por cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="157151e5-a715-4dea-9e2c-33986f92a6b4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7137196c-13c9-4d50-902a-8b234c538300" name="Filtrar por producto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="39a507a6-418d-4b70-b564-a7b214eab1a5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d4856721-25a8-459c-bd6f-3cb05c2ed698" name="Anular/Reactivar Nota de Débito" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b910b43-5927-49f5-997a-5f3e694ca698" />
+        <additions>
+          <include Id="8f8c45b0-8715-4614-9129-c7f1a42af3c6">
+            <useCaseMoniker Id="50162e61-1ed5-41d3-a695-006d5a0b96b8" LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar" />
+            <elementDefinition Id="d0e04e83-4422-4b3b-a6f0-2f78e6b23a3e" />
+          </include>
+          <include Id="aa516b64-5381-41ce-8d8b-d91cbd864d1b">
+            <useCaseMoniker Id="fbe24d24-a5fb-46a0-a36f-9dc9b226c189" LastKnownName="Buscar Notas de Débito" />
+            <elementDefinition Id="6765e73b-5358-4799-9212-fabec30f5b00" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4f9b0a2e-ab0d-490d-a900-78aba8587abf" name="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..." isAbstract="false" isLeaf="false">
+        <elementDefinition Id="35bf37ab-4aac-47fd-a4ca-f4e2d1b9b874" />
+        <additions>
+          <include Id="7b91d433-d519-40d7-a66b-9fa216a6a342">
+            <useCaseMoniker Id="fbe24d24-a5fb-46a0-a36f-9dc9b226c189" LastKnownName="Buscar Notas de Débito" />
+            <elementDefinition Id="009f67b9-cebf-47b1-8f3d-102b9121d4a4" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="95a62a66-4c9e-4e90-af2f-bfb8ee3eb021" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

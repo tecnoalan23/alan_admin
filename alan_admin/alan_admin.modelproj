@@ -17,39 +17,70 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
-    <Folder Include="CasosDeUso\VentasYCXC" />
+    <Folder Include="DiagramasUML\Calses\" />
+    <Folder Include="DiagramasUML\Calses\VentasYCXC" />
+    <Folder Include="DiagramasUML\CasosDeUso\" />
+    <Folder Include="DiagramasUML\CasosDeUso\VentasYCXC\" />
     <Folder Include="ModelDefinition\" />
-    <Content Include="CasosDeUso\VentasYCXC\DProductos.usecasediagram">
+    <Content Include="DiagramasUML\Calses\VentasYCXC\VentasYCXC.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="CasosDeUso\VentasYCXC\DProductos.usecasediagram.layout">
+    <Content Include="DiagramasUML\Calses\VentasYCXC\VentasYCXC.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>CasosDeUso\VentasYCXC\DProductos.usecasediagram</DependentUpon>
+      <DependentUpon>DiagramasUML\Calses\VentasYCXC\VentasYCXC.classdiagram</DependentUpon>
     </Content>
-    <Content Include="CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="CasosDeUso\VentasYCXC\DUsuarios.usecasediagram">
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DProductos.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="CasosDeUso\VentasYCXC\DUsuarios.usecasediagram.layout">
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DProductos.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>CasosDeUso\VentasYCXC\DUsuarios.usecasediagram</DependentUpon>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DProductos.usecasediagram</DependentUpon>
     </Content>
-    <Content Include="CasosDeUso\VentasYCXC\PFacturacion.usecasediagram">
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="CasosDeUso\VentasYCXC\PFacturacion.usecasediagram.layout">
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>CasosDeUso\VentasYCXC\PFacturacion.usecasediagram</DependentUpon>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DTiposUnidades.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DUsuarios.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DUsuarios.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DUsuarios.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DVendedor.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DVendedor.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DVendedor.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PFacturacion.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PFacturacion.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PFacturacion.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeDebito.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeDebito.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeDebito.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeEntrega.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeEntrega.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeEntrega.usecasediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\alan_admin.uml">
       <SubType>Content</SubType>
     </Content>
-    <Folder Include="CasosDeUso" />
+    <Folder Include="DiagramasUML" />
   </ItemGroup>
 </Project>

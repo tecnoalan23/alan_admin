@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="dc776d9d-203a-4c97-8961-7fbe79ca3710"
   name="alan_admin" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1062,7 +1062,17 @@
         Id="2adee7de-a611-4c78-a72c-7049e91acf57"
         name="Imprimir lista de productos"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="57856f16-d7fd-4dad-9502-6e873f01cb85">
+            <useCaseMoniker
+              Id="abd7a714-f0f0-44ef-a42b-aa875e54da4c"
+              LastKnownName="Ir a pantalla de Reportes"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1333,7 +1343,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd"
-              LastKnownName="Anular Factura"
+              LastKnownName="Anular/Reactivar Factura"
               LastKnownLocation="alan_admin.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1392,6 +1402,84 @@
                 <memberEnd
                   Id="487a28c6-e498-446d-b980-d1c3a2586c68"
                   name="Eliminar Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="715ea3e4-a444-4184-be00-961733f4a7a8"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Buscar Factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96bc3f9e-c5cd-4a1c-b646-7a6755dbea91"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf6064b1-bee5-433f-9d72-9bd83a961d23"
+                  name="Buscar Factura"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="683706cd-7bd3-4cea-96a1-fed15440296e"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Mostrar el saldo actual de la factura"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="72a26683-d725-46f8-ab09-b2570346dc31"
+              LastKnownName="Mostrar el saldo actual de la factura"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72896814-ef07-4d10-a0b6-86f9a42fb04c"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0bc792a-158a-4b96-9260-d5ff7c5041e3"
+                  name="Mostrar el saldo actual de la factura"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1724,7 +1812,7 @@
     <packageHasNamedElement>
       <useCase
         Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd"
-        name="Anular Factura"
+        name="Anular/Reactivar Factura"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -1796,6 +1884,3094 @@
         name="Buscar por "
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="31384076-7a13-42e3-8d38-e3aaeca9914a"
+        name="Usuario Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="dd0f9d7e-a292-4d1b-8934-8472965adfbd"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Importar datos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5fa45d97-8a56-4255-96ff-1c6cf71fb968"
+              LastKnownName="Importar datos"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c046a9e0-ce48-4598-b3dc-f6e975334a5d"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9afc7fcc-45bb-46ee-8d2e-5ff1ef629be8"
+                  name="Importar datos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bf267f27-bc0c-454b-819a-bcb23a63bff5"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Guardar Nota de Entrega"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a6ea8a93-b6cb-4412-86a1-e234aa7b751d"
+              LastKnownName="Guardar Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="846624a6-57e0-4122-8078-7ce78f68c13c"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f52b822-c4e2-4016-a5a6-dbccdb3f552f"
+                  name="Guardar Nota de Entrega"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d2367d78-66f8-4ce5-b880-54bc694e5e22"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Actualizar datos de la Nota de Entrega"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="06e3c1a1-273d-4b95-b2d1-14dfe118aae8"
+              LastKnownName="Actualizar datos de la Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="263b65e3-1e41-4deb-a15a-a371de60e3c5"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="117e4767-3928-4859-bf40-00803c62c977"
+                  name="Actualizar datos de la Nota de Entrega"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="37829541-aac7-4b1e-8d31-1690d06769d3"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Eliminar Nota de Entrega"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="789e1209-4b13-4614-ac7b-718a19422cfc"
+              LastKnownName="Eliminar Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e5f92cfe-243b-4e0c-aecf-d3d11359b73d"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c374454d-94ec-40bc-add0-832bcbcadac8"
+                  name="Eliminar Nota de Entrega"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8ff2f076-6273-4f46-bc9a-f11d613ffe9e"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Anular Nota de Entrega"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="06f7324e-4f14-41cb-99e6-9559b38a3b55"
+              LastKnownName="Anular/Reactivar Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9286ee45-1f87-40ea-84b8-e19ce0e16a8a"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="11ef7946-8132-46a0-90dd-4113ae1aee04"
+                  name="Anular Nota de Entrega"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bfd7d2a0-fdce-4de5-a68e-4485be86e6e8"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..."
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="da231359-95a6-4fe2-8728-2e8c4dd141e8"
+              LastKnownName="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..."
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72ee79f6-8e33-47bf-ad8e-72ea4c5b0dc2"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba2bcb5f-c3b5-4eae-ad3c-a40a0f5d4a8f"
+                  name="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..."
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d1a67a5-9140-49e2-a3d6-dd3596fdce7b"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Buscar Notas de Entregas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98ee8b3a-5ec9-480d-bb51-fbb0be5792ba"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d00af5d6-f353-4503-a5d2-73fb05be6c20"
+                  name="Buscar Notas de Entregas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c38db739-e2ac-4d2a-a1b5-7f6786adbdd3"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Imprimir Nota de Entrega"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5f37a8b5-57c7-40b8-b5c1-0afbb274c702"
+              LastKnownName="Imprimir Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4c6a1ed-6400-4053-8acb-e969e1733e23"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bc12853-b6e5-48df-a77d-d85c57507ed7"
+                  name="Imprimir Nota de Entrega"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5802d5f0-3359-44b1-8855-1a8115bd51db"
+        name="Indicacion en el status que se encuentra la factura: Anulada, Pagada, Por Pagar...1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5fa45d97-8a56-4255-96ff-1c6cf71fb968"
+        name="Importar datos"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="bfc9d0d0-d36e-4492-a0aa-b1fc5307769d">
+            <useCaseMoniker
+              Id="b9969970-08d6-4d81-8b79-b7c6535c347f"
+              LastKnownName="Importar datos de Presupuesto"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="38da771b-3527-4289-b7b2-ffd1ed77c203">
+            <useCaseMoniker
+              Id="b7e31abb-e614-434d-a8c5-c434a63cc1d2"
+              LastKnownName="Importar datos de Facturacion"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="f09ccf43-bd3c-40ac-8845-63f61b1dd553">
+            <useCaseMoniker
+              Id="f95afe69-c0a9-4ef8-a1ec-12dd9d395b6e"
+              LastKnownName="Importar datos de Facturacion1"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9969970-08d6-4d81-8b79-b7c6535c347f"
+        name="Importar datos de Presupuesto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b7e31abb-e614-434d-a8c5-c434a63cc1d2"
+        name="Importar datos de Facturacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f95afe69-c0a9-4ef8-a1ec-12dd9d395b6e"
+        name="Importar datos de Facturacion1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6af0c199-2335-4488-8e44-48ecc05390f2"
+        name="Indicacion del status en que se encuentra la nota de entrega: Anulada, Procesada, sin procesar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9aa6d9c2-d809-46ce-bcd2-ae70073d640d">
+            <useCaseMoniker
+              Id="74ded8f8-d53d-4bfa-b866-5b11322affd7"
+              LastKnownName="Buscar Nota de Entrega"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="74ded8f8-d53d-4bfa-b866-5b11322affd7"
+        name="Buscar Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6ea8a93-b6cb-4412-86a1-e234aa7b751d"
+        name="Guardar Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5aedd3fc-ef3c-49a6-a359-5c840aa51481">
+            <useCaseMoniker
+              Id="9476081e-d5fc-425a-bb52-65ce504656e3"
+              LastKnownName="Seleccionar Cliente buscando por nombre o RIF"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="cd24bc0c-40e9-4966-b291-af9e2dd58d33">
+            <useCaseMoniker
+              Id="bb09f29d-e0a9-4119-a3ab-b693cab3d0ba"
+              LastKnownName="Seleccionar producto por Codigo o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9476081e-d5fc-425a-bb52-65ce504656e3"
+        name="Seleccionar Cliente buscando por nombre o RIF"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ac76a6f8-8c67-4f87-a11b-9c1a1e09a0c9">
+            <useCaseMoniker
+              Id="9475c405-853c-4916-8e1b-b6623b279585"
+              LastKnownName="Indicar si el cliente tiene descuento"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="9c9e38ab-2e4f-4d21-ad21-b75c4c7df93d">
+            <useCaseMoniker
+              Id="71c5f804-bbee-4b58-b07c-a74f212095ae"
+              LastKnownName="Indicar la Condicion de pago del cliente pero que se pueda editar"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="04f2696a-901c-488d-a569-a38f8a1e7b92">
+            <useCaseMoniker
+              Id="1fbeaece-7367-47a2-889e-d7efd5885aee"
+              LastKnownName="Indicar el tipo de precio relacionado con el cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9475c405-853c-4916-8e1b-b6623b279585"
+        name="Indicar si el cliente tiene descuento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="71c5f804-bbee-4b58-b07c-a74f212095ae"
+        name="Indicar la Condicion de pago del cliente pero que se pueda editar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="f9ee8d79-d026-40df-b021-2480ff7ddbe3">
+            <useCaseMoniker
+              Id="a41a2c3c-53f0-4e81-bb3d-f1c38d5c7643"
+              LastKnownName="Si la condicion de pago es credito, indicar la fecha de vencimiento."
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1fbeaece-7367-47a2-889e-d7efd5885aee"
+        name="Indicar el tipo de precio relacionado con el cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a41a2c3c-53f0-4e81-bb3d-f1c38d5c7643"
+        name="Si la condicion de pago es credito, indicar la fecha de vencimiento."
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bb09f29d-e0a9-4119-a3ab-b693cab3d0ba"
+        name="Seleccionar producto por Codigo o nombre"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f5ee75c7-db14-4d5d-9df0-db7e8c6e2395">
+            <useCaseMoniker
+              Id="e939039d-9530-4665-95a9-f16a0ec20d37"
+              LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="02a3e95e-72bc-4a68-b9f7-118bdde3fd17">
+            <useCaseMoniker
+              Id="d3de0893-518f-4c2c-a8b7-51367b581fbc"
+              LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="48757ee8-616c-4bf2-989e-5c2492de5cc4">
+            <useCaseMoniker
+              Id="cb3c9b0f-f31d-42a5-a69d-7a4fb04b3211"
+              LastKnownName="Indicar descuentos"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e939039d-9530-4665-95a9-f16a0ec20d37"
+        name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3de0893-518f-4c2c-a8b7-51367b581fbc"
+        name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb3c9b0f-f31d-42a5-a69d-7a4fb04b3211"
+        name="Indicar descuentos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="06e3c1a1-273d-4b95-b2d1-14dfe118aae8"
+        name="Actualizar datos de la Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="56b8e2cb-e1f6-4cdc-8bb3-1e2590392563">
+            <useCaseMoniker
+              Id="6e727013-281e-4c4c-96cc-a04313eaa0bc"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="028de621-9bae-4679-8746-5607c0d18e79">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6e727013-281e-4c4c-96cc-a04313eaa0bc"
+        name="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="789e1209-4b13-4614-ac7b-718a19422cfc"
+        name="Eliminar Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="eda3a809-c597-4f69-8eb2-2ad3bbce724d">
+            <useCaseMoniker
+              Id="6e727013-281e-4c4c-96cc-a04313eaa0bc"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="b3400389-5c31-4f37-b678-9b4bddbd190a">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="06f7324e-4f14-41cb-99e6-9559b38a3b55"
+        name="Anular/Reactivar Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6ae6014e-06a4-4928-8a5b-1fe386fd6411">
+            <useCaseMoniker
+              Id="6e727013-281e-4c4c-96cc-a04313eaa0bc"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="ff0c2909-5d1a-4c3b-a7f7-94d4f1ddcb2b">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+        name="Buscar Notas de Entregas"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b654a4af-fcf7-4c2b-8473-7b90146e4fa7">
+            <useCaseMoniker
+              Id="1c798505-e436-49c3-8f42-d1eabda4e491"
+              LastKnownName="Buscar por número de Nota de Entrega o Control"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="8e9a8a09-f807-4f3f-97a0-63474c1c772b">
+            <useCaseMoniker
+              Id="e08cb435-bd3c-4039-acb6-3569894e2f21"
+              LastKnownName="Filtrar por cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="4069d902-6816-4b4c-bd98-f09dbf8e21a4">
+            <useCaseMoniker
+              Id="a061b730-a17c-4fca-84d8-b4837733c719"
+              LastKnownName="Filtrar por producto"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1c798505-e436-49c3-8f42-d1eabda4e491"
+        name="Buscar por número de Nota de Entrega o Control"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e08cb435-bd3c-4039-acb6-3569894e2f21"
+        name="Filtrar por cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a061b730-a17c-4fca-84d8-b4837733c719"
+        name="Filtrar por producto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="da231359-95a6-4fe2-8728-2e8c4dd141e8"
+        name="Indicacion en el status que se encuentra la Nota de entrega: Anulada, Procesada, Sin Procesar..."
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="cc5229a9-6c2a-42fc-9d3f-ac0ebce46c0e">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7adc8450-f6d8-4978-976e-b7531819e52d"
+        name="Usuario Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="69cd571c-141f-4b41-be10-fabe95f3c7b9"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Guardar Nota de Entrega1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="da62f1ac-9030-4abe-944f-5b179a611209"
+              LastKnownName="Guardar Nota de Débito"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4315196a-e169-4a0b-bb1e-b31b93ce982a"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f51d069-fb59-4796-8941-dac9bcf291e7"
+                  name="Guardar Nota de Entrega1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5316e723-9121-4b81-8309-084c6a1affbc"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Actualizar datos de la Nota de Débito"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51614c28-aa28-40bf-a1b9-2263c7ab6446"
+              LastKnownName="Actualizar datos de la Nota de Débito"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6f12f27-a479-4bd3-909f-a50439faf166"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bcd2a8b9-d4b0-4515-8fba-70f594f34dd5"
+                  name="Actualizar datos de la Nota de Débito"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="87b5830a-6f8c-428e-a8d7-43f7bfa289b3"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Eliminar Nota de Débito"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4023a74c-2c24-4e6c-aab5-8faf477ea24a"
+              LastKnownName="Eliminar Nota de Débito"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f95aa4b3-e021-45b0-8268-a012be811bec"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd2043ae-d1a3-4750-85ec-5ae2790d584a"
+                  name="Eliminar Nota de Débito"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e6db87ef-3ad5-453e-9eac-7564fb1e0c9c"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Anular/Reactivar Nota de Débito"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0b910b43-5927-49f5-997a-5f3e694ca698"
+              LastKnownName="Anular/Reactivar Nota de Débito"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46c45c5d-d2cd-4432-918a-a5dd2ac344d4"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bae49a0d-1c97-46fd-ab70-5d4c81123496"
+                  name="Anular/Reactivar Nota de Débito"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bbf7abd3-378e-4680-85d2-3b1b422e4470"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..."
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="35bf37ab-4aac-47fd-a4ca-f4e2d1b9b874"
+              LastKnownName="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..."
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51a74726-12a7-4618-a0cc-5929f0fb8eba"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7720d415-8b97-46a7-95b3-cb51d3e2422b"
+                  name="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..."
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="da62f1ac-9030-4abe-944f-5b179a611209"
+        name="Guardar Nota de Débito"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5001373d-c435-454e-b9e6-67c7c1b1cae4">
+            <useCaseMoniker
+              Id="2df25dfc-c837-41d4-8d15-dbbb22f7f6f0"
+              LastKnownName="Seleccionar Cliente buscando por nombre o RIF"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="53a9c137-eba4-4562-b2d1-723942a17fc2">
+            <useCaseMoniker
+              Id="ddab0076-ebfc-42ec-8994-0b8c32497444"
+              LastKnownName="Seleccionar producto por Codigo o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2df25dfc-c837-41d4-8d15-dbbb22f7f6f0"
+        name="Seleccionar Cliente buscando por nombre o RIF"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9ff9a244-f973-4d56-9071-f8e89450f535">
+            <useCaseMoniker
+              Id="e6ff69d9-4fe8-4bc9-b3d3-0255f3cd1561"
+              LastKnownName="Indicar si el cliente tiene descuento"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="48b33f51-17c7-49cf-9f04-3d7f8d2ec4e0">
+            <useCaseMoniker
+              Id="b380885c-c357-4acb-b5e6-d31ea89c4efa"
+              LastKnownName="Indicar el tipo de precio relacionado con el cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e6ff69d9-4fe8-4bc9-b3d3-0255f3cd1561"
+        name="Indicar si el cliente tiene descuento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b380885c-c357-4acb-b5e6-d31ea89c4efa"
+        name="Indicar el tipo de precio relacionado con el cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ddab0076-ebfc-42ec-8994-0b8c32497444"
+        name="Seleccionar producto por Codigo o nombre"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="d56dddfc-c8ee-4bf7-9f33-6cb3d7fe34e2">
+            <useCaseMoniker
+              Id="8630e30a-2a7c-4cea-8a45-78a9dd775f37"
+              LastKnownName="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="065055e9-07c2-41df-813c-9b19bfc43f04">
+            <useCaseMoniker
+              Id="8d92819c-74c4-408d-a63b-72135c322cc3"
+              LastKnownName="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="baeeb594-c1f2-41b5-9cdd-f49de354df73">
+            <useCaseMoniker
+              Id="da4f691f-6d88-4e36-84df-0d0b2962830f"
+              LastKnownName="Indicar descuentos"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8630e30a-2a7c-4cea-8a45-78a9dd775f37"
+        name="Si no existe el producto, ir directamente a la pantalla de Productos para ingresarlo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8d92819c-74c4-408d-a63b-72135c322cc3"
+        name="Poder Seleccionar el tipo de unidad y que calcule automaticamente el precio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="da4f691f-6d88-4e36-84df-0d0b2962830f"
+        name="Indicar descuentos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51614c28-aa28-40bf-a1b9-2263c7ab6446"
+        name="Actualizar datos de la Nota de Débito"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="608effc8-2c58-496c-93b2-a66278b5eac3">
+            <useCaseMoniker
+              Id="9dbc7fba-dedc-4779-a58b-820c85df7dcf"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="41260560-0b2d-4f01-80d5-5c98a06adeb4">
+            <useCaseMoniker
+              Id="f4ef2172-5440-4292-80ef-b2693b283f5b"
+              LastKnownName="Buscar Notas de Débito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f4ef2172-5440-4292-80ef-b2693b283f5b"
+        name="Buscar Notas de Débito"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9d833c42-e7ee-407e-82ef-2ff1fbb76efb">
+            <useCaseMoniker
+              Id="266e6e81-7e7d-4ff3-b70f-12778bf4f19f"
+              LastKnownName="Buscar por número de Nota de Débito o Control"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="33f36e8d-5228-4887-b6d3-7ede76b46166">
+            <useCaseMoniker
+              Id="157151e5-a715-4dea-9e2c-33986f92a6b4"
+              LastKnownName="Filtrar por cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+          <extend
+            Id="b9b0876c-ee05-4420-b176-65c3b5fbfdcc">
+            <useCaseMoniker
+              Id="39a507a6-418d-4b70-b564-a7b214eab1a5"
+              LastKnownName="Filtrar por producto"
+              LastKnownLocation="alan_admin.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4023a74c-2c24-4e6c-aab5-8faf477ea24a"
+        name="Eliminar Nota de Débito"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9a9082ed-9017-4839-9901-cbd2ad81811f">
+            <useCaseMoniker
+              Id="9dbc7fba-dedc-4779-a58b-820c85df7dcf"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="cd354090-1d41-4e08-bed9-f15d585e8bef">
+            <useCaseMoniker
+              Id="f4ef2172-5440-4292-80ef-b2693b283f5b"
+              LastKnownName="Buscar Notas de Débito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9dbc7fba-dedc-4779-a58b-820c85df7dcf"
+        name="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="266e6e81-7e7d-4ff3-b70f-12778bf4f19f"
+        name="Buscar por número de Nota de Débito o Control"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="157151e5-a715-4dea-9e2c-33986f92a6b4"
+        name="Filtrar por cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="39a507a6-418d-4b70-b564-a7b214eab1a5"
+        name="Filtrar por producto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0b910b43-5927-49f5-997a-5f3e694ca698"
+        name="Anular/Reactivar Nota de Débito"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d0e04e83-4422-4b3b-a6f0-2f78e6b23a3e">
+            <useCaseMoniker
+              Id="9dbc7fba-dedc-4779-a58b-820c85df7dcf"
+              LastKnownName="Si ya esta procesada No se puede Modificar, Anular o Eliminar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="6765e73b-5358-4799-9212-fabec30f5b00">
+            <useCaseMoniker
+              Id="f4ef2172-5440-4292-80ef-b2693b283f5b"
+              LastKnownName="Buscar Notas de Débito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="35bf37ab-4aac-47fd-a4ca-f4e2d1b9b874"
+        name="Indicacion en el status que se encuentra la Nota de Débito: Anulada, Procesada, Sin Procesar..."
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="009f67b9-cebf-47b1-8f3d-102b9121d4a4">
+            <useCaseMoniker
+              Id="f4ef2172-5440-4292-80ef-b2693b283f5b"
+              LastKnownName="Buscar Notas de Débito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="abd7a714-f0f0-44ef-a42b-aa875e54da4c"
+        name="Ir a pantalla de Reportes"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7508b979-90f9-41f1-88f2-14cafe662ba8"
+        name="ClaseConexion"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="36400ba1-d3f2-4aca-8868-8d8869cc3378"
+            name="vConexionSQL"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f21ecf2e-acef-430b-b2f4-0d1f2f9520b0"
+            name="vProcedimiento"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a8632495-add1-4b10-9803-8fc2f5539268"
+            name="vErrores"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="19e1cecf-738b-4fe7-8b67-4ba946e2931d"
+            name="vEOF"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e913ad9c-51b8-46d1-9753-f27a4c6fa96b"
+            name="ejecutar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="04d44c56-eb82-4f44-bedd-a61313f0baba"
+            name="buscar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="08f28e88-0b57-4703-be12-e5012d42be57"
+            name="llenarGrid"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e0ce3ff1-e407-4b68-8963-2412d5fa43ee"
+            name="llenarCombo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5f37a8b5-57c7-40b8-b5c1-0afbb274c702"
+        name="Imprimir Nota de Entrega"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="52a29d37-a8df-4467-abb6-c22a5c43d295">
+            <useCaseMoniker
+              Id="4ae499f8-ee4d-49f8-a49c-20ec10577e70"
+              LastKnownName="Buscar Notas de Entregas"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e827b99-2c28-4314-9802-de5cc8f81a26"
+        name="ClasePersona"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f236a233-2610-45a7-8bdb-533d9ef14d8e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7508b979-90f9-41f1-88f2-14cafe662ba8"
+              LastKnownName="ClaseConexion"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="9ce094d7-8e73-4104-bed0-1b3e0e53958c"
+            name="vID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="68598db8-27cb-4daa-8948-bd4953a42daa"
+            name="vNombre"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b7d3de65-777a-4872-b868-327ac53010e9"
+            name="vFecha"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                LastKnownName="Date"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5531ddea-90ae-4206-a41b-825dea1d3971"
+            name="vStatus"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Si esta inactivo o activo</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b3027773-e89b-4846-916b-438a463c117b"
+            name="vComentario"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0ea57536-4af7-4ea7-8233-4224d1d0fbc0"
+            name="vDireccion"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6f4a048a-b5d2-480f-a1ef-09599c4915bd"
+            name="vRif"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b5d7eb03-15d7-499a-9ab8-aa5dfa456db7"
+            name="vTelefono"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e1ce8f5e-2198-4f6a-b62e-80cc6dc9d044"
+            name="vEmail"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d6681238-a33a-42ef-9101-f0d67e4b0be9"
+            name="agregarPersona"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d7d2726a-e1b7-4b4b-9a5a-ce42a37f6348"
+            name="EliminarPersona"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ecce3067-9dca-41c6-bfb4-f22d012dd4cc"
+            name="BuscarPersona"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+        name="Date" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="38d2a573-7e07-4a83-bb98-83e958e3ccbd"
+        name="ClaseDatos"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ff969d17-571a-4c97-8261-38dc27dc88be"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7508b979-90f9-41f1-88f2-14cafe662ba8"
+              LastKnownName="ClaseConexion"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6d4e102d-d970-4407-8d24-ae968182f324"
+            name="vID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="40b32846-227f-40b7-886a-72f5c72b5543"
+            name="vDescripcion"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3b540503-fa66-4b6b-a5f7-b369828f9b21"
+            name="vStatus"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c605324c-5c7b-4214-9e29-7507ac79af49"
+            name="vComentario"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="eff9e9d4-242b-43b1-a084-f6d046b96f81"
+            name="agregarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b328bcc7-9078-4df9-88c1-adbbe1ea04f4"
+            name="eliminarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3a6bdc2d-22af-4528-a8ba-8348e3751f53"
+            name="buscarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+        name="Long" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+        name="Decimal" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4fd6304e-ebb7-4890-bdfd-0b7db30021ce"
+        name="ClaseProcesos"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="7dd69ca3-56ab-4ab3-bee6-e1cf3b6eabc1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7508b979-90f9-41f1-88f2-14cafe662ba8"
+              LastKnownName="ClaseConexion"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3e8e7bc8-e0af-4bc6-beac-6a0816477d4c"
+            name="vID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="032e89ce-6490-437d-ab91-d34f3e27ead4"
+            name="vControl"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fa637847-628f-4c66-9a7b-fa0eaabdf1dd"
+            name="vStatus"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="851b88da-8b99-4208-89eb-8530ce671e1d"
+            name="vFecha"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                LastKnownName="Date"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9de42aa7-8489-40cf-b1cb-9a457237c846"
+            name="vComentario"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="87f17133-02eb-4b6a-b6b6-e6634e815e71"
+            name="vSubtotal"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5e4227c-7e4a-4679-b043-d49a4dbb5423"
+            name="vIVA"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e34c9599-f85f-409a-82bd-58878ab59156"
+            name="vDescuento"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cae7e854-386b-4397-ba61-4ff0df9d3a66"
+            name="vTotal"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8d76d5b6-ad30-4312-863e-1c82d8d949c6"
+            name="vFechaVencimiento"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                LastKnownName="Date"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b5018ef8-5f77-472a-bb7f-4f7ec8bf8f52"
+            name="calcularDiasVencimiento"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ce082f0c-e66f-49fe-be3e-b5cf7362dee2"
+        name="decimal" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="87d2dc4f-eb77-436d-a30b-8322751df4eb"
+        name="Usuario Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8644a43a-a51d-4b39-a32d-fdfcde5519b7"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Guardar Vendedor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d19a9e3f-cb65-4a9d-ae07-8e3bca25652d"
+              LastKnownName="Guardar Vendedor"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5f7b0a3-4da1-4ff9-9655-9e6f34abe959"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f980e682-aeb6-4863-b760-b10168d77898"
+                  name="Guardar Vendedor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b746355e-d76a-461b-a71a-8200adb5656f"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Eliminar Vendedor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6a46c93b-45eb-445b-a479-0724db500d5b"
+              LastKnownName="Eliminar Vendedor"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36b88300-fa69-4f30-b808-e2e67ea2baa1"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="347299cf-e20a-48e2-88df-d93b95168ac3"
+                  name="Eliminar Vendedor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="936d0eca-16e9-40ea-9b0c-8a0ddd0f297d"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Inactivar/Reactivar Vendedor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ac36d1ee-566d-4c43-84fe-4e285ef618cc"
+              LastKnownName="Inactivar/Reactivar Vendedor"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f13e013a-5eba-46e8-9b8f-9991dd72287b"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02713fa9-f6e2-4cca-86ec-5a1100a7c66a"
+                  name="Inactivar/Reactivar Vendedor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2bc6d0e7-a09a-4e52-8bc9-e38d31faa81f"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Buscar Vendedor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="04c8c142-4a20-405d-ba18-17fa56d5194e"
+              LastKnownName="Buscar Vendedor"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b11cb37c-3ab4-4b9d-bdb3-58cf6eed47c5"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d89b4495-5f21-457c-8790-78925e39e4da"
+                  name="Buscar Vendedor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="89bfdfab-6621-444d-af83-3fba26427229"
+            isDerived="false"
+            sourceEndRoleName="Usuario Registrado"
+            targetEndRoleName="Actualizar Vendedor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6133bec1-59fc-4ddd-9bc8-5bdd207f4299"
+              LastKnownName="Actualizar Vendedor"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33401c35-f60e-4bbb-942f-408ac438f609"
+                  name="Usuario Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="baef3930-baf4-48f9-aa74-d8ce0774df60"
+                  name="Actualizar Vendedor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d19a9e3f-cb65-4a9d-ae07-8e3bca25652d"
+        name="Guardar Vendedor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="772def7e-13f6-49d1-a665-3fa10ce1b01e">
+            <useCaseMoniker
+              Id="b25de033-e8b5-43db-a62b-696ef0f29c05"
+              LastKnownName="Verificar que la cedula no exista"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="04c8c142-4a20-405d-ba18-17fa56d5194e"
+        name="Buscar Vendedor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4e4c265c-7f94-4d7f-a535-dc702d382e46">
+            <useCaseMoniker
+              Id="fe1dd4ec-2028-4959-b29e-2181a8fde178"
+              LastKnownName="Filtrar por cedula o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6a46c93b-45eb-445b-a479-0724db500d5b"
+        name="Eliminar Vendedor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2bb23aa7-e3c3-4f82-94ce-b2506a854c66">
+            <useCaseMoniker
+              Id="fe1dd4ec-2028-4959-b29e-2181a8fde178"
+              LastKnownName="Filtrar por cedula o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="17a94754-1b34-46a7-be50-a6273bb707dd">
+            <useCaseMoniker
+              Id="ac176367-ad9f-427a-9e4e-b61d2f8476a4"
+              LastKnownName="Verificar que no esté asociado a ningun proceso"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ac36d1ee-566d-4c43-84fe-4e285ef618cc"
+        name="Inactivar/Reactivar Vendedor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9f553ef2-5a05-455c-b9af-f50af4801e33">
+            <useCaseMoniker
+              Id="fe1dd4ec-2028-4959-b29e-2181a8fde178"
+              LastKnownName="Filtrar por cedula o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6133bec1-59fc-4ddd-9bc8-5bdd207f4299"
+        name="Actualizar Vendedor"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7d93208a-2954-4ed1-8bf7-f386ebadba41">
+            <useCaseMoniker
+              Id="fe1dd4ec-2028-4959-b29e-2181a8fde178"
+              LastKnownName="Filtrar por cedula o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b25de033-e8b5-43db-a62b-696ef0f29c05"
+        name="Verificar que la cedula no exista"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe1dd4ec-2028-4959-b29e-2181a8fde178"
+        name="Filtrar por cedula o nombre"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ac176367-ad9f-427a-9e4e-b61d2f8476a4"
+        name="Verificar que no esté asociado a ningun proceso"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e7919a52-c4ca-4bfb-ae1c-3bb410170cbd"
+        name="ClaseUsuario"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="884ebc3c-be1d-4758-aa99-1eb891710d76"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9e827b99-2c28-4314-9802-de5cc8f81a26"
+              LastKnownName="ClasePersona"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0ca2468d-6b5a-4e0b-a96b-daf2687f0c6b"
+            name="vContrasena"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5dd35028-2576-45e1-8573-2401ff37496b"
+            name="buscarPersona"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5867d550-9b8a-478b-9e0d-11b9c4dcc822"
+                  name="xUsuario"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbec2e39-9957-4bb8-b0b2-86fcd847b0bf"
+                  name="xPass"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73acb237-7bb7-4c10-a2b9-6a670c1871f0"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+        name="ClaseCliente"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="de2e97ec-c08a-426c-8cc4-b9e19369869a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9e827b99-2c28-4314-9802-de5cc8f81a26"
+              LastKnownName="ClasePersona"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3468016a-dee1-4b1a-8606-35adedfea3a4"
+            name="vNIT"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2fb511b7-5be1-416c-9642-e1e7d1f43cac"
+            name="vSaldo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a0dc9bb1-da32-4fa5-9abe-94fc845205ca"
+            name="vTipoPrecio"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a0f933d7-6668-4624-9086-a630410cf623"
+            name="vCredito"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6f837dd-9cb2-401a-a1f1-e85450d20852"
+            name="vDescuento"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fbb051c4-643a-4a4c-9031-47f4101b8b0b"
+            name="vVendedor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6675519f-5016-42f5-b342-a03829a7bec2"
+            name="agregarPersona"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9168f011-3235-4e4d-bfa7-808a042d50cd"
+                  name="xID"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="871e3495-fcb3-4a92-b1f7-5a9792179f65"
+                  name="xNombre"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="df3d8606-e996-4a24-86c9-f9fa5757a532"
+                  name="xRIF"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="61072427-d75a-4223-9c19-a16332f893b3"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="62f9253e-e589-4819-8329-4c473fd719ed"
+        name="ClaseVendedor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="33cf725c-9ba3-4738-9070-6bd60ee33d1e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9e827b99-2c28-4314-9802-de5cc8f81a26"
+              LastKnownName="ClasePersona"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5b131a39-21b9-4154-b116-66a538753d18"
+            name="vComision"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="21e7b05b-73de-42c7-b5da-4bc818ae756b"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5500a375-01d6-4077-bce5-315e40a013f1"
+        name="ClaseProductos"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="4d574afb-2130-42c5-ad77-60ec8934a89b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="38d2a573-7e07-4a83-bb98-83e958e3ccbd"
+              LastKnownName="ClaseDatos"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c3fb1329-5cfe-4332-b245-54b0f0e2cd26"
+            name="vPrecio3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a82a8090-08c5-4e5d-88b6-2f5484a960fd"
+            name="vPrecio2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="356a392f-a9b6-4434-971f-8f8f3aa50ad2"
+            name="vPrecio1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d8ec53aa-5e99-4ca6-b839-1fd0af886003"
+            name="vEquivalencia"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Dato para indicar cuando tenga distintas unidades. Por ejemplo 1 Millar tiene 1000Unidades</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="406cc204-be98-42dd-8718-f26be7fb37ee"
+            name="vTipoUnidad"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bade1576-2740-425d-a79a-58537f24aec7"
+            name="vPrecio4"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="34231ff8-f152-43c7-8c9c-b63499e0443c"
+            name="vPrecio5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bac21a74-8dd1-4cf6-8a36-3e18ff253303"
+            name="calcularSubtotal"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Si se marca el check de precios con IVA hay que calcular el subtotal</description>
+          </operation>
+          <operation
+            Id="ca5f085f-cd46-405b-b41e-013f2baa5304"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+        name="ClaseParametros"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="663f37c4-15b5-475f-9c54-9d6fe4a5a607"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9e827b99-2c28-4314-9802-de5cc8f81a26"
+              LastKnownName="ClasePersona"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d18290ad-c55a-4c12-a35b-291f22d00300"
+            name="vIVA"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Porcentaje de IVA</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f38b1f2a-00df-4b95-bcff-3dfb375c8bfe"
+            name="vLogo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="08b30be2-3128-493d-8d9b-e723491bbf16"
+                LastKnownName="Image"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bc4703b5-3c3e-4938-842f-25579885564a"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e06e428d-8a20-4137-ae0c-0642e4235248"
+        name="ClaseTipoUnidades"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="bb8ecc3a-7d83-4ebc-b8a6-015dc5c0b4d7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="38d2a573-7e07-4a83-bb98-83e958e3ccbd"
+              LastKnownName="ClaseDatos"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="926fa2be-e75e-481c-aec7-8b61c59c7549"
+            name="vTipoUnidad"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b4aec7cb-0df2-4721-af00-d3a434de6e28"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a469bc87-3c64-4d9c-9c86-e19b02f36f76"
+        name="ClaseCredito"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="e823bbc9-1822-44b6-9ea7-9b820f0c716a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="38d2a573-7e07-4a83-bb98-83e958e3ccbd"
+              LastKnownName="ClaseDatos"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6cb35a51-2a5d-4f67-9ae0-14a853d2f2a6"
+            name="vDiasCredito"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c1b4c107-24f8-45e1-9a52-23e2211c7311"
+            name="agregarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15701df1-5c71-4303-8085-f1cba02995fc"
+                  name="xID"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="38c0085c-9ae8-40e1-a10b-d45fea7c061b"
+                  name="xDescripcion"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1b07881-fd18-491a-a298-4d814432645b"
+                  name="xDiasCredito"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="54261e85-7ddc-4bfe-885f-d7fcdeef4d55"
+            name="buscarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="734549bb-f4d9-4b0c-9f99-9accaccc33d2"
+                  name="xID"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7601a583-cbd4-49d8-8fd5-d78a8cbe13e5"
+                  name="xDescripcion"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cc5e6f11-0978-4111-a0c6-dd53fccc9cf3"
+            name="eliminarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9151f6d3-5abe-4853-a98d-01cf051465a3"
+                  name="xID"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="13e15d2f-bd36-4d0f-b6f5-c209544d09ed"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e0516407-00f2-493f-a2b2-83ffa4a0e2ea"
+        name="ClaseFactura"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="6cd7cc48-2b9d-4552-8417-655d57e31a50"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4fd6304e-ebb7-4890-bdfd-0b7db30021ce"
+              LastKnownName="ClaseProcesos"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="eec81299-2695-424d-94c7-011f95d8d5ed"
+            name="vSaldoActual"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ee860ee5-09fb-41e1-ab10-abdf73fe7c59"
+            name="buscarCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d3b889da-ae2f-4f5b-ad8e-fe6d344c9684"
+            name="buscarProducto"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="93661326-4005-40f5-9423-c00e9cb3e711"
+            name="importarDatos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3dbd46f9-d2ea-4526-9aa8-71bea7232663"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c5caca0c-9246-448a-9561-5fb60c2d9004"
+        name="ClasePresupuesto"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="4aa1b55c-b291-4ecf-b5ae-b9b7a1383d4c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4fd6304e-ebb7-4890-bdfd-0b7db30021ce"
+              LastKnownName="ClaseProcesos"
+              LastKnownLocation="alan_admin.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ce2112d1-38ce-479c-943a-ec51c51d7ee2"
+            name="buscarCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8f14fa49-6ff5-44ad-b7db-daf766e584cd"
+            name="buscarProducto"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0807ce3f-2ddf-429f-b444-6ffdd80ac8e6"
+            name="validaciones"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="12775c67-bdf0-4e66-a108-73752728d94a"
+        name="ClaseNotaEntrega"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="97af9d56-6c81-4fed-a181-b03fee723329"
+            name="buscarCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f284bf34-c8a3-43f8-8b11-be554335a716"
+            name="buscarProducto"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1d05c259-15cc-48db-b198-70c1c5587f26"
+        name="ClaseNotaCredito"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b94fef86-35c4-4470-b5ae-768ee528a10b"
+        name="ClaseNotaDebito"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="67e2bbfc-6899-4813-ab68-92cb8883f7ca"
+        name="Stringç" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="08b30be2-3128-493d-8d9b-e723491bbf16"
+        name="Image" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="72a26683-d725-46f8-ab09-b2570346dc31"
+        name="Mostrar el saldo actual de la factura"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="91871187-6745-4eed-8bc7-3d8ed78f85f4">
+            <useCaseMoniker
+              Id="2347d514-6f7f-4830-a98b-42caec9be8ca"
+              LastKnownName="Buscar Factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d57b2cb2-e178-4712-aaaf-a460107f7235"
+        name="ClaseReportes"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

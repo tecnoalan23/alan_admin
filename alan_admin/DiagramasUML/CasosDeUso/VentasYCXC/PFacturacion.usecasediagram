@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="566ab1b7-3e90-4b14-8386-d645dfef78f4" name="PFacturacion" linkedPackageId="2c35e90f-10eb-4216-bbab-c7f82c3059af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="5227f1bd-0ee9-49f8-8199-6eca48b2ac07">
-      <profileInstance Id="8f381684-10c4-463f-8756-1abf1333febe" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3e2fbca2-7511-4f12-98d6-6da2d354e6ed">
-      <profileInstance Id="b1b953b0-ebe4-4cb9-9285-1acfc1fd9f6e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="566ab1b7-3e90-4b14-8386-d645dfef78f4" name="PFacturacion" linkedPackageId="2c35e90f-10eb-4216-bbab-c7f82c3059af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="63e3d722-c3e4-4c24-afb0-e8bbec3baac1" name="Usuario Registrado" isAbstract="false" isLeaf="false">
@@ -100,7 +86,7 @@
             <elementDefinition Id="b740a211-51ad-4af9-ba30-8e87a194390f" />
           </association>
           <association Id="84e3092d-c4c2-4911-b2ec-cdf460094eb3" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Anular Factura" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="b9ecc469-5699-41ab-9887-71d67b6ae625" LastKnownName="Anular Factura" />
+            <useCaseMoniker Id="b9ecc469-5699-41ab-9887-71d67b6ae625" LastKnownName="Anular/Reactivar Factura" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="44f18aa4-532d-42d7-a76c-febba7430c7b" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -131,6 +117,38 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="fb805877-9d5f-4df3-a71b-5e7da572e4aa" />
           </association>
+          <association Id="e989e49f-9a83-4987-b656-d88d0ed06768" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Buscar Factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2cdb41b2-8606-469e-8b9f-be5b0f259f0e" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96bc3f9e-c5cd-4a1c-b646-7a6755dbea91" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5530347-e1aa-40bd-8543-0d38bb952545" name="Buscar Factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cf6064b1-bee5-433f-9d72-9bd83a961d23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="715ea3e4-a444-4184-be00-961733f4a7a8" />
+          </association>
+          <association Id="faea1bed-3fae-4bc7-8597-5a09a26d97b3" isDerived="false" sourceEndRoleName="Usuario Registrado" targetEndRoleName="Mostrar el saldo actual de la factura" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ce908d3d-9051-4c0b-b00a-a74a01448c62" LastKnownName="Mostrar el saldo actual de la factura" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f04882f8-f639-455b-8a0e-c268950797e3" name="Usuario Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="72896814-ef07-4d10-a0b6-86f9a42fb04c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ecd1253-b551-4460-ace1-40b15114f0bd" name="Mostrar el saldo actual de la factura" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c0bc792a-158a-4b96-9260-d5ff7c5041e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="683706cd-7bd3-4cea-96a1-fed15440296e" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -146,10 +164,6 @@
             <useCaseMoniker Id="a2087929-0cee-449c-b7aa-d0a2ee89cc4a" LastKnownName="Importar datos de Nota de Entrega" />
             <elementDefinition Id="eabd8aff-640d-48bb-865c-4cbb6e15e122" />
           </extend>
-          <extend Id="f64fc49c-ff37-4c76-8d11-d26974446d4c">
-            <useCaseMoniker Id="d6ad9b0c-f6de-46d5-91f0-4f38dc7e20de" LastKnownName="Importar datos de Facturacion" />
-            <elementDefinition Id="500ac01b-53cd-4b58-8c5e-ed8f11128acb" />
-          </extend>
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
@@ -161,11 +175,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="a2087929-0cee-449c-b7aa-d0a2ee89cc4a" name="Importar datos de Nota de Entrega" isAbstract="false" isLeaf="false">
         <elementDefinition Id="31b18410-7f6b-4f6c-bbca-2025207fe03d" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="d6ad9b0c-f6de-46d5-91f0-4f38dc7e20de" name="Importar datos de Facturacion" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="af7d6353-970d-4977-ae67-7c54a2af2590" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -335,7 +344,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="b9ecc469-5699-41ab-9887-71d67b6ae625" name="Anular Factura" isAbstract="false" isLeaf="false">
+      <useCase Id="b9ecc469-5699-41ab-9887-71d67b6ae625" name="Anular/Reactivar Factura" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1ac9c6a4-34fe-4f7d-bff3-12bd7f7f7cbd" />
         <additions>
           <include Id="ff0a2d95-fca1-4177-b0c4-c7c207fca65b">
@@ -379,8 +388,33 @@
         <elementDefinition Id="54a78555-f00e-4a59-9113-eb7d171458f9" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ce908d3d-9051-4c0b-b00a-a74a01448c62" name="Mostrar el saldo actual de la factura" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="72a26683-d725-46f8-ab09-b2570346dc31" />
+        <additions>
+          <include Id="65866544-b0e0-42e5-949d-10c557f19751">
+            <useCaseMoniker Id="d20f3d7d-6a29-43ca-b8d8-b28ad2e45327" LastKnownName="Buscar Factura" />
+            <elementDefinition Id="91871187-6745-4eed-8bc7-3d8ed78f85f4" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="2c35e90f-10eb-4216-bbab-c7f82c3059af" name="alan_admin">
     <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5227f1bd-0ee9-49f8-8199-6eca48b2ac07">
+        <profileInstance Id="8f381684-10c4-463f-8756-1abf1333febe" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3e2fbca2-7511-4f12-98d6-6da2d354e6ed">
+        <profileInstance Id="b1b953b0-ebe4-4cb9-9285-1acfc1fd9f6e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
