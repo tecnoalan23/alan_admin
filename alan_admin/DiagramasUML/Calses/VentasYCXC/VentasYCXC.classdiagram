@@ -1,19 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="aff50776-26e2-4f96-b459-ee1b98ef667d" name="VentasYCXC" linkedPackageId="fc1be195-ac65-455c-98f4-ba9a9fbcf28d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="7945f63b-393f-4779-b550-4086a7e9ee8a">
-      <profileInstance Id="7e5bf39d-3a6a-4b28-b174-77ef715dd5e2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="a4283b59-a586-413f-81d6-ef9375816471">
-      <profileInstance Id="ee86734b-5e8e-4ac4-ba86-5da7404a9693" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="aff50776-26e2-4f96-b459-ee1b98ef667d" name="VentasYCXC" linkedPackageId="fc1be195-ac65-455c-98f4-ba9a9fbcf28d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="fc11bf33-e373-46cf-aeed-1edb888411a2">
+      <elementDefinition Id="bbf53bab-dbc4-4145-b635-86abb84ea5d8" />
+      <body>En los parametros colocar un dos tab, uno relacionado con las ventas y otro con el porcentaje de IVA. En este, se colocara un combobox editable para que se haga la edicion o agregado y en la pestaña de ventas se colocara ese mismo combo pero no editable para que seleccione cual es el predeterminado.</body>
+    </comment>
+    <comment Id="12d67ad5-61f0-48e7-bfc5-611500fb358e">
+      <elementDefinition Id="9d908c91-3ec9-4e6d-9e8e-a29c398fe2c6" />
+      <body>La pantalla de productos se va a definir de la siguiente manera: Una cabecera que tendra los datos basicos del producto, abajo dos tab uno relacionado con los precios y el otro relacionado con los tipos de unidad. Se mandaran a guardar las tres partes de la pantalla en un solo procedimiento almacenado.</body>
+    </comment>
+    <comment Id="7d91d6a4-e4f4-44ca-838c-0903844deddb">
+      <elementDefinition Id="0a9b4cc3-d8f1-4f8e-a0ad-200a9bb188df" />
+      <body>Se creara una tabla que se llamara TipoUnidadesProductos donde se relacionaran los productos con sus tipos de unidades y sus equivalentes.</body>
+    </comment>
+    <comment Id="d2b3cd32-7c08-4743-b663-35ebd243d2cb">
+      <elementDefinition Id="548a7f7e-6db0-4f4c-821b-1b693e4ffe26" />
+      <body>Se colocara una auditoria?</body>
+    </comment>
+    <comment Id="2ac5cee8-0998-48c5-bd7b-e7acd7506ba6">
+      <elementDefinition Id="7402d9e7-04a8-4a9a-990a-7368353d8afb" />
+      <body>Al eliminar un registro, si éste está asociado a un documento ese documento tiene que cambiar de estado a sin procesar.</body>
+    </comment>
+    <comment Id="5f50c371-53a5-4dc8-b1c0-5ce05f5ae5ee">
+      <elementDefinition Id="4b9cf73a-58de-41a7-a672-878e7ef9479f" />
+      <body>La importacion y exportacion de los datos se realizara seleccionado los items y a partir de esa informacion se traeran los datos padres. Se editaran dos filas de la tabla item que se llamaran numero_asociado y fila_unica. El numero asociado sera el numero autonumerico del item que se esta importando o exportando y la fila unica sera un tipo de satos uniqueidentifier. el cual es un tipo de datos que nunca se repite en ninguna de las tablas, lo que nos va permitir importar o exportar de otros modulos y poder relacionar esas filas.</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="c5d35b1d-5739-4f14-92e0-75362b5ed290" name="ClaseConexion" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -31,6 +43,14 @@
           <property Id="a2d48cac-b271-403f-8e3e-722fb566bbca" name="vEOF" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="19e1cecf-738b-4fe7-8b67-4ba946e2931d" />
           </property>
+          <property Id="41db3f3f-75d7-4715-a2ba-4e2b13d4d5d9" name="vServidor" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Este valor es una constante, tendra el dato del servidor</description>
+            <elementDefinition Id="035e550c-5480-4f88-a937-2e41a18b4c6b" />
+          </property>
+          <property Id="0aad1a7a-3ff2-4874-b022-8bd1139faddd" name="vBaseDatos" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Este valor es una constante que tendra el valor de la base de datos</description>
+            <elementDefinition Id="591f9c7d-ade5-4cbc-a931-37e75fd93d1a" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="d9e8caef-1aae-4d61-a084-b278eb3db48b" name="ejecutar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -41,9 +61,206 @@
           </operation>
           <operation Id="9339397b-63cc-4be4-9302-a0fa782dfc68" name="llenarGrid" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="08f28e88-0b57-4703-be12-e5012d42be57" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f9679e82-40b4-4b54-83bc-99ec2f71f89f" name="xNombreGrid" direction="In" isUnique="false">
+                  <elementDefinition Id="27b7af72-100c-40f0-872c-e9ff5342112c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c004410e-fd8e-4326-abf4-09ab435c7b52" LastKnownName="GridView" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="054941af-2b1f-4c72-8a75-f4408577335d" name="xProcedimientoAlmacenado" direction="In" isUnique="false">
+                  <elementDefinition Id="e3128019-d718-41ab-a682-a3bf9f608b3e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a20d1692-9693-4ca3-9db8-4d33560209b0" direction="Return">
+                  <elementDefinition Id="6f7a2d22-d495-456b-b30c-431379c366f0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ce7bfff-d68a-419f-ae46-73fb7161bd25" LastKnownName="GridView" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation Id="66c66c1e-4dda-44e6-aafb-5058d3aa23c5" name="llenarCombo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e0ce3ff1-e407-4b68-8963-2412d5fa43ee" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="31e4d033-a874-4596-97c3-6bc30f898ab3" direction="Return">
+                  <elementDefinition Id="2168b021-0e6a-4830-ab53-7d5e07fe3d5f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="709f630b-e0c5-4738-b09f-dc1b06177055" LastKnownName="ComboBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ba1691cf-bdef-41a5-82e1-662e8edb6ccf" name="xNombreCombo" direction="In">
+                  <elementDefinition Id="d5b545bf-cfc8-4dc7-bd03-a4a9ff8f6cec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="709f630b-e0c5-4738-b09f-dc1b06177055" LastKnownName="ComboBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9e1a8a53-accb-454d-9d7d-d234dbd05fcd" name="xProcedimientoAlmacenado" direction="In">
+                  <elementDefinition Id="678e2f31-7d50-46ab-99e2-a0463ffdcd24" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b70c8b70-fd9b-4a20-8936-f44d69ae7e78" name="xValueMember" direction="In">
+                  <elementDefinition Id="8abd63f3-3032-4b4c-9248-13376ad51c03" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5964d651-7f42-404a-aaf2-5732fc0a57c9" name="xDisplayMember" direction="In">
+                  <elementDefinition Id="32574922-5352-4893-8690-cfe00fde90f8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="346fecf6-3e07-4d32-a512-d53bcf831c93" name="irOtraPantalla" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Este metodo es para cuando el usuario se encuentra en un dato que tiene asociada otra pantalla pueda acceder por una tecla o boton mas rapidamente. Ademas permitira ir a pantallas que importen y exporten datos haciendo la configuracion necesarias de los check y todo eso a traves de la variable xImporExpor</description>
+            <elementDefinition Id="72a35d8b-151a-4883-bc71-d22b0802ba03" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3d157632-d5cf-468f-b63a-9f3083059dd7" name="xPantalla" direction="In">
+                  <elementDefinition Id="113f9221-e560-493e-9cf3-d6eb68de0c53" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e641bcab-9fae-47ce-bfef-bb3dba55bad2" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7884a9d4-ff6c-478a-869f-32472bb7e4a0" name="xImporExpor" direction="In">
+                  <elementDefinition Id="f65dd1f9-54c7-44b0-850c-49f7fcd7c68a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="60f0e2fd-b626-47eb-907d-130d48ddce62" name="comportamientoBotones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Verificar si se puede retornar una array que contenga todos los datos booleanos e igualarlos con las propiedades enabled de los botones de cada formulario</description>
+            <elementDefinition Id="42eb593b-f1b2-4a23-9269-57057fa0bfdc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a81d1561-f5cd-4bfc-a1c5-f22d9d1be8e3" name="xBotonNuevo" direction="In">
+                  <elementDefinition Id="ead3d1b0-0e23-440b-8d1b-b6017dc3061c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ec93b1ee-b751-4d8b-88a3-c1b796b3de1b" name="xBotonGuardar" direction="In">
+                  <elementDefinition Id="07fa53bb-0184-486f-bc09-fbb06e472389" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ec6668e1-6f7a-4494-8350-446c1f550b47" name="xBotonBuscar" direction="In">
+                  <elementDefinition Id="6e3112ae-cf48-4682-b2d6-183eeb10ef88" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6be18257-46f6-47a1-811c-c3d71c192a1f" name="xBotonEliminar" direction="In">
+                  <elementDefinition Id="03e4ca0a-8b4c-4df0-abbe-581eb8a62dfa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a3dacce-b493-44be-8853-a15a9cf7ee3f" name="xBotonImprimir" direction="In">
+                  <elementDefinition Id="83735132-b4d3-420c-a3d7-411f97485371" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3ad57ff6-6dbf-4f24-96ee-3a430215779a" name="crearDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b099960c-f07b-43f5-90f4-de33fa6e8054" />
+          </operation>
+          <operation Id="286e1d87-19b3-4694-b02e-61a6ceb2c328" name="llenarImagenes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="11b79bef-0578-4be7-a28b-9965cd4ae3f8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b741fa0-d5c2-40de-8851-b13d6f3d4779" direction="Return">
+                  <elementDefinition Id="8bbc3751-c2ae-4004-8d02-5616e85dc48a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8adf075c-085b-4e8b-ac21-b2fb4b40c3db" LastKnownName="PictureBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a0775d2-334d-4703-837d-526ffdb76dad" name="xSintaxis" direction="In">
+                  <elementDefinition Id="6c0b7402-e626-4620-b1f6-61a807de5561" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4b9ffa1e-4e7d-4803-96cf-7a6d926aeba1" name="xNombrePictureBox" direction="In">
+                  <elementDefinition Id="d10cab64-7bda-4f16-8d70-afb522bc0757" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8adf075c-085b-4e8b-ac21-b2fb4b40c3db" LastKnownName="PictureBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="594383f4-8a38-4ca2-8b3a-fcdb233cf109" name="grabarImagenes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9a4f0bd4-892c-4589-95e9-b3ac7a72d652" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57ab8fea-b1ff-4413-bc9f-990644841aaa" name="xSintaxis" direction="In">
+                  <elementDefinition Id="ab48fde7-9035-4821-b2a7-a4efbc54eab5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="89d2b9fd-5b34-4bfd-80f3-15faaffa90d4" name="xNombrePictureBox" direction="In">
+                  <elementDefinition Id="0dd7fcd7-ed1e-4eec-92a7-ae034842c5dc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8adf075c-085b-4e8b-ac21-b2fb4b40c3db" LastKnownName="PictureBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="343d78f3-7537-47df-b789-14fa6af68236" name="xParametros" direction="In">
+                  <elementDefinition Id="ce970c29-4890-4eb0-97fd-46b86633c5fb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -58,7 +275,7 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="d6902da3-0154-4dfc-bb34-5f780ecc3311" name="vID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="d6902da3-0154-4dfc-bb34-5f780ecc3311" name="vRef" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9ce094d7-8e73-4104-bed0-1b3e0e53958c" />
             <type_NamedElement>
               <referencedTypeMoniker Id="a21c5712-d6ce-465d-9f06-d34d61f2ee93" LastKnownName="Long" />
@@ -162,7 +379,7 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="f7a91796-e02f-4c08-91cc-dd18067b8c51" name="vID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="f7a91796-e02f-4c08-91cc-dd18067b8c51" name="vRef" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6d4e102d-d970-4407-8d24-ae968182f324" />
             <type_NamedElement>
               <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
@@ -220,7 +437,7 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="6b03e552-525c-4bd9-8de6-8853ff9f07be" name="vID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="6b03e552-525c-4bd9-8de6-8853ff9f07be" name="vRef" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3e8e7bc8-e0af-4bc6-beac-6a0816477d4c" />
             <type_NamedElement>
               <referencedTypeMoniker Id="1c2babe1-6ab5-4e92-8955-0e32fb551362" LastKnownName="Long" />
@@ -233,6 +450,7 @@
             </type_NamedElement>
           </property>
           <property Id="77933cb7-537f-4101-8438-4e663fb5277d" name="vStatus" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Si la operacion esta procesada, parcialmente procesada o sin procesar</description>
             <elementDefinition Id="fa637847-628f-4c66-9a7b-fa0eaabdf1dd" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e0fab3a7-ca01-4791-861f-4e2813125af9" LastKnownName="String" />
@@ -258,6 +476,9 @@
           </property>
           <property Id="281980f5-098b-4d24-942c-95fc48be93a5" name="vIVA" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d5e4227c-7e4a-4679-b043-d49a4dbb5423" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="730ce00e-8e31-45f3-8689-89c0fb78ba35" LastKnownName="Decimal" />
+            </type_NamedElement>
           </property>
           <property Id="d43e8410-0ecb-43a7-a9e3-2b98b2056180" name="vDescuento" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="e34c9599-f85f-409a-82bd-58878ab59156" />
@@ -271,16 +492,167 @@
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="977c113f-5354-4b4c-a1b2-24f6b079c91b" name="vFechaVencimiento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="977c113f-5354-4b4c-a1b2-24f6b079c91b" name="vFechaVencimiento" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8d76d5b6-ad30-4312-863e-1c82d8d949c6" />
             <type_NamedElement>
               <referencedTypeMoniker Id="2169efc8-317c-4c42-8552-21d00b82dac0" LastKnownName="Date" />
             </type_NamedElement>
           </property>
+          <property Id="fe618516-1dc8-4746-ad5c-b610abcf0452" name="vPorIVA" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="204a8ec6-587c-4e41-9f0a-05c38b04a20a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="d83c5381-0219-4860-abd5-77d4089331a9" name="vPorDescuento" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a29554ed-8960-449f-a39b-c5e565a6feb4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="28fb9e46-698f-4c63-93e5-72b6700eb3ac" name="vRefCliente" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="67c18697-3255-4feb-a198-3476f94b6d46" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+            </type_NamedElement>
+          </property>
+          <property Id="89f54584-6be9-4e9a-b0e5-63955f5376f6" name="vRefProducto" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fb3a0c51-97e7-4f49-b80f-d59c145e7bc6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+            </type_NamedElement>
+          </property>
+          <property Id="45b3c5b6-d4f4-4d96-8769-bb8a58bf5889" name="vPrecio" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7604f5c2-d7fc-4b5d-9e57-26c7c08fe4fd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="5fa36953-f554-4f95-89dd-a8ca5436b688" name="vSubtotalItem" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a09d9c2f-3d64-47a0-b344-1cf8f063d24a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="6ace9123-f0a5-4ab1-9237-1a019bf0684b" name="vPorIVAItem" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0496c6bd-be15-4a81-9ae5-80ae0c780aa5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="5b530f3f-3a3c-4b90-b69c-39112acfa618" name="vIVAItem" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a1ee1a24-84a1-4c86-8468-0b18ac28ec4e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="8cde85ba-c999-42d4-a2fc-7dafc0e630c6" name="vTotalItem" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0965399d-9736-47ba-a38a-18b83d47ebfd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="6b5132a9-8f17-4d45-932b-f1a93079b5b3" name="vUnidadItem" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0daeaadc-4c4f-48f3-a41b-4f0dad536147" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+            </type_NamedElement>
+          </property>
+          <property Id="9da0a361-1593-4441-b3db-37a175f064e4" name="vRefTipoUnidad" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="594e6f3e-e06b-4dd9-ad1c-1ac48dd0c88c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="89eb6eb5-eaf1-44e1-bdb2-ca69b2e85220" name="vTipoPrecio" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c49e0427-5daf-4592-ae13-78c397634827" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="9426cd57-694a-43a4-87da-5ab52dadffbe" name="vComentarioItem" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="963beb79-88b2-438e-b4bc-25831928f0aa" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="2a455452-1f64-4d69-9460-e3f21d08ee9d" name="calcularDiasVencimiento" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Esta es una funcion que me va a devolver el valor de la fecha calculando la fecha de vencimiento de un cliente si éste tiene credito</description>
             <elementDefinition Id="b5018ef8-5f77-472a-bb7f-4f7ec8bf8f52" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7fbbe956-52fd-4cda-b938-5d44bf3f72dd" name="xRefCliente" direction="In">
+                  <elementDefinition Id="1311ca23-0018-4838-b928-2a693e48163c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d659c44e-747a-42de-afcf-3f5e8ecf2083" direction="Return">
+                  <elementDefinition Id="03cf0106-533c-4b0f-b2f5-1b03db57f8b9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7fbb242c-18ca-4f44-8c1c-944a10fd1528" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ce78ea31-60ec-40e9-ab6a-9834c2edbf11" name="exportarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1a966a98-67e3-4d86-b873-039a0a72f530" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f90532ad-f848-48e4-b77b-228edd045aec" name="xRefDocExportado" direction="In" isUnique="false">
+                  <elementDefinition Id="8eac2ef1-f0ef-49d3-bcb2-d4b09b0a183b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="34158bfe-0366-4b95-94bf-db28a2a609e4" name="xFilaUnica" direction="In" isUnique="false">
+                  <elementDefinition Id="21fd818a-acfb-4566-b48e-a8efd68468fd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c8d8ec4e-20ff-42c5-b07e-c48f8fb79a4b" name="importarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Metodo que permitira importar registros</description>
+            <elementDefinition Id="17aa3103-a3b8-443a-a081-df81e0717648" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b79d500d-6e23-4f4f-9690-e94704fc8204" name="xRefDocImportado" direction="In">
+                  <description>Es el numero que me voy a traer del item del documento, para tambien buscar los datos del padre</description>
+                  <elementDefinition Id="1fa536f2-cb2b-4aaf-90b5-e0c583c330a8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4dc47c47-1d6b-430b-8c0d-7b8e20e21222" name="xFilaUnica" direction="In">
+                  <description>Es el numero unico del item que no se repetira en ninguna otra tabla</description>
+                  <elementDefinition Id="0a86829f-d334-4f27-b366-46c8ed4e7fb4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="be1f1214-f2c2-400e-8968-9dc6d67fa217" name="agregarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c603002c-d903-41bd-b276-828f7321c389" />
+          </operation>
+          <operation Id="691864d6-1442-4377-9741-bdeb53dd3eb7" name="buscarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="48e23be4-1d7e-4fe3-a593-c675391d89ae" />
+          </operation>
+          <operation Id="ee88ca1a-576c-4482-b6d2-c863b6ebdf77" name="eliminarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="08268c5d-e385-4af6-b984-a3d984b8ae00" />
+          </operation>
+          <operation Id="66d62ee3-4b05-4c49-ac98-57d637ee5de3" name="buscarIVAPredeteminado" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f5b2a0b4-644b-47e2-a974-205e1bdb155a" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -335,7 +707,7 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="f5a5bc06-d9de-4fa5-833f-832dbd959dba" name="vContrasena" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="f5a5bc06-d9de-4fa5-833f-832dbd959dba" name="vPass" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0ca2468d-6b5a-4e0b-a96b-daf2687f0c6b" />
             <type_NamedElement>
               <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
@@ -359,7 +731,82 @@
             </ownedParameters>
           </operation>
           <operation Id="b1bd4ff4-e670-4717-b96f-87654650e68e" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Aqui hay que validar que el nombre del usuario no exista</description>
             <elementDefinition Id="73acb237-7bb7-4c10-a2b9-6a670c1871f0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="adba42cb-6580-49ff-a4d2-2ff88c20d8c6" direction="Return">
+                  <elementDefinition Id="b6b43283-0e79-4dc2-9d75-1427db4703d4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a54ed300-198c-469c-999b-5998b381e10d" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="71d4fc62-4665-45b5-98ba-72abd44dc103" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Indicar si el usuario tiene operaciones asociadas</description>
+            <elementDefinition Id="e1a723de-950c-4566-8377-cf384fe66265" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="62d83724-f33d-46c7-b6ce-85968fb4154c" name="xRef" direction="In">
+                  <elementDefinition Id="e3d2390b-aa4f-4faf-8663-4e1e1248f7cf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6067e20f-59ac-4db9-85d6-71aa84fe49ef" name="agregarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e41c716b-e710-4c5c-8362-de78ceb0fbf9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f5d6e42e-5679-4630-a766-3fc07ad3cdd4" name="xNombre" direction="In">
+                  <elementDefinition Id="5e35ec30-cda3-4462-8f50-9057efb393db" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="efc80897-f1f8-41ab-8a08-7a8b7b13292b" name="xPass" direction="In">
+                  <elementDefinition Id="c11024b5-7576-4cb1-a322-cc1050c4b5bd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a421cd38-92f1-4cc3-b4f6-6e6e95f06cca" name="xID" direction="In">
+                  <elementDefinition Id="8915e408-231f-41d8-93a9-a46f19e7c089" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="07c4ac99-5ebd-4535-8faa-2fbbe9bc0f8c" name="xStatus" direction="In">
+                  <elementDefinition Id="79193cbd-b924-4eb8-ba30-ba706b9af2dd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1100015c-739d-40cc-9aff-b6d758f139dd" name="eliminarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bc619b62-e7d0-4e94-aaa3-4c3005c27c29" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9a258c1a-e62b-4429-92e3-0156922ecde3" name="xRef" direction="In" isUnique="false">
+                  <elementDefinition Id="03ae6cbe-b9a4-44ee-8079-c844ec7a201c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -368,41 +815,75 @@
       <class Id="74c6fb54-75a2-4152-a769-0925b762fb99" name="ClaseCliente" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0b5722f0-354e-47be-8fde-7e9508d916fa" />
         <generalsInternal>
-          <generalization Id="2f48eb73-3403-4565-996f-0f5fc955fed9" isSubstitutable="false">
+          <generalization Id="4f3c4520-034f-4944-9793-d9e1cef37b5e" isSubstitutable="false">
             <classMoniker Id="701aad50-103d-4ae1-addb-64c31f72432a" LastKnownName="ClasePersona" />
-            <elementDefinition Id="de2e97ec-c08a-426c-8cc4-b9e19369869a" />
+            <elementDefinition Id="d29f2453-3789-499c-8eea-e89d6d0cf9d4" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="8c847df3-6f9a-466a-bfc0-e605c2432f47" isDerived="false" sourceEndRoleName="ClaseCliente" targetEndRoleName="ClaseVendedor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="217e9066-c6e2-4a2a-9a59-550b38e49d50" LastKnownName="ClaseVendedor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0eb71013-3506-484c-935d-3194139bb340" name="ClaseCliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f9603cd-842f-4c6b-88ca-6830d567cc63" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31b39606-a6c8-4595-9ff4-bc9deb82d244" name="ClaseVendedor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b462735f-2692-4770-8ae8-27b2f86fd2b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1dc28dfe-c86f-421d-beb2-b7c3a26d2183" />
+          </association>
+          <association Id="b847db16-16e4-4d8e-8659-2bbdf42deda9" isDerived="false" sourceEndRoleName="ClaseCliente" targetEndRoleName="ClaseCredito" isLeaf="false" isAbstract="false">
+            <classMoniker Id="de8c3b9f-490b-4844-94dd-5d5890e85567" LastKnownName="ClaseCondicionPago" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88ccd220-222b-40ba-b6b8-a9068889efb0" name="ClaseCliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="25560d5e-a4fe-410c-b678-cc4facd92956" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5a7732df-dcac-4ad7-9e13-b478313e62a1" name="ClaseCredito" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="13e00c6c-f1a1-43ad-8c78-f99caea2c3d2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ad93c68-5d08-42d1-b2b9-f4687331c070" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
-          <property Id="efe70a81-1ac3-4091-b2f3-7536abffca89" name="vNIT" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="efe70a81-1ac3-4091-b2f3-7536abffca89" name="vNIT" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3468016a-dee1-4b1a-8606-35adedfea3a4" />
             <type_NamedElement>
               <referencedTypeMoniker Id="3df33e21-67e7-42a7-9bf1-cfbed92db1ac" LastKnownName="String" />
             </type_NamedElement>
           </property>
-          <property Id="6f36aaf4-63af-4966-bdc7-6de8219a51a2" name="vSaldo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="6f36aaf4-63af-4966-bdc7-6de8219a51a2" name="vSaldo" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2fb511b7-5be1-416c-9642-e1e7d1f43cac" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="894425d7-331e-4c34-996d-a2a92be87316" name="vTipoPrecio" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="894425d7-331e-4c34-996d-a2a92be87316" name="vTipoPrecio" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a0dc9bb1-da32-4fa5-9abe-94fc845205ca" />
           </property>
-          <property Id="02e8ffbf-ec69-4772-b5dd-4189c44969b5" name="vCredito" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a0f933d7-6668-4624-9086-a630410cf623" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
-            </type_NamedElement>
-          </property>
-          <property Id="3b93a34a-affd-4ad1-89b1-547b56ca5c27" name="vDescuento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="3b93a34a-affd-4ad1-89b1-547b56ca5c27" name="vDescuento" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a6f837dd-9cb2-401a-a1f1-e85450d20852" />
             <type_NamedElement>
               <referencedTypeMoniker Id="ce756553-5f8f-4c23-8d80-5f56644f0957" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="c96ca4c3-ed11-4556-9198-d3ebeffccc59" name="vVendedor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="c96ca4c3-ed11-4556-9198-d3ebeffccc59" name="vRefVendedor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="fbb051c4-643a-4a4c-9031-47f4101b8b0b" />
+          </property>
+          <property Id="59963066-3f4a-43a5-b79a-cb6120d7d001" name="vRefCondicionPago" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e1e7d1bb-678b-4705-a8f6-1ec04fc6c84f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1f96f968-d47e-4109-a167-58a8bd8b14d8" LastKnownName="Integer" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -410,7 +891,7 @@
             <elementDefinition Id="6675519f-5016-42f5-b342-a03829a7bec2" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="5522670d-b402-453b-8289-d0d63aa5e0b9" name="xID" direction="In">
+                <parameter Id="5522670d-b402-453b-8289-d0d63aa5e0b9" name="xRef" direction="In">
                   <elementDefinition Id="9168f011-3235-4e4d-bfa7-808a042d50cd" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
@@ -430,10 +911,150 @@
                   <elementDefinition Id="df3d8606-e996-4a24-86c9-f9fa5757a532" />
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0b01f039-3f7c-4346-9624-a68631d8250f" name="xFecha" direction="In">
+                  <elementDefinition Id="94c3e8e4-8a8d-49c7-a483-5451f88fe85f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07351249-418b-4922-b5e9-7779a8bae3f3" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="20cebb1b-3fd1-45e8-b192-5a6cb4874bb1" name="xNIT" direction="In">
+                  <elementDefinition Id="73a1d72b-f973-47cf-928b-035ff0c63637" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="93288f27-d208-439d-9b55-2efb03f8c865" name="xStatus" direction="In">
+                  <elementDefinition Id="e9fc6f57-a6ad-4bc2-b4ed-5407fd417162" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4fc20470-0103-4d65-938b-10caa4395d09" name="xDireccion" direction="In">
+                  <elementDefinition Id="892d5588-df19-460c-a7b5-281e85d95b43" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="60f93289-cbd7-4fe5-8aff-73dcefa509f1" name="xTelefono" direction="In">
+                  <elementDefinition Id="0110645f-364d-4bf3-9554-39f330075b95" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="df4feb09-c6eb-4eb3-b9d2-897e28a8cae8" name="xRefCondicionPago" direction="In">
+                  <elementDefinition Id="994889e1-7fe6-4bf6-adba-d80c43094c42" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c509c730-565a-42f6-96aa-db83aa3acac8" name="xDescuento" direction="In">
+                  <elementDefinition Id="713508b0-4693-4778-9c2d-3ca96d852345" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d5013f04-2e6a-4614-a449-b558014d100d" name="xTipoPrecio" direction="In">
+                  <elementDefinition Id="25834d06-f101-40fb-a138-f91e406bb5ac" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="717911c0-ba00-441d-bb8e-e86886c5abf0" name="xRefVendedor" direction="In">
+                  <elementDefinition Id="a2a23a36-53a1-40a6-ad6f-75377e6969d4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3b8df230-73fc-4ff9-8282-61b649667af9" name="xComentario" direction="In">
+                  <elementDefinition Id="c88049b9-4ee0-4084-ad71-d17b57dcfd81" />
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation Id="8eb5b0b7-e47b-4702-a8cb-32d8f908ec94" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="61072427-d75a-4223-9c19-a16332f893b3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c881c94-d015-4e8a-a8b1-4c47fa558e09" direction="Return">
+                  <elementDefinition Id="341d71c7-dddc-460e-8826-e5e62de33757" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38c0ab01-19fd-4cb2-a18a-ae46e81c9a5a" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8e5e171d-6be5-413b-8bd7-5192071dd272" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Indicar si el cliente tiene operaciones asociadas cuando se quiera eliminar</description>
+            <elementDefinition Id="74ba75f2-c2dd-4261-adbe-759fa02fc032" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c16be796-5a6e-451b-8bb1-f50948501a3c" name="xRef" direction="In">
+                  <elementDefinition Id="33dcaefe-7370-4354-8422-2c06e7947e5c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cf045b48-5ff1-4a53-8187-0572b3a9f6dc" name="buscarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="44c2a4b3-14f8-442a-96bc-50585b7d6590" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8492a21a-e7b7-4b7b-b236-414ad8ad6aaa" name="xRef" direction="In">
+                  <elementDefinition Id="1822b625-e5fd-496d-9c7d-78bd635c8559" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6bd4caf9-db3d-4695-be1b-4fce964df271" name="xNombre" direction="In">
+                  <elementDefinition Id="766d1ca0-6b4e-489c-8ae7-17a70d5c7e03" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5f35055e-b439-460e-bf10-d5ec293e212e" name="xRIF" direction="In">
+                  <elementDefinition Id="cc75728a-4088-438c-8dea-a0098bd12a1e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b401df0f-9f67-4c4b-8f6f-171f11b6375f" name="eliminarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c333bde5-ec3c-43eb-860d-1772cd4e4e79" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5d21aef9-7e6f-43b1-b8e4-1a66394247a4" name="xRef" direction="In">
+                  <elementDefinition Id="38b74a33-4edf-49c1-9add-2641d7b707c5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -448,13 +1069,148 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="e8d7fc2c-f469-4b3c-8b46-86ee90680164" name="vComision" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="e8d7fc2c-f469-4b3c-8b46-86ee90680164" name="vComision" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="5b131a39-21b9-4154-b116-66a538753d18" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="12670708-b025-4d2c-9543-96ab990bc50b" LastKnownName="Decimal" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="43a602c4-b7f7-40f7-b423-99793967c4da" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="21e7b05b-73de-42c7-b5da-4bc818ae756b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ac96ce2d-7c68-48b5-a3e6-4b72948f376e" direction="Return">
+                  <elementDefinition Id="f29e41bd-a825-4725-be94-fe999822fff1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="56bb2a12-97d1-4250-ad8b-f0aaf7c70474" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="435d5c30-8f6a-4972-9bc1-1071d7efdf27" name="agregarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="81a95f82-f2be-4836-acb9-e38f2e72032b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a541080a-ff3e-49b5-a48b-d3da3bc29379" name="xRef" direction="In">
+                  <elementDefinition Id="ae1723ec-22bf-44a2-9500-6952e83d55da" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b8417594-27ee-4b8f-b5dc-66a683dd3095" name="xNombre" direction="In">
+                  <elementDefinition Id="886e0f05-8376-4fe4-af38-4d452caec0f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3c59715d-b76e-4590-845b-c6553117ae41" name="xRIF" direction="In">
+                  <elementDefinition Id="17f7cc8d-0c51-408a-a693-a95da3ca1c3d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b9310691-0249-45b7-94e3-3944e47dc3c1" name="xFecha" direction="In">
+                  <elementDefinition Id="40f3e94f-dcd2-4bfa-b0a3-bb104194998a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07351249-418b-4922-b5e9-7779a8bae3f3" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1aae8732-2735-405d-8dce-73e0ced785f3" name="xStatus" direction="In">
+                  <elementDefinition Id="2e95f68c-d40c-40bd-b5a4-f26190142d11" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dbd72925-6658-485f-92de-abbc0b0bc70d" name="xDireccion" direction="In">
+                  <elementDefinition Id="6fe08df1-32cf-4062-883b-8142730da6b4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c23646c8-cf48-411b-bf98-fa131058ff6d" name="xTelefono" direction="In">
+                  <elementDefinition Id="b0ca29d8-16c2-488c-95f5-69edf24601a9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="991e3d22-ea7d-4bd3-955c-7abe6a2a6164" name="xComision" direction="In">
+                  <description>Porcentaje de comision que se le va a aplicar a cada factura del vendedor</description>
+                  <elementDefinition Id="d3cc3877-5a68-47a6-82a9-412bfe7e6672" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d1a98d12-3576-4508-816f-fd6349a82d81" name="xComentario" direction="In">
+                  <elementDefinition Id="41fdaa97-5e15-4c11-a8e9-02a9361b751e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0e86c52f-6df3-4bd7-8efb-9459a53609dd" name="buscarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5f2d37eb-4657-4624-8acc-cafafa148299" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="43d9672e-5d1e-4bb1-9b79-e44ccbcdbaaf" name="xRef" direction="In">
+                  <elementDefinition Id="8063f437-3e55-40ec-8bd2-66d23bbfee22" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="154f8e72-f36d-48b6-bc7a-72f6dca36dcf" name="xRIF" direction="In">
+                  <elementDefinition Id="7a521488-2e86-4d0d-893c-be325590e3a4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2bc7bb30-9334-4b6f-a43c-84563a5bdb8b" name="xNombre" direction="In">
+                  <elementDefinition Id="112f131c-d7fc-4bed-9cf0-141d15806911" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f12c06af-0def-4c72-bca8-176bbcd86aa5" name="eliminarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="38768d90-695e-4f6f-b6da-962f46992142" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="36b7565c-d95c-4336-a3d2-34744d03f652" name="xRef" direction="In">
+                  <elementDefinition Id="f9be200e-8087-4cce-a1de-3f90c8dbfb32" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="18553359-e650-408f-8e11-287dcb454618" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Indicar si el vendedor tiene operaciones asociadas cuando se quiera eliminar</description>
+            <elementDefinition Id="1c47c24f-80d8-4033-ba5a-b1e921591138" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fc555f44-4fb1-4f6b-818e-0c7129365a1e" name="xRef" direction="In">
+                  <elementDefinition Id="762e903e-8732-4c06-bd93-5b7e2366b54d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -468,45 +1224,63 @@
             <elementDefinition Id="4d574afb-2130-42c5-ad77-60ec8934a89b" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="52845ac4-913a-4fcc-91ee-521457d68ccf" isDerived="false" sourceEndRoleName="ClaseProductos" targetEndRoleName="ClaseTipoUnidades" isLeaf="false" isAbstract="false">
+            <classMoniker Id="04684968-53aa-4fba-9e36-597d793b9868" LastKnownName="ClaseTipoUnidades" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="319c7b28-34c5-475f-984f-fa99d99f7b85" name="ClaseProductos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="667dc8fa-3688-48f8-adad-71181819e3f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="431add5b-a902-41da-8e10-3ef75ce726bb" name="ClaseTipoUnidades" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94fcaad4-7c27-43a3-8541-24e21dbfbd36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f63591b5-cb6a-4899-ae8b-be88f53d20d0" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
-          <property Id="1d2d9a64-252a-4d31-9694-78bba61df189" name="vPrecio3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="1d2d9a64-252a-4d31-9694-78bba61df189" name="vPrecio3" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c3fb1329-5cfe-4332-b245-54b0f0e2cd26" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="4560b1c0-07fe-4b70-9033-f9bf5a4ffe10" name="vPrecio2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="4560b1c0-07fe-4b70-9033-f9bf5a4ffe10" name="vPrecio2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a82a8090-08c5-4e5d-88b6-2f5484a960fd" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="1abe7cad-77cb-4c5d-9d07-d8e7b5377c5d" name="vPrecio1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="1abe7cad-77cb-4c5d-9d07-d8e7b5377c5d" name="vPrecio1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="356a392f-a9b6-4434-971f-8f8f3aa50ad2" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="19a5ef22-f773-4bec-a696-c36d5330bc5f" name="vEquivalencia" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="19a5ef22-f773-4bec-a696-c36d5330bc5f" name="vEquivalencia" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <description>Dato para indicar cuando tenga distintas unidades. Por ejemplo 1 Millar tiene 1000Unidades</description>
             <elementDefinition Id="d8ec53aa-5e99-4ca6-b839-1fd0af886003" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="d1494233-dfe1-47b2-b2fa-d4d1157df41c" name="vTipoUnidad" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="d1494233-dfe1-47b2-b2fa-d4d1157df41c" name="vTipoUnidad" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="406cc204-be98-42dd-8718-f26be7fb37ee" />
             <type_NamedElement>
               <referencedTypeMoniker Id="0e235fe8-24c0-4e8e-a107-776ff01b8853" LastKnownName="Integer" />
             </type_NamedElement>
           </property>
-          <property Id="1f295292-08e7-4a3f-a112-ce61b3e78718" name="vPrecio4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="1f295292-08e7-4a3f-a112-ce61b3e78718" name="vPrecio4" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="bade1576-2740-425d-a79a-58537f24aec7" />
             <type_NamedElement>
               <referencedTypeMoniker Id="46d9b7d2-7dc3-4521-bac7-5d33bed7d8ab" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="844701d6-c454-4548-8722-91b979ffa60f" name="vPrecio5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="844701d6-c454-4548-8722-91b979ffa60f" name="vPrecio5" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="34231ff8-f152-43c7-8c9c-b63499e0443c" />
             <type_NamedElement>
               <referencedTypeMoniker Id="7c66fb2b-f170-4530-9e07-693e37b91d37" LastKnownName="Decimal" />
@@ -519,7 +1293,179 @@
             <elementDefinition Id="bac21a74-8dd1-4cf6-8a36-3e18ff253303" />
           </operation>
           <operation Id="7f39d33e-38d7-4cdf-a058-f71ee3bb7937" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Validar que el producto no exista, etc...</description>
             <elementDefinition Id="ca5f085f-cd46-405b-b41e-013f2baa5304" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="71192b76-1e4b-41c1-9a4f-95bbac0bcbe6" direction="Return">
+                  <elementDefinition Id="952816b9-5884-4a5d-b06b-1e4d7f25d9d2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ad61c32-e338-4bcb-80c1-b4317512237f" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="393ddcf5-139c-4c3f-af92-f65606d88d1c" name="agregarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee99ecc2-daea-4a02-817d-52f0a2f4a916" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="faa0ceee-ce0c-40c7-97db-546cf74e1c3e" name="xRef" direction="In" isUnique="false">
+                  <elementDefinition Id="ddd747bd-aee8-4298-8d0f-3dd523364897" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d9ab286a-0c4d-4070-8ff8-fc05a79d1f80" name="xDescripcion" direction="In" isUnique="false">
+                  <elementDefinition Id="c7e15a0d-67cb-46c1-8edd-cbfd5e78aedd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3dc92426-279d-4f92-9401-9305c8c0e897" name="xFecha" direction="In" isUnique="false">
+                  <elementDefinition Id="b0b27926-1cbd-45f6-b183-1de366d46a7f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07351249-418b-4922-b5e9-7779a8bae3f3" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="13303218-8857-4f3a-b3f4-21ab2f763b10" name="xPrecio1" direction="In" isUnique="false">
+                  <elementDefinition Id="efa0e4b9-7217-4fed-933e-2920ea11a262" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e3f523d-bdf9-47ac-9b91-4cd7e820346f" name="xPrecio2" direction="In" isUnique="false">
+                  <elementDefinition Id="a7179cea-eb35-4b9c-92a2-65e0c3bd203d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab9b5365-4b88-4f11-a262-366af22d65ca" name="xPrecio3" direction="In" isUnique="false">
+                  <elementDefinition Id="c5d6a879-330b-48d8-9c7e-b723e829a415" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f9f085a4-cf0c-4f31-b57d-f432377c8fc5" name="xPrecio4" direction="In" isUnique="false">
+                  <elementDefinition Id="172bdd87-a523-4353-bcc2-a97c77402393" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="850c3512-e48e-4fb4-b014-c60713e0ad9a" name="xPrecio5" direction="In" isUnique="false">
+                  <elementDefinition Id="9426579f-f430-4993-97a7-3a3554eba859" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3dbac639-12b2-4adb-82da-0f169a3b3283" name="xStatus" direction="In" isUnique="false">
+                  <elementDefinition Id="3689ff72-33a2-42b7-8042-68d1ba029966" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ccb38ca9-b1f7-41c3-aec9-db03b7bdb5ad" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ab3f417-3aa6-4ca5-a0fc-4cea77ff75d9" name="xRefTipoUnidad" direction="In" isUnique="false">
+                  <elementDefinition Id="41ce0922-54bf-4d9b-a0f7-e81febed92ee" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0d22fe49-60ab-4e40-a2dc-3dbe72d67ab7" name="xEquivalencia" direction="In" isUnique="false">
+                  <elementDefinition Id="bbaab8ff-9045-43f6-8bed-d4cf313249df" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f7d54556-43f2-4986-bbf3-869910e3f66b" name="xComentario" direction="In" isUnique="false">
+                  <elementDefinition Id="b9142d74-7bae-4428-a855-f5b5c1eb9c91" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="799698b7-d655-4e0d-a778-aac850861e30" name="xRefPorIVA" direction="In" isUnique="false">
+                  <elementDefinition Id="20fb7356-717e-4fce-8fbf-c581d5ebefa0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1e7892a1-1fb4-4a4d-8cd6-4ac04e14412b" name="buscarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>aqui se busca tambien los tipos de unidades</description>
+            <elementDefinition Id="ccb68888-b20a-4a27-81d3-3bd422c75976" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6136676f-3f76-4141-b86d-bc2b4a87e4f0" name="xRef" direction="In">
+                  <elementDefinition Id="804cdee8-99b7-4cda-8ace-3f86d911ea6b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="212e4611-1a72-4449-ad32-3e7557ce484b" name="xDescripcion" direction="In">
+                  <elementDefinition Id="479cd344-96cb-48dd-8936-7c45878b2b9f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="20902783-b53a-4b72-ac1f-ebe2cc5bfc77" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Para saber si el producto esta asociado en alguna operacion</description>
+            <elementDefinition Id="ad4610c0-e083-4efc-b4d0-54651c4d1f7e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe66dd20-990e-426b-a7ad-3859d35820c9" name="xRef" direction="In">
+                  <elementDefinition Id="eeff1b73-8a4f-4690-b30b-d2db4b0ff777" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ad9fc911-382e-4a71-878e-07f30bbe9f4c" name="eliminarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bd167874-8ef8-4089-b795-043ba17aff03" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0eb0e637-0af0-4431-9520-ed81889da95e" name="xRef" direction="In">
+                  <elementDefinition Id="49ea0796-9a87-4ce2-a1ed-fc6086c31c73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bfab0227-967a-4cfa-8942-44ef8a7cd186" name="imprimirListaProductos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6d36800a-0910-4cec-8c42-317bcf933ef4" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -534,23 +1480,148 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="fe31ab54-2708-4e34-8f10-e1f7782c3c73" name="vIVA" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <description>Porcentaje de IVA</description>
+          <property Id="fe31ab54-2708-4e34-8f10-e1f7782c3c73" name="vRefIvaPre" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Es el iva predeterminado</description>
             <elementDefinition Id="d18290ad-c55a-4c12-a35b-291f22d00300" />
             <type_NamedElement>
               <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
-          <property Id="5d62252e-5a1e-497a-a801-b098f29b78c3" name="vLogo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="5d62252e-5a1e-497a-a801-b098f29b78c3" name="vLogo" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f38b1f2a-00df-4b95-bcff-3dfb375c8bfe" />
             <type_NamedElement>
               <referencedTypeMoniker Id="53e047a4-27ad-485e-83d7-20aef150aaa1" LastKnownName="Image" />
+            </type_NamedElement>
+          </property>
+          <property Id="040152a3-7845-436d-880a-3ebca6b801ec" name="vNIT" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0ef38f88-62df-42f6-b24a-3f046a71582d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="afc725e8-2e81-48b1-bf3c-0b8e0314a8eb" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="ec232550-50b7-4b3e-9943-59628c99b605" name="vRefIVA" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Es el ref de los porcentajes de IVA</description>
+            <elementDefinition Id="18fab49f-4516-42ad-884c-c5890fde21c0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1d68c7a-9861-4fcb-926b-82aab35882fc" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="4f337edf-f3e4-411a-a43b-a7d9666eb43d" name="vIVA" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <description>Porcentaje de IVA</description>
+            <elementDefinition Id="cd21b4aa-4718-4a6d-bf24-6df0ece489b8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="28703999-020f-4c33-8b72-7ba5cb365647" LastKnownName="Decimal" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="ae6565a7-672a-4c15-a20c-f5725cd994be" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="bc4703b5-3c3e-4938-842f-25579885564a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="05fccd17-9fd5-4176-8570-96ea0b796489" direction="Return">
+                  <elementDefinition Id="2c825e15-5f34-4868-9487-359984e664da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="dc98e7cd-13ca-4c30-aaa7-26a116ec57cf" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f491f8de-ef69-4f35-b17a-553b23ce29a1" name="agregarPersona" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c57b7d5d-d29b-4c85-a525-bb56a98c0169" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="98fe079b-f223-4aa5-8b35-ae8d9e2745dd" name="xRIF" direction="In">
+                  <elementDefinition Id="ca92dc37-0f73-4e02-94a9-53257619187b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e717f1bd-9dba-47a2-8006-65bc2e069f0d" name="xNIT" direction="In">
+                  <elementDefinition Id="26254b56-086c-4e1c-9609-71eeceac29c1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="99706f5a-7271-426e-8895-0e76e5e780f7" name="xNombre" direction="In">
+                  <elementDefinition Id="32af6edb-33f9-43ab-adbf-b7c87bff2a38" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bf5c1287-5535-401e-a17d-364fcefd254b" name="xDireccion" direction="In">
+                  <elementDefinition Id="77dc1c12-9e62-4064-a753-819c2922dbba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d4c929ae-23bd-404b-98d4-2a2da46df0b7" name="xTelefono" direction="In">
+                  <elementDefinition Id="7e705c21-500b-4fcc-af87-fab56c85320e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8678f404-e2cb-4c11-8ce5-e40c8718bd02" name="xEmail" direction="In">
+                  <elementDefinition Id="f78832f8-3c5f-477a-86df-07c7b76cc1cd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="517632f3-aa62-4ce4-95f3-bbb5e3a15ecd" name="xRefIvaPre" direction="In">
+                  <description>Es el ref del IVA predeterminado</description>
+                  <elementDefinition Id="f29e4fb0-0b1e-4372-947f-b822dadd07c9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="deb320a5-e823-4446-9e54-0e1db66a4387" name="xLogo" direction="In">
+                  <elementDefinition Id="68d25c2e-71e3-4647-9af6-b0d8266243c9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="53e047a4-27ad-485e-83d7-20aef150aaa1" LastKnownName="Image" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4fed0f96-b3e2-4a5e-9ae1-37dad2ad7588" name="agregarPorIVA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c068ffcd-d650-4614-b4f9-75f5d5f03b8d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="904fff6b-b51e-4f9a-8062-70708414363b" name="xRefIVA" direction="In">
+                  <elementDefinition Id="df5bc771-ea46-440c-a1c0-f26c0a5885ff" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c846e80-aced-49be-94bd-2f1decaada5a" name="xIVA" direction="In">
+                  <elementDefinition Id="0df5a12d-9f46-4e2f-9ada-6d1552cfb6c4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="feccfc34-068d-4c3c-b761-8cf7ef966c17" name="buscarParametros" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>No coloque buscar desde persona porque no tenia parametros ya que sera una sola empresa</description>
+            <elementDefinition Id="bbaa2b9a-5e5a-4d61-870c-38c7f0cc0a1a" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -565,22 +1636,100 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="65c62d7b-8785-4177-a2a7-4d01542e461f" name="vTipoUnidad" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="65c62d7b-8785-4177-a2a7-4d01542e461f" name="vTipoUnidad" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="926fa2be-e75e-481c-aec7-8b61c59c7549" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="8a3d6543-d8d9-4207-bed1-289a06fc2a9c" LastKnownName="String" />
+              <referencedTypeMoniker Id="74b38dba-69a4-4214-84b9-b43b55829452" LastKnownName="String" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="1f94cab0-f95e-4aff-b3db-65fb270f3e59" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b4aec7cb-0df2-4721-af00-d3a434de6e28" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fb58e5f6-1779-45af-8283-4ea90927c20b" direction="Return">
+                  <elementDefinition Id="aa89963b-54e3-43a5-a1c1-3499108dc0f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1221a3b9-0dd4-43c2-b0ec-b53d69b40f40" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f0fda43b-38fa-4947-a950-a939a37fd8b0" name="agregarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="68d991b9-9f92-45c5-8704-62f246c13595" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b5903ce5-6c46-44a6-9a5b-6603f0d927e9" name="xRef" direction="In">
+                  <elementDefinition Id="48e96a6e-39c6-4813-882c-dd85ae194c58" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="05c91844-b96b-46dd-a9b9-951d348ad080" name="xTipoUnidad" direction="In">
+                  <elementDefinition Id="6ecc1506-3eb4-4656-a989-8bdbe0796348" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="11e01a2f-1e0c-4d0c-b0bc-237ab2e60965" name="buscarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4526eee-fe7b-4eb4-884a-a22dd5357699" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d966bd96-6369-435e-b003-921dd4e7dd77" name="xRef" direction="In">
+                  <elementDefinition Id="dad348c8-f554-45df-acba-17043073caa8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d25110f4-5242-4405-aa43-abaee9204b40" name="xTipoUnidad" direction="In">
+                  <elementDefinition Id="068be8d5-9def-46fa-99c5-b77c38f4071f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0ad02a60-a002-4e4f-acd4-6682aff9f8bb" name="eliminarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7482deeb-850e-457c-96a1-753d58448b4c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="037acf94-abcc-4392-9d3e-942c0995c68b" name="xRef" direction="In">
+                  <elementDefinition Id="a7359766-97ac-4d0f-b469-08915b1c0e20" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cba03915-0878-4066-9a06-c304a724d5fc" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bf3ad461-0364-489e-94f0-cb092eb412fc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f03578d0-ca6e-4259-bed0-f39116fe1e45" name="xRef" direction="In">
+                  <elementDefinition Id="fe1d6c7a-f606-4262-81c2-7e61ee8849bb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="de8c3b9f-490b-4844-94dd-5d5890e85567" name="ClaseCredito" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="de8c3b9f-490b-4844-94dd-5d5890e85567" name="ClaseCondicionPago" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a469bc87-3c64-4d9c-9c86-e19b02f36f76" />
         <generalsInternal>
           <generalization Id="f6ec8204-c71f-4084-aec6-68d9828a4358" isSubstitutable="false">
@@ -589,7 +1738,7 @@
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
-          <property Id="720b2610-853e-4a98-b923-6898d5e4ff89" name="vDiasCredito" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="720b2610-853e-4a98-b923-6898d5e4ff89" name="vDiasCredito" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6cb35a51-2a5d-4f67-9ae0-14a853d2f2a6" />
             <type_NamedElement>
               <referencedTypeMoniker Id="1935dfca-0c39-4140-9ec6-08b5202edc46" LastKnownName="Integer" />
@@ -601,7 +1750,7 @@
             <elementDefinition Id="c1b4c107-24f8-45e1-9a52-23e2211c7311" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="bd0ea7e6-9c25-4496-ba97-aed96b778d3c" name="xID" direction="In">
+                <parameter Id="bd0ea7e6-9c25-4496-ba97-aed96b778d3c" name="xRef" direction="In">
                   <elementDefinition Id="15701df1-5c71-4303-8085-f1cba02995fc" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
@@ -662,6 +1811,29 @@
           </operation>
           <operation Id="b876a99f-64ec-42f6-a424-87a5b9d2b342" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="13e15d2f-bd36-4d0f-b6f5-c209544d09ed" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5ed25b31-908f-4c54-80e4-a9ab5f4746fb" direction="Return">
+                  <elementDefinition Id="9a928552-af73-4c7d-924d-add84cb24eef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cb68f06a-8936-4921-b80b-b9b2e372112a" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8f9bf34c-03c6-4728-9f2d-a02dc1dcb91e" name="operacionAsociada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2ace4cc0-ca9c-4cc2-8104-01d975a58db7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a3b2de6-18a3-4ee9-b2e1-04c5291fadb3" name="xRef" direction="In">
+                  <elementDefinition Id="5d8e3022-e1b4-44f5-a23c-72d70a7cebad" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -681,17 +1853,330 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="c730bd20-f350-41ba-b9bd-6e933eea043d" name="buscarCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="ee860ee5-09fb-41e1-ab10-abdf73fe7c59" />
+          <operation Id="64795c70-7329-415e-9d2c-eb044d939728" name="agregarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2a86dd37-6bba-4250-b2fe-9b54c2a9a0c3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e661dab-9402-43a1-86aa-8adc93249667" name="xRef" direction="In">
+                  <elementDefinition Id="dbfa04d4-6237-4337-a6f1-bdf604273141" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d98bda04-01e9-472b-bace-f303f14422c3" name="xNumero" direction="In">
+                  <elementDefinition Id="a17bb25a-ba7c-49ed-b0ea-230c54bcd0af" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6048d23d-b981-49a1-ab16-c6eb8e64d291" name="xStatus" direction="In">
+                  <elementDefinition Id="10fc19fc-2e97-439a-a3ee-04779f06aaf6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3f1b687a-4bdd-4cd7-8628-3c4de215a086" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="60e7499b-1146-4b29-a71f-46807342017a" name="xFecha" direction="In">
+                  <elementDefinition Id="49301b8d-82f4-4460-bd9f-67160aac3928" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f158055-9f7f-4c4c-94b5-b82bbab46cee" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="85f08265-82d1-43f9-8dff-d7ec3382f1f1" name="xFechaVenc" direction="In">
+                  <elementDefinition Id="a9acc5b5-ddc8-4bde-adb0-f7f02845dc96" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f158055-9f7f-4c4c-94b5-b82bbab46cee" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6abdac1-f31e-4796-ae79-4485bb9b4897" name="xRefCliente" direction="In">
+                  <elementDefinition Id="5db71943-b4a4-48ba-a185-e46b2cad0f43" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e7a96627-73df-4dde-8cb4-383194a40c61" name="xRefVendedor" direction="In">
+                  <elementDefinition Id="0b49769c-9aff-449e-b2ab-abba8a98a938" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c1a4dd7a-f5fb-4016-aed0-d66f11aedab8" name="xRefCondicionPago" direction="In">
+                  <elementDefinition Id="4fd8cd28-26e1-41cb-a33a-aefc3a46a552" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="068a1765-8e5e-425c-a999-0332259b64ea" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b60b4f6d-b76f-44ab-a065-1552dbc8be0d" name="xSubtotal" direction="In">
+                  <elementDefinition Id="3ea7d2f2-aa10-42d6-9ae8-587dc50fdb50" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="29d8e03e-def0-4b33-ad8c-1cf38916713f" name="xPorIVA" direction="In">
+                  <elementDefinition Id="04c178fa-6f15-4c9b-ac72-89a50ef1fdaf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="864abcb4-3e77-483d-9ab9-7824dc69d0b0" name="xIVA" direction="In">
+                  <elementDefinition Id="bf455d05-9fe6-47cc-a034-745b67c28f73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a86ce8b1-9a7e-4d43-a05a-46a6c0e0eb72" name="xPorDescuento" direction="In">
+                  <elementDefinition Id="7a9d54fb-3473-41f3-9009-6dba75fc1cdb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58cc5f20-88f8-4bbc-975a-b55e31f3fa74" name="xDescuento" direction="In">
+                  <elementDefinition Id="be33aa45-f1f7-4a25-b181-b72ca0b18621" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="11125267-1c24-4332-9a6d-1f3758d71a21" name="xTotal" direction="In">
+                  <elementDefinition Id="237aee0f-fffb-49fc-91d8-bac13dc4df00" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a5b3a11e-f347-437a-8bb5-2311f43ea920" name="xComentario" direction="In">
+                  <elementDefinition Id="6d9691c4-912b-471c-bf43-a80fe874036d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3f1b687a-4bdd-4cd7-8628-3c4de215a086" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6d0d0890-3ccb-45f1-b783-323335f9a3ef" name="xRefProducto" direction="In">
+                  <elementDefinition Id="227ca825-8688-4bba-9994-121783e38921" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3754ebbf-faa0-4ca8-93d1-4960a2013f43" name="xPrecio" direction="In">
+                  <elementDefinition Id="aee0920e-ede7-47a1-800b-50c30513adec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="540e8f77-2d36-4a8b-91fe-6285074c41b9" name="xUnidadItem" direction="In">
+                  <elementDefinition Id="d02d30a1-a3af-440f-8bfe-3086961073d2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e0b73d51-f12e-40fe-9df8-b8498f637b9b" name="xRefTipoUnidad" direction="In">
+                  <elementDefinition Id="7d000ba5-a047-45f8-a45c-009c117aa0fa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="068a1765-8e5e-425c-a999-0332259b64ea" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4a569a42-7b4e-4bf4-a395-859d2d16f54e" name="xTipoPrecio" direction="In">
+                  <elementDefinition Id="fe53f68a-50c3-4f56-b20f-81a81e9620ff" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3f1b687a-4bdd-4cd7-8628-3c4de215a086" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="897d3244-4d51-4e99-b048-df465e8f3271" name="xSubtotalItem" direction="In">
+                  <elementDefinition Id="2b10b314-5082-4c64-8ad0-742f6e8bdbc9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8b5083e2-11aa-4d38-8c0c-f338833c7fce" name="xPorIVAItem" direction="In">
+                  <elementDefinition Id="8433dbf7-5359-416f-a022-086cfbb7b482" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="21980bc3-08ed-4d43-95c3-881aa6a450f3" name="xIVAItem" direction="In">
+                  <elementDefinition Id="3cf61da7-a944-4092-89b0-0f718e0ba2cf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ac87bf81-faa4-4140-b7e5-8e9ae7d015d2" name="xPorDescuentoItem" direction="In">
+                  <elementDefinition Id="b63176c5-d12d-4f0a-960b-b2d631370373" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37488b85-bccb-4e72-93a8-5644bc0e1801" name="xDescuentoItem" direction="In">
+                  <elementDefinition Id="2b9a48b9-f285-4e7b-bc62-171d073f1cdf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f9b6bcf4-d1da-42de-8b95-e2c4ee5403a1" name="xTotalItem" direction="In">
+                  <elementDefinition Id="b6668bcd-c4b3-4953-ab69-0b8d086f05b0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e167029a-250a-4be6-967b-0e67d15b997c" name="xComentarioItem" direction="In">
+                  <elementDefinition Id="291f53f0-3e2c-4b1b-92ab-baf768f31916" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3f1b687a-4bdd-4cd7-8628-3c4de215a086" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="956112e7-884e-4bc6-abfa-fc270bb6d673" name="xFilaOrigen" direction="In">
+                  <description>Indica el numero de la importacion</description>
+                  <elementDefinition Id="3d1c6d7f-d60b-4ca7-9c8d-e88bbb2e0e6f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
-          <operation Id="4d7e0145-778a-4b43-bb5a-b4fb857946a4" name="buscarProducto" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="d3b889da-ae2f-4f5b-ad8e-fe6d344c9684" />
+          <operation Id="f953f1ed-3949-4509-a58a-d3682b972101" name="actualizarStatus" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Metodo para actualizar el status a ser llamado cuando se elimine</description>
+            <elementDefinition Id="6cc52645-c972-4a65-94ce-4617b923deba" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3a466edd-1b1a-4bd0-a16f-107f2abff1dd" name="xRef" direction="In">
+                  <elementDefinition Id="b415ee3f-61f2-4d78-ab3c-8702273d8e64" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="05074d10-de88-4a52-bda7-17c276d69997" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca16a4b1-391f-449e-b58f-76a420b15732" name="xStatus" direction="In">
+                  <elementDefinition Id="a39220c2-98bd-4016-bba1-25389a2ffb98" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a3922657-dfc1-405e-857e-d387aa36521f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
-          <operation Id="68cc93e0-b733-4e25-9c4e-90cbf2ee50e3" name="importarDatos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="93661326-4005-40f5-9423-c00e9cb3e711" />
+          <operation Id="ba95eaed-8a0a-4221-bf28-a40c9cd378c8" name="anular" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be35dd89-26c6-431e-a804-12caa154e0fd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57deeafa-682e-4b72-a72e-30991ced7c4a" name="xRef" direction="In" isUnique="false">
+                  <elementDefinition Id="238b9361-3bcd-4eb0-a1ae-48fab338b2e3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6eb47192-9efe-42c3-8c42-1d933d6877a3" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
-          <operation Id="7ae8c283-3ef6-48fb-8965-ff0e22e523cd" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="3dbd46f9-d2ea-4526-9aa8-71bea7232663" />
+          <operation Id="784c9ff7-b3d7-435a-8048-f8d9f5235bf2" name="buscarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aa59a5ca-7132-41b1-83df-e9fca9f4e2da" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c91bf834-9684-4121-95a7-f4b716000915" name="xRef" direction="In">
+                  <elementDefinition Id="f777014a-5245-4613-aaf6-8417bc6cfbf2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b4d0316c-b5fa-46b3-9e85-00e5bf4b4eb9" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0f46f312-795a-49fd-bbbb-d5a98b878f52" name="xControl" direction="In">
+                  <elementDefinition Id="caee3f51-82f0-49f2-9c37-340236679087" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b4d0316c-b5fa-46b3-9e85-00e5bf4b4eb9" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c9ecf8d-2dc9-4b6a-a344-2867f9a3ff58" name="xRefCliente" direction="In">
+                  <elementDefinition Id="d879acc1-8ce9-4054-a814-7191d3e8c068" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b4d0316c-b5fa-46b3-9e85-00e5bf4b4eb9" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="887958ea-6da4-4bfa-8dc4-b2f6886159b1" name="xRefProducto" direction="In">
+                  <elementDefinition Id="1bc1cd07-2c47-440e-a744-0d8dcc9c8a8a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b4d0316c-b5fa-46b3-9e85-00e5bf4b4eb9" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f3c7e9ca-ef6d-429a-88d5-e47af8c64ffb" name="eliminarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bf8acf2c-b01c-4c82-aa73-a18b84afc8af" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bf5c00ca-24de-41f8-967b-dae4278f6c1c" name="xRef" direction="In">
+                  <elementDefinition Id="e6d3f5d1-d606-41c7-a0c8-92bb9e26bd8f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="768053c9-d6cc-4181-acc9-508312d7d6b3" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="afb781b1-7546-41a1-9eae-5d1ee0a8d1ba" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b770bb60-70a2-45cf-9f04-3f541ae3f416" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="15862273-57b5-4320-98b4-62928c1bca3b" direction="Return">
+                  <elementDefinition Id="65d48676-7c0c-4a26-99fd-a8ef4136eeee" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c9eb94d8-3897-4606-bd52-f04a6412f664" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -705,15 +2190,375 @@
             <elementDefinition Id="4aa1b55c-b291-4ecf-b5ae-b9b7a1383d4c" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="c712553f-db6c-4ba6-9525-365350484125" isDerived="false" sourceEndRoleName="ClasePresupuesto" targetEndRoleName="ClaseCliente" isLeaf="false" isAbstract="false">
+            <classMoniker Id="74c6fb54-75a2-4152-a769-0925b762fb99" LastKnownName="ClaseCliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5efb171e-45d1-47b8-86ce-aa53709048b1" name="ClasePresupuesto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="41daa2b1-5420-412a-a965-ca3df49d49e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e0a38684-acc4-4241-93bd-252f0498fb0f" name="ClaseCliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d3713257-a81e-4c9c-be38-72435e8eaccb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f1e459f-7471-4b58-aeca-0f1dbeec2c9c" />
+          </association>
+          <association Id="701bb965-6eef-4b40-bee5-a7cf25033995" isDerived="false" sourceEndRoleName="ClasePresupuesto" targetEndRoleName="ClaseProductos" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5e8e7f7a-f4ab-4a89-9039-8fe06455896c" LastKnownName="ClaseProductos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d24feff4-fd22-47de-877f-a814b95f1ee2" name="ClasePresupuesto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0d846fbe-066c-4156-863d-d8341fda76a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8d5f634-9532-4483-b83c-d54539bc1d89" name="ClaseProductos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="1e5bca43-0937-4d37-8b46-8a4a5358389e" name="Lower" value="1">
+                      <elementDefinition Id="063b00ee-76be-408a-b454-c9b5a04c2514" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3944d87b-0ccb-48a6-96d4-001dc0cbc055" name="Upper" value="1">
+                      <elementDefinition Id="b9a209e1-1949-42a7-aa40-3d58b23fed2a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f15c3cef-b202-4b6a-94d6-0f500fadea75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07ed834b-89fb-4ff3-82c7-4b603b3a6973" />
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
-          <operation Id="f65d4c88-c7ad-4a84-aa90-64ce39dfffbe" name="buscarCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="ce2112d1-38ce-479c-943a-ec51c51d7ee2" />
-          </operation>
-          <operation Id="181b4e54-9cef-444a-b624-26ea265a8b7d" name="buscarProducto" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="8f14fa49-6ff5-44ad-b7db-daf766e584cd" />
-          </operation>
           <operation Id="18caf9e7-fc9f-4c73-81b4-fcdc6f5d30cc" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="0807ce3f-2ddf-429f-b444-6ffdd80ac8e6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="66c48bea-fd0e-44bd-b179-89ad8bb50e09" direction="Return">
+                  <elementDefinition Id="1042930b-0914-4e7b-b6e6-8a0bf7357ac1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="da48b2a3-174a-4edb-94c6-5b049f419c61" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="15a81b66-f831-4cbe-b9aa-e688adf42fbe" name="agregarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="760f15be-e3d1-4ea1-8a7b-88acf570fdd6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6e7fc72b-2900-4612-ade2-050321fe7114" name="xRef" direction="In">
+                  <elementDefinition Id="c88d924f-ee7a-452c-afa2-2c6cbcfb89a1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cb164548-c226-4948-8602-b46d78c5d7ca" name="xNumero" direction="In">
+                  <elementDefinition Id="ce3a6d2c-c27e-44d5-9982-f9cec07b78f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58f9d8c9-2830-49a9-9eb1-fb179a43a2ea" name="xStatus" direction="In">
+                  <elementDefinition Id="5bb5851a-004d-4021-9c13-2ce6181be229" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e3937517-4a4a-4f18-9e76-e68874ee7776" name="xFecha" direction="In">
+                  <elementDefinition Id="d4d84856-284f-4807-bbdd-d224ff079e78" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07351249-418b-4922-b5e9-7779a8bae3f3" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="75271f6a-4f8c-4b17-bb48-4899bc130761" name="xFechaVenc" direction="In">
+                  <elementDefinition Id="8fc66e0b-73b5-47e4-9900-4a02121ac399" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="07351249-418b-4922-b5e9-7779a8bae3f3" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="779b5059-04a0-4255-9b36-d8f1064892ac" name="xRefCliente" direction="In">
+                  <elementDefinition Id="df98208c-3681-4dc0-bcf1-e724795066e0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c380addd-45bd-4a1b-9940-6ea12043c90a" name="xRefVendedor" direction="In">
+                  <elementDefinition Id="d9db2d0b-2fa1-4fee-af20-fc0e0e3aec71" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8418cc4b-d03c-4c5d-8257-10efca8a2659" name="xRefCondicionPago" direction="In">
+                  <elementDefinition Id="bee05822-56a2-43f8-b2de-04bb26c1456a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="adc2c462-beb4-4fce-b997-5149df89e936" name="xSubtotal" direction="In">
+                  <elementDefinition Id="a14d7375-2f8f-4414-bdce-7b935a008bb0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b9fca724-e7af-4600-9709-9a590978d51b" name="xPorIVA" direction="In">
+                  <elementDefinition Id="0f8cef24-12c5-4550-89e7-8f0ff99ba9db" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="30dbf4ce-b0d4-479f-a7be-e87cc4399175" name="xIVA" direction="In">
+                  <elementDefinition Id="f4be0534-9f85-465a-bc86-3728dde4c463" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b1bb3f48-e60e-4280-a78a-f553d6767d8f" name="xPorDescuento" direction="In">
+                  <elementDefinition Id="37b680da-00b7-4440-858b-e868950b48f1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3bf7e740-0c14-4e9d-9325-97b98a0a103d" name="xDescuento" direction="In">
+                  <elementDefinition Id="937edb3f-59ed-47f0-b39d-decf18abb202" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aca217b3-1092-433e-b3e4-d845890bfa9b" name="xTotal" direction="In">
+                  <elementDefinition Id="f2e4ce7a-d60a-46b4-9a61-7c4ab5941158" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7b94356d-a1e4-40d9-a97e-292d19650f5c" name="xComentario" direction="In">
+                  <elementDefinition Id="3226f757-6ddc-4f44-9cf7-f385a05a9cb2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="713ed340-9f47-4e51-af6a-982730b6e551" name="xRefProducto" direction="In">
+                  <elementDefinition Id="b06a062d-3598-42c3-a506-aca3c160e601" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="656f25f2-f91e-45c2-a519-be6ac8379d2f" name="xPrecio" direction="In">
+                  <elementDefinition Id="5910c814-5a9e-4379-8bb2-3172acbc76cc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4780aad-c71d-499d-932b-509fcd26577f" name="xUnidadItem" direction="In">
+                  <elementDefinition Id="db0958f0-7ebb-4eb8-b915-631a6a58e579" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="53d5d0c5-be40-43cf-998e-c2502a8b42e0" name="xRefTipoUnidad" direction="In">
+                  <elementDefinition Id="d3046886-ecb0-4499-a1a4-8d5ffb7ddedf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea3185f3-e4ce-4d13-a4b7-9913b46ff922" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0d17487a-227f-468f-b2e6-e9329bff7a30" name="xTipoPrecio" direction="In">
+                  <elementDefinition Id="a79fdff4-0994-4a93-8bad-8101397e50ff" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ba0cf60d-09b4-4fb5-a442-889f4d552ac4" name="xSubtotalItem" direction="In">
+                  <elementDefinition Id="273038d4-a5d5-4cce-bc3c-95bb53bbf3ec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="be50f432-5d2e-4e9c-881f-8b0502961d54" name="xPorIVAItem" direction="In">
+                  <elementDefinition Id="cf5e4875-e811-4e7c-9f83-d2cbbcf237c2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bcbd7037-07aa-42f5-920d-fc58a449ee8b" name="xIVAItem" direction="In">
+                  <elementDefinition Id="1a06ea2c-54aa-494e-8d2b-46c6ae4caf15" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37280f6b-b5c8-4ca4-89f6-32a7afd3ec2b" name="xPorDescuentoItem" direction="In">
+                  <elementDefinition Id="ad3ec093-d515-4787-812d-17264112e8c8" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dd009dcd-be7f-439e-81e5-3f82a0fe6837" name="xDescuentoItem" direction="In">
+                  <elementDefinition Id="cc2d3b65-3f53-421d-b475-7e7271037983" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3b8ade8f-556c-4f04-aad7-7a4e66a9d27c" name="xTotalItem" direction="In">
+                  <elementDefinition Id="a5f72815-4a86-496e-b89a-19e061d1eb79" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4172ea8-5288-46cb-aa5a-89ba9516fb88" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="53d0a1f0-0c6e-4908-9bd3-2a25b86ef76e" name="xComentarioItem" direction="In">
+                  <elementDefinition Id="d460b0e4-60a4-4774-b9ce-a95c75ac93eb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="38b78c7a-d204-484f-a55f-49852e5c86ad" name="xFilaOrigen" direction="In">
+                  <description>Indica el numero de la importacion</description>
+                  <elementDefinition Id="24566145-7e13-4146-8b46-aba1d99ddfec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0f8d37e2-8edc-4a30-8cf4-97f3e2e47895" name="anular" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8aeceb2a-090a-4c46-8609-8c176462d0a9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fb752232-42f0-4967-93ee-523afb964597" name="xRef" direction="In" isUnique="false">
+                  <elementDefinition Id="e94e6da4-ee18-41a2-92d6-375bf6268c35" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e0823918-c191-414c-b646-d1f7f1c8290d" name="buscarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8af8c05b-0c46-4a52-8073-b85ab7c94526" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="06a5d2ef-f93c-48f1-a2bc-f93ba913af12" name="xRef" direction="In">
+                  <elementDefinition Id="91e8a81f-7f39-4610-8475-e6047773f1c3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="97fce686-cd2d-420a-9675-d08291af824a" name="xControl" direction="In">
+                  <elementDefinition Id="df553111-69c2-4e61-931f-5ee150a03eb8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="11743339-53af-4e10-8367-6fdc17e74f3d" name="xRefCliente" direction="In">
+                  <elementDefinition Id="284404f0-5cc5-47a6-86d4-5976371fe08f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7106a5c5-879a-44e7-a249-7bf1b49b1c15" name="xRefProducto" direction="In">
+                  <elementDefinition Id="0abd2e42-07bb-48e5-b326-c4e968dc0860" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1ad945c6-d228-4678-b29e-f77ae11456f3" name="eliminarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="40a93124-f3ac-44d4-9c65-3d40d54f76fe" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="21ab5329-02e7-4323-bbdb-eda147ceaeab" name="xRef" direction="In">
+                  <elementDefinition Id="d49c75fb-af3b-46a7-8886-f8d944b5dbba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f7a26483-2816-45ba-b797-3986755be960" name="actualizarStatus" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Metodo para actualizar el status a ser llamado cuando se elimine</description>
+            <elementDefinition Id="629f21d1-cbba-4582-adf6-0b31a5fb96c3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4091a69-464c-46af-a648-0e0f5b964217" name="xRef" direction="In">
+                  <elementDefinition Id="0e262879-5aaf-45ef-8966-2976078dab1a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8874c648-82a1-4ecc-80a5-a543497d2e88" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d402dee3-c7f9-4baa-8bd9-55e4b570059c" name="xStatus" direction="In">
+                  <elementDefinition Id="59d3b89c-e0bb-4fae-b80b-5271353f6c61" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ecdeb7c-2381-48dd-ba6d-1cbc13b4b1cc" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -721,12 +2566,337 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="0d87a25e-a992-40e4-8448-f879c38ee180" name="ClaseNotaEntrega" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="12775c67-bdf0-4e66-a108-73752728d94a" />
+        <generalsInternal>
+          <generalization Id="5ea6d6c8-815e-4218-bacd-90446e5d3cd4" isSubstitutable="false">
+            <classMoniker Id="1a5a13d9-f139-474d-aaf2-9e75fde48ddf" LastKnownName="ClaseProcesos" />
+            <elementDefinition Id="ced412a8-93fe-4330-a966-fc1b195a571b" />
+          </generalization>
+        </generalsInternal>
         <ownedOperationsInternal>
-          <operation Id="d1a9cf2a-72c4-4a50-8004-ebaec8426095" name="buscarCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="97af9d56-6c81-4fed-a181-b03fee723329" />
+          <operation Id="4c61eb6b-535f-4d4d-b454-c15a094ecde0" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3f6b4248-bb10-4f0c-bbc4-411f9e3e4a14" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="660525ee-3707-4e20-bf51-ca89a47629ed" direction="Return">
+                  <elementDefinition Id="d7c078ad-a706-4bc4-a39a-af76fc3f3e07" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="75302d33-981b-4e0e-a8f0-d8a8347a9f51" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
-          <operation Id="ece7e57a-1dc6-46a0-992f-3aa2915a5381" name="buscarProducto" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="f284bf34-c8a3-43f8-8b11-be554335a716" />
+          <operation Id="bfe7e226-80df-4aae-beea-d098ba6ba31b" name="actualizarStatus" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <description>Metodo para actualizar el status a ser llamado cuando se elimine</description>
+            <elementDefinition Id="3fc9b0e8-4308-4cc7-b226-b0ae4d024b1a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8c6363e-5d28-4a89-814a-b863cafab2c5" name="xRef" direction="In">
+                  <elementDefinition Id="e61d63bf-3cd9-404c-a2a4-3239eb69a981" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="47fd1258-79af-42c2-aa4c-0c574247afa4" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab3e7f1c-1bfa-4562-95a9-b2c59b320dd0" name="xStatus" direction="In">
+                  <elementDefinition Id="fae7bda5-0d7f-4f2e-818a-db89acc3641b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9200e358-3fa4-45b4-81bf-dc1e8d55ed00" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c06a7b1e-be73-412e-bc93-8f20c31cea42" name="agregarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e4472578-21f4-40a3-b025-cec4a7616bc9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3c5b2cd0-35ab-4e3b-837e-5abd28d21c25" name="xRef" direction="In">
+                  <elementDefinition Id="9d143762-16c7-4acf-8b48-8c154e410ddf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="15480e1c-6cef-4b04-956a-6c0fc216b1ab" name="xNumero" direction="In">
+                  <elementDefinition Id="242b5d8d-dc71-48c0-b011-a2a1c16384d9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="efacaf3f-2b22-4211-8704-652146f62768" name="xStatus" direction="In">
+                  <elementDefinition Id="99bc236a-c5b6-442b-ac47-39953f36f2fd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1c6881be-1fb5-4f55-b907-0b0c49e5926a" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7de3f5a1-a880-4803-a21f-cdfb774e69d8" name="xFecha" direction="In">
+                  <elementDefinition Id="7009e726-217f-4381-bb02-e23e82ead576" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f822047-155e-4bce-952b-53179529a8ca" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e73cf386-7f4f-4630-a1b5-1d3b94593753" name="xFechaEntrega" direction="In">
+                  <elementDefinition Id="2d1b707b-cc9e-4be7-940b-521735ee9e35" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f822047-155e-4bce-952b-53179529a8ca" LastKnownName="Date" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8bfd976d-7c76-4a2d-b6c7-fda42258b9d8" name="xRefCliente" direction="In">
+                  <elementDefinition Id="9cf4aa5d-def2-4baf-b61b-0a1be114803b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bb2f2e6a-1bc4-4dc2-b810-1a3d51225b45" name="xRefVendedor" direction="In">
+                  <elementDefinition Id="4bd4f2ed-036f-43a4-ad3a-fd2774264825" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="377593b5-23eb-4bab-92d7-3a97e8e5b4f7" name="xRefCondicionPago" direction="In">
+                  <elementDefinition Id="ba592d24-1aab-45d6-8a5e-915568d358b3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="62150736-071d-481c-925f-283bb955c615" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b692f3f6-4191-4f12-a16f-f572f62ad7b4" name="xSubtotal" direction="In">
+                  <elementDefinition Id="8d3c73a0-23b2-40da-acc5-10f0fc55558d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a35c8457-65a0-49a3-afce-0de28f418135" name="xPorIVA" direction="In">
+                  <elementDefinition Id="cc5ed886-11ec-46d0-922f-ce18fb350a60" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1b532574-1501-4cb0-8e48-f5971114c382" name="xIVA" direction="In">
+                  <elementDefinition Id="3e35867d-aefe-4a4e-a610-53b873210ba3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="201410df-fc70-47d0-851c-9db7fce4a085" name="xPorDescuento" direction="In">
+                  <elementDefinition Id="cd438436-0dd9-4a88-b768-0d6a44b63276" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a872d0ed-8069-4733-9a39-6ca437d4e6c9" name="xDescuento" direction="In">
+                  <elementDefinition Id="b4b8eaac-0d38-42e0-88e1-b4f5b70324a6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="45dff153-a120-4841-b758-a53a8264291b" name="xTotal" direction="In">
+                  <elementDefinition Id="0c31f625-c607-49aa-bc45-b2a0b9de55c6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0a604610-5775-4b10-b0d0-a71f60b80716" name="xComentario" direction="In">
+                  <elementDefinition Id="38a67c72-be2c-4be7-bfd6-414a41b2fb83" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1c6881be-1fb5-4f55-b907-0b0c49e5926a" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5f9da5fc-9cdc-4bc4-8df9-65e9f16ff6ed" name="xRefProducto" direction="In">
+                  <elementDefinition Id="1f9e8553-3d90-4974-ba49-d158cb889189" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="447d90c6-72d1-4c52-b29d-3299485ef96a" name="xPrecio" direction="In">
+                  <elementDefinition Id="1e50c238-4b60-4f17-a543-53e3dc621001" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="127b356e-33cb-4023-a64d-89c8b8e8982d" name="xUnidadItem" direction="In">
+                  <elementDefinition Id="0141caa4-95dc-44f3-9178-c9a90d4b87f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7342493a-0638-4a33-acbe-81fcf4584f76" name="xRefTipoUnidad" direction="In">
+                  <elementDefinition Id="ed830b49-3b41-4af7-a24f-562ca172e947" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="62150736-071d-481c-925f-283bb955c615" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5e83a9d-31e2-402a-89c4-f1f5a1243c01" name="xTipoPrecio" direction="In">
+                  <elementDefinition Id="e380d43e-d1e8-4974-8655-04930aedba68" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1c6881be-1fb5-4f55-b907-0b0c49e5926a" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="758581dd-f6cb-4898-bf5c-41221fcdff71" name="xSubtotalItem" direction="In">
+                  <elementDefinition Id="298e2123-22d1-4644-ad18-9cee7fd4441c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a537f380-1e23-43de-acc0-2b839a124728" name="xPorIVAItem" direction="In">
+                  <elementDefinition Id="2a05aa27-ed9f-4ee4-b469-0a9f57725030" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="71e1a5d6-0570-49d5-a5d0-3c665697ec68" name="xIVAItem" direction="In">
+                  <elementDefinition Id="fd424d8f-0dcc-4097-a485-ed4a22887920" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5d8cd100-a393-4f83-ad47-c20b0498e5ea" name="xPorDescuentoItem" direction="In">
+                  <elementDefinition Id="d3ef4a0f-ce0b-4acb-b5ad-701c08c17003" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0780d5b6-eb3e-4224-bb5c-6c101e48f7d5" name="xDescuentoItem" direction="In">
+                  <elementDefinition Id="c73a5479-da2f-4396-8cea-d2abb6194c08" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8e3e9ac9-00ff-4829-81b2-c89870a7bd76" name="xTotalItem" direction="In">
+                  <elementDefinition Id="6cf634df-3e65-4c25-8122-30973156282b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" LastKnownName="Decimal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="09b0b413-1504-4fcc-97d0-0da89543aaba" name="xComentarioItem" direction="In">
+                  <elementDefinition Id="7536b940-cd1e-4a75-b4c7-0de5cddbe931" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1c6881be-1fb5-4f55-b907-0b0c49e5926a" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="acfeca74-29f7-475b-8501-2319dd318f85" name="xFilaOrigen" direction="In">
+                  <description>Indica el numero de la importacion</description>
+                  <elementDefinition Id="1dc2acaa-9c8b-4400-b856-0657ebfd4aac" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a6cf17fd-d818-4e91-b9a3-bf1511565940" name="anular" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55f26f9f-d1a4-47a0-a127-835e6700eda0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a56b238b-2c40-400e-8356-512485d70ae4" name="xRef" direction="In" isUnique="false">
+                  <elementDefinition Id="e3f4af09-ba93-47d7-938f-47a64e5a6ee1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cda04975-b2ee-4ce7-a723-0c76b1b01d65" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c7887c36-3015-4cf9-b558-00b62a95bfc1" name="buscarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b315fe6-c67d-4560-8faa-81b8554eae3f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7156d849-a7f2-4c1e-91a8-9934746b1632" name="xRef" direction="In">
+                  <elementDefinition Id="b5312916-c279-4314-a44d-6252246731d1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1bab68f9-68b9-4709-8354-324ac17c09bc" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bcc1d413-d5e0-4e2b-af87-579c03c2240a" name="xControl" direction="In">
+                  <elementDefinition Id="01fc3fb2-dc2a-45bf-892c-1af17ce9e6a7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1bab68f9-68b9-4709-8354-324ac17c09bc" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe2eb306-468f-4dfe-b89a-4db1245c887e" name="xRefCliente" direction="In">
+                  <elementDefinition Id="eaf87194-3d2f-4dcf-bcaa-eb5d95e89f59" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1bab68f9-68b9-4709-8354-324ac17c09bc" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c4d047e7-890e-402b-972a-40522f85949b" name="xRefProducto" direction="In">
+                  <elementDefinition Id="ce0e6819-a5a8-4c3b-8f8d-411596d14fae" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1bab68f9-68b9-4709-8354-324ac17c09bc" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1f22d8a7-1975-48ad-8c0b-a451b0249145" name="eliminarProcesos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35f1aa23-6680-4c06-b0eb-bfe836d549d2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0b49cf1-fb9f-4ed6-bfd6-9a18dce2b294" name="xRef" direction="In">
+                  <elementDefinition Id="5c4f8233-e7a4-444a-bce3-cf4b8d622be5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e5afa994-058b-4390-8e15-6b252b2070f1" LastKnownName="Long" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -734,11 +2904,53 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="faac99f3-531d-4470-9cae-b73f6c7ee957" name="ClaseNotaCredito" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1d05c259-15cc-48db-b198-70c1c5587f26" />
+        <generalsInternal>
+          <generalization Id="a1b0a515-d430-403c-adb4-90e11aec83b2" isSubstitutable="false">
+            <classMoniker Id="1a5a13d9-f139-474d-aaf2-9e75fde48ddf" LastKnownName="ClaseProcesos" />
+            <elementDefinition Id="3602c385-a995-43d8-9b01-49fb72754641" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="3c3d3472-a9af-4684-9db4-0f633d21a428" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="88f4138b-c13b-4afe-85ae-1033f65214cb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c370442-9c8d-4182-941e-fe2269f7901f" direction="Return">
+                  <elementDefinition Id="3eda9145-838e-43e9-8ef2-4577f4b2c512" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="41ec3f60-6d19-4a2d-8d65-1a289811f96e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="90c85f3f-7b90-4d86-a0a4-5e3a38b529ba" name="ClaseNotaDebito" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="b94fef86-35c4-4470-b5ae-768ee528a10b" />
+        <generalsInternal>
+          <generalization Id="d45cc9c1-9396-4ab9-b3f5-62cd218a46af" isSubstitutable="false">
+            <classMoniker Id="1a5a13d9-f139-474d-aaf2-9e75fde48ddf" LastKnownName="ClaseProcesos" />
+            <elementDefinition Id="3387acdc-a60c-490e-9bc9-5e838e8d1d75" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="6c73a734-124b-4226-91d3-75e82514fc3f" name="validaciones" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b8aab59-a3ea-4dd0-8317-23845218022b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3e18eca0-1c5c-42a9-a51b-53695efa171e" direction="Return">
+                  <elementDefinition Id="c1202e7c-4164-4b28-b17a-21054a0c2189" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b37517a6-1481-4a04-afb7-2059fdd309da" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
@@ -787,11 +2999,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="8a3d6543-d8d9-4207-bed1-289a06fc2a9c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="1935dfca-0c39-4140-9ec6-08b5202edc46" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
         <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
@@ -816,8 +3023,247 @@
         <elementDefinition Id="d57b2cb2-e178-4712-aaaf-a460107f7235" />
       </class>
     </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="1f96f968-d47e-4109-a167-58a8bd8b14d8" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="afc725e8-2e81-48b1-bf3c-0b8e0314a8eb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="28703999-020f-4c33-8b72-7ba5cb365647" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="Decimal">
+        <elementDefinition Id="a652d346-46d0-4e99-96bc-91ab945827d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b1d68c7a-9861-4fcb-926b-82aab35882fc" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="12670708-b025-4d2c-9543-96ab990bc50b" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="Decimal">
+        <elementDefinition Id="a652d346-46d0-4e99-96bc-91ab945827d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e641bcab-9fae-47ce-bfef-bb3dba55bad2" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="56bb2a12-97d1-4250-ad8b-f0aaf7c70474" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a54ed300-198c-469c-999b-5998b381e10d" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="38c0ab01-19fd-4cb2-a18a-ae46e81c9a5a" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dc98e7cd-13ca-4c30-aaa7-26a116ec57cf" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1ad61c32-e338-4bcb-80c1-b4317512237f" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="74b38dba-69a4-4214-84b9-b43b55829452" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1221a3b9-0dd4-43c2-b0ec-b53d69b40f40" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cb68f06a-8936-4921-b80b-b9b2e372112a" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7fbb242c-18ca-4f44-8c1c-944a10fd1528" name="Date" isAbstract="false" isLeaf="false" cachedFullName="Date">
+        <elementDefinition Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="da48b2a3-174a-4edb-94c6-5b049f419c61" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="75302d33-981b-4e0e-a8f0-d8a8347a9f51" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="41ec3f60-6d19-4a2d-8d65-1a289811f96e" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b37517a6-1481-4a04-afb7-2059fdd309da" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="730ce00e-8e31-45f3-8689-89c0fb78ba35" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="Decimal">
+        <elementDefinition Id="a652d346-46d0-4e99-96bc-91ab945827d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="709f630b-e0c5-4738-b09f-dc1b06177055" name="ComboBox" isAbstract="false" isLeaf="false" cachedFullName="ComboBox">
+        <elementDefinition Id="b41fa2dc-9ad7-4f89-9c02-7fb5904960b4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8adf075c-085b-4e8b-ac21-b2fb4b40c3db" name="PictureBox" isAbstract="false" isLeaf="false" cachedFullName="PictureBox">
+        <elementDefinition Id="9cf44e27-f683-4b38-9188-d27c3a0e85f7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c004410e-fd8e-4326-abf4-09ab435c7b52" name="GridView" isAbstract="false" isLeaf="false" cachedFullName="GridView">
+        <elementDefinition Id="f0e0b395-f7f8-4ecd-bf9c-158c2a576876" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1ce7bfff-d68a-419f-ae46-73fb7161bd25" name="GridView" isAbstract="false" isLeaf="false" cachedFullName="GridView">
+        <elementDefinition Id="f0e0b395-f7f8-4ecd-bf9c-158c2a576876" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="47fd1258-79af-42c2-aa4c-0c574247afa4" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9200e358-3fa4-45b4-81bf-dc1e8d55ed00" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ef9f6029-7146-4129-84fe-99f0baeaf3d5" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1c6881be-1fb5-4f55-b907-0b0c49e5926a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6f822047-155e-4bce-952b-53179529a8ca" name="Date" isAbstract="false" isLeaf="false" cachedFullName="Date">
+        <elementDefinition Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="62150736-071d-481c-925f-283bb955c615" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="91495ac3-8ed2-4410-a4e7-d48ba280d0a9" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="Decimal">
+        <elementDefinition Id="a652d346-46d0-4e99-96bc-91ab945827d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cda04975-b2ee-4ce7-a723-0c76b1b01d65" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1bab68f9-68b9-4709-8354-324ac17c09bc" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e5afa994-058b-4390-8e15-6b252b2070f1" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="70a0b998-200e-48c1-bd71-6f0eda0f3a0c" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3f1b687a-4bdd-4cd7-8628-3c4de215a086" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6f158055-9f7f-4c4c-94b5-b82bbab46cee" name="Date" isAbstract="false" isLeaf="false" cachedFullName="Date">
+        <elementDefinition Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="068a1765-8e5e-425c-a999-0332259b64ea" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a8a448f0-0549-4b8d-85a8-60b5f39fd2d4" name="Decimal" isAbstract="false" isLeaf="false" cachedFullName="Decimal">
+        <elementDefinition Id="a652d346-46d0-4e99-96bc-91ab945827d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="05074d10-de88-4a52-bda7-17c276d69997" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3922657-dfc1-405e-857e-d387aa36521f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6eb47192-9efe-42c3-8c42-1d933d6877a3" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b4d0316c-b5fa-46b3-9e85-00e5bf4b4eb9" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="768053c9-d6cc-4181-acc9-508312d7d6b3" name="Long" isAbstract="false" isLeaf="false" cachedFullName="Long">
+        <elementDefinition Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c9eb94d8-3897-4606-bd52-f04a6412f664" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="fc1be195-ac65-455c-98f4-ba9a9fbcf28d" name="alan_admin">
     <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7945f63b-393f-4779-b550-4086a7e9ee8a">
+        <profileInstance Id="7e5bf39d-3a6a-4b28-b174-77ef715dd5e2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a4283b59-a586-413f-81d6-ef9375816471">
+        <profileInstance Id="ee86734b-5e8e-4ac4-ba86-5da7404a9693" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

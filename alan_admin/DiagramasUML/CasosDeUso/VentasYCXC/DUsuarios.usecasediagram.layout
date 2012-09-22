@@ -94,7 +94,7 @@
       <includeMoniker Id="48eca1ff-1d94-4a9d-8a30-929f9ad8febf" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="5.1804601886455632, 2.783050559933737, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.1875, 3.8125, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
       </moveableDecoratorHostShapes>
       <nodes>
         <useCaseShapeMoniker Id="4d61d7c5-78dd-44de-ab65-072ecd4791d4" />
@@ -112,6 +112,9 @@
     <includeConnector edgePoints="[(4.09223748569721 : 3.15254563429682); (5.92243910895979 : 1.96291457917614)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«include»">
       <includeMoniker Id="c1ad9049-eb36-449c-a52f-dea73e210294" />
       <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.25, 3, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
       <nodes>
         <useCaseShapeMoniker Id="c05069c5-bb72-4c82-9be9-e42172c2fe5f" />
         <useCaseShapeMoniker Id="fd1c9111-9e02-4dd5-b384-8748a47ad359" />
@@ -121,7 +124,7 @@
       <useCaseMoniker Id="b9d03053-bcc9-48f8-baca-276b65b0116b" LastKnownName="Indicar si tiene operaciones asociadas, si es asi no se puede eliminar" />
       <relativeChildShapes />
     </useCaseShape>
-    <includeConnector edgePoints="[(4.41404842712846 : 4.13379152525252); (5.42412393817974 : 3.95702831081855)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+    <includeConnector edgePoints="[(4.41404842712846 : 4.13379152525252); (5.42412393817974 : 3.95702831081855)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«include»">
       <includeMoniker Id="70dc080f-cec2-48c9-854d-17ec989a417c" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
