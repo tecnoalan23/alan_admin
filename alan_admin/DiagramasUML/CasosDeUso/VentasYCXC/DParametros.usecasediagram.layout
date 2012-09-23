@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DParametros">
+  <useCaseModelRootMoniker Id="491eaf3a-1089-422f-b7a4-8c055bb62a93" />
+  <nestedChildShapes>
+    <actorShape Id="388a104e-49c2-448e-b2d2-a6781b71a11c" absoluteBounds="3.25, 4.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="879f14a4-8c79-4040-9160-e48370f1b050" LastKnownName="Usuario2" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="c5a08803-9e2b-48cf-aafa-9563df22c0f2" absoluteBounds="4.125, 3.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b583571a-a8df-4902-b917-24eb2ee8308e" LastKnownName="Agregar3" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.75 : 4.90277777777778); (4.37986938018372 : 4.34289388428114)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="5b46b2cb-9151-42c8-bd53-6d7be15ec9aa" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="388a104e-49c2-448e-b2d2-a6781b71a11c" />
+        <useCaseShapeMoniker Id="c5a08803-9e2b-48cf-aafa-9563df22c0f2" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="6d87cacd-0098-4cdd-a1fb-14775ba7b2a9" absoluteBounds="4.125, 5.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="769350b2-1102-4c9e-a8b1-324e13d9e9b0" LastKnownName="Editar3" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.75 : 5.20833333333333); (4.20897485283108 : 5.36132495094369)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="c1e57e9a-4a74-4c18-b5c0-13cf8d83d147" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="388a104e-49c2-448e-b2d2-a6781b71a11c" />
+        <useCaseShapeMoniker Id="6d87cacd-0098-4cdd-a1fb-14775ba7b2a9" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="1b4176fb-141b-42bb-ae12-a9db4ae49b35" absoluteBounds="4.125, 5.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="c503451e-e60d-4b88-9126-aa786e7f3276" LastKnownName="Buscar2" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.75 : 5.34722222222222); (4.37986938018372 : 5.90710611571886)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="6a29bd24-d847-4997-a37c-40d4369e5909" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="388a104e-49c2-448e-b2d2-a6781b71a11c" />
+        <useCaseShapeMoniker Id="1b4176fb-141b-42bb-ae12-a9db4ae49b35" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="fc9cdc9f-50d8-4c28-89fa-fbca1c70d72b" absoluteBounds="4.125, 6.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a96de06b-20be-4e57-8938-9e5d4fff2b85" LastKnownName="Borrar3" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.67307692307692 : 5.375); (4.46144471805842 : 6.51375348163994)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="bbb096bd-6d7a-4b99-8aba-9c54a1b32fce" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="388a104e-49c2-448e-b2d2-a6781b71a11c" />
+        <useCaseShapeMoniker Id="fc9cdc9f-50d8-4c28-89fa-fbca1c70d72b" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="887b73f8-8bf8-4e8e-9862-7cbdae998d83" absoluteBounds="5.625, 3.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="6767cab7-cfad-4da0-9033-f61e08cade2a" LastKnownName="Si no existe1" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.125 : 4.125); (5.625 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="23d5cac1-9438-4fa0-8dab-5259943cea87" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="c5a08803-9e2b-48cf-aafa-9563df22c0f2" />
+        <useCaseShapeMoniker Id="887b73f8-8bf8-4e8e-9862-7cbdae998d83" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="593fb591-81fa-4d44-a5eb-01922edbdc1f" absoluteBounds="7.125, 3.875, 1.125, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="65ed39b3-d8bb-4ca9-854b-a93a30672a05" LastKnownName="Ingreso el porcentaje IVA" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(6.625 : 4.125); (7.125 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="811cc537-0ef1-4391-8013-900f726d6f0a" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="887b73f8-8bf8-4e8e-9862-7cbdae998d83" />
+        <useCaseShapeMoniker Id="593fb591-81fa-4d44-a5eb-01922edbdc1f" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="972f5acc-5b30-4593-bee0-e69901380e97" absoluteBounds="5.625, 6, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="fc68e789-dbb9-4d7f-8c40-9b594e3709f8" LastKnownName="Si existe6" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(4.97855339059327 : 5.67677669529664); (5.77144660940673 : 6.07322330470336)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="5b0c9016-6be3-4d80-a2e9-dd722b47ee9d" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6d87cacd-0098-4cdd-a1fb-14775ba7b2a9" />
+        <useCaseShapeMoniker Id="972f5acc-5b30-4593-bee0-e69901380e97" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.11819696191607 : 6.16609974682634); (5.63180303808393 : 6.20890025317366)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="54730e2a-9cc9-4854-9244-1727a316224b" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="1b4176fb-141b-42bb-ae12-a9db4ae49b35" />
+        <useCaseShapeMoniker Id="972f5acc-5b30-4593-bee0-e69901380e97" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.04102514716892 : 6.61132495094369); (5.70897485283108 : 6.38867504905631)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="4a291858-96ad-4e95-ae43-d75b139d9877" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="fc9cdc9f-50d8-4c28-89fa-fbca1c70d72b" />
+        <useCaseShapeMoniker Id="972f5acc-5b30-4593-bee0-e69901380e97" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="431471a2-3442-44de-84b5-8d86d7bd63fd" absoluteBounds="7.125, 5.875, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="4588d1de-d3cf-48ea-812a-10cb49de1664" LastKnownName="Selecciono el porcentaje IVA" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(6.625 : 6.25); (7.125 : 6.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="7fabf3d9-362d-4ed9-b658-3add4f19955b" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="972f5acc-5b30-4593-bee0-e69901380e97" />
+        <useCaseShapeMoniker Id="431471a2-3442-44de-84b5-8d86d7bd63fd" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="9e087d2c-adf8-43e2-b585-50bc0df61ca4" absoluteBounds="6.625, 4.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ab8620e6-e872-47c5-b3e7-e43a3fef994c" LastKnownName="UseCase2" />
+      <relativeChildShapes />
+    </useCaseShape>
+  </nestedChildShapes>
+</useCaseDiagram>

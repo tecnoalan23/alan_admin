@@ -1,32 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="dc776d9d-203a-4c97-8961-7fbe79ca3710"
   name="alan_admin" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="bbf53bab-dbc4-4145-b635-86abb84ea5d8">
-      <body>En los parametros colocar un dos tab, uno relacionado con las ventas y otro con el porcentaje de IVA. En este, se colocara un combobox editable para que se haga la edicion o agregado y en la pestaña de ventas se colocara ese mismo combo pero no editable para que seleccione cual es el predeterminado.</body>
-    </comment>
-    <comment
-      Id="9d908c91-3ec9-4e6d-9e8e-a29c398fe2c6">
-      <body>La pantalla de productos se va a definir de la siguiente manera: Una cabecera que tendra los datos basicos del producto, abajo dos tab uno relacionado con los precios y el otro relacionado con los tipos de unidad. Se mandaran a guardar las tres partes de la pantalla en un solo procedimiento almacenado.</body>
-    </comment>
-    <comment
-      Id="0a9b4cc3-d8f1-4f8e-a0ad-200a9bb188df">
-      <body>Se creara una tabla que se llamara TipoUnidadesProductos donde se relacionaran los productos con sus tipos de unidades y sus equivalentes.</body>
-    </comment>
-    <comment
-      Id="548a7f7e-6db0-4f4c-821b-1b693e4ffe26">
-      <body>Se colocara una auditoria?</body>
-    </comment>
-    <comment
-      Id="7402d9e7-04a8-4a9a-990a-7368353d8afb">
-      <body>Al eliminar un registro, si éste está asociado a un documento ese documento tiene que cambiar de estado a sin procesar.</body>
-    </comment>
-    <comment
-      Id="4b9cf73a-58de-41a7-a672-878e7ef9479f">
-      <body>La importacion y exportacion de los datos se realizara seleccionado los items y a partir de esa informacion se traeran los datos padres. Se editaran dos filas de la tabla item que se llamaran numero_asociado y fila_unica. El numero asociado sera el numero autonumerico del item que se esta importando o exportando y la fila unica sera un tipo de satos uniqueidentifier. el cual es un tipo de datos que nunca se repite en ninguna de las tablas, lo que nos va permitir importar o exportar de otros modulos y poder relacionar esas filas.</body>
+      Id="7c7395f3-ccf7-4190-a13c-e5579a5b61f4">
+      <body>CONSIDERACIONES:
+- En los parametros colocar un dos tab, uno relacionado con las ventas y otro con el porcentaje de IVA. En este, se colocara un combobox editable para que se haga la edicion o agregado y en la pestaña de ventas se colocara ese mismo combo pero no editable para que seleccione cual es el predeterminado.
+
+-La pantalla de productos se va a definir de la siguiente manera: Una cabecera que tendra los datos basicos del producto, abajo dos tab uno relacionado con los precios y el otro relacionado con los tipos de unidad. Se mandaran a guardar las tres partes de la pantalla en un solo procedimiento almacenado.
+
+- Se colocara una auditoria?
+
+- Las validaciones se haran en cada pantalla del formulario a traves del objeto ErrorProvider.
+
+- Cualquier duda con la nota de debito ver pagina: http://www.zonaeconomica.com/contabilidad/nota-debito.
+
+- Al eliminar un registro, si éste está asociado a un documento ese documento tiene que cambiar de estado a sin procesar.
+
+- Se creara una tabla que se llamara TipoUnidadesProductos donde se relacionaran los productos con sus tipos de unidades y sus equivalentes.
+
+- La importacion y exportacion de los datos se realizara seleccionado los items y a partir de esa informacion se traeran los datos padres. Se editaran dos filas de la tabla item que se llamaran numero_asociado y fila_unica. El numero asociado sera el numero autonumerico del item que se esta importando o exportando y la fila unica sera un tipo de satos uniqueidentifier. el cual es un tipo de datos que nunca se repite en ninguna de las tablas, lo que nos va permitir importar o exportar de otros modulos y poder relacionar esas filas.</body>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -3106,7 +3101,14 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="f21ecf2e-acef-430b-b2f4-0d1f2f9520b0"
             name="vProcedimiento"
@@ -3130,7 +3132,14 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="19e1cecf-738b-4fe7-8b67-4ba946e2931d"
             name="vEOF"
@@ -3142,7 +3151,14 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="035e550c-5480-4f88-a937-2e41a18b4c6b"
             name="vServidor"
@@ -3156,6 +3172,12 @@
             aggregation="None"
             isComposite="false">
             <description>Este valor es una constante, tendra el dato del servidor</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
           </property>
           <property
             Id="591f9c7d-ade5-4cbc-a931-37e75fd93d1a"
@@ -3170,6 +3192,31 @@
             aggregation="None"
             isComposite="false">
             <description>Este valor es una constante que tendra el valor de la base de datos</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f1b9cd54-c3ef-46ba-a547-4f1cd8cb5d5a"
+            name="vRefUsuario"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Para saber el usuario que inicio sesion y mantener este dato en todas las operaciones que se realicen y asi guardarlas en cada una de las tablas</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -3323,7 +3370,7 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Este metodo es para cuando el usuario se encuentra en un dato que tiene asociada otra pantalla pueda acceder por una tecla o boton mas rapidamente. Ademas permitira ir a pantallas que importen y exporten datos haciendo la configuracion necesarias de los check y todo eso a traves de la variable xImporExpor</description>
+            <description>Este metodo es para cuando el usuario se encuentra en un dato que tiene asociada otra pantalla pueda acceder por una tecla o boton mas rapidamente. Ademas permitira ir a pantallas que importen y exporten datos, donde primero deberan hacer click en los check correspondientes y luego se mandara a traves de la variable xImporExpor si es para importar/exportar, si es asi se haran configuraciones necesarias en las pantallas como poner check en los productos para saber cual se va a importar/exportar.</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -3564,6 +3611,15 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="4d9ed960-1537-42fe-8ecf-ccca2c414c04">
+            <classMoniker
+              Id="d57b2cb2-e178-4712-aaaf-a460107f7235"
+              LastKnownName="ClaseReportes"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="f236a233-2610-45a7-8bdb-533d9ef14d8e"
@@ -3787,6 +3843,15 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="34caf9ca-6b63-4e47-80c9-69b85fe5b38a">
+            <classMoniker
+              Id="d57b2cb2-e178-4712-aaaf-a460107f7235"
+              LastKnownName="ClaseReportes"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="ff969d17-571a-4c97-8261-38dc27dc88be"
@@ -3920,6 +3985,15 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="f8fddcf3-775c-47ed-ba40-beff19debefb">
+            <classMoniker
+              Id="d57b2cb2-e178-4712-aaaf-a460107f7235"
+              LastKnownName="ClaseReportes"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="7dd69ca3-56ab-4ab3-bee6-e1cf3b6eabc1"
@@ -4356,6 +4430,24 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="174bb406-b9c0-4adf-8e1c-cb3f8a41f34d"
+            name="vRefUsuario"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -4366,17 +4458,17 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Esta es una funcion que me va a devolver el valor de la fecha calculando la fecha de vencimiento de un cliente si éste tiene credito</description>
+            <description>Esta es una funcion que me va a devolver el valor de la fecha calculando la fecha de vencimiento de una condicion de pago</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
                   Id="1311ca23-0018-4838-b928-2a693e48163c"
-                  name="xRefCliente"
+                  name="xFecha"
                   direction="In">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
-                      LastKnownName="Long"
+                      Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                      LastKnownName="Date"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4393,6 +4485,19 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31dc7eaf-8b46-47a7-beca-e56b14a35547"
+                  name="xDias"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
@@ -4403,6 +4508,7 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <description>Metodo para cuando se van a exportar los registros, devolvera las filas encontradas de la pantalla que buscara a traves de los parametros xREfDocExportado y el parametro xFilaUnica.</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -4442,7 +4548,7 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Metodo que permitira importar registros</description>
+            <description>Metodo para cuando se van a importar los registros, devolvera las filas encontradas de la pantalla, que buscara a traves de los parametros xREfDocExportado y el parametro xFilaUnica.</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -4506,6 +4612,16 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="d740d275-2271-41d2-be62-8d2159349658"
+            name="buscarUltimoControl"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Metodo para buscar el ultimo numero de control del proceso donde se encuentre</description>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4895,30 +5011,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="73acb237-7bb7-4c10-a2b9-6a670c1871f0"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <description>Aqui hay que validar que el nombre del usuario no exista</description>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b6b43283-0e79-4dc2-9d75-1427db4703d4"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="e1a723de-950c-4566-8377-cf384fe66265"
             name="operacionAsociada"
             isLeaf="false"
@@ -5051,86 +5143,6 @@
               LastKnownLocation="alan_admin.uml" />
           </generalization>
         </generalsInternal>
-        <targetEnds>
-          <association
-            Id="1dc28dfe-c86f-421d-beb2-b7c3a26d2183"
-            isDerived="false"
-            sourceEndRoleName="ClaseCliente"
-            targetEndRoleName="ClaseVendedor"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="62f9253e-e589-4819-8329-4c473fd719ed"
-              LastKnownName="ClaseVendedor"
-              LastKnownLocation="alan_admin.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="4f9603cd-842f-4c6b-88ca-6830d567cc63"
-                  name="ClaseCliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b462735f-2692-4770-8ae8-27b2f86fd2b8"
-                  name="ClaseVendedor"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="2ad93c68-5d08-42d1-b2b9-f4687331c070"
-            isDerived="false"
-            sourceEndRoleName="ClaseCliente"
-            targetEndRoleName="ClaseCredito"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="a469bc87-3c64-4d9c-9c86-e19b02f36f76"
-              LastKnownName="ClaseCondicionPago"
-              LastKnownLocation="alan_admin.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="25560d5e-a4fe-410c-b678-cc4facd92956"
-                  name="ClaseCliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="13e00c6c-f1a1-43ad-8c78-f99caea2c3d2"
-                  name="ClaseCredito"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="3468016a-dee1-4b1a-8606-35adedfea3a4"
@@ -5394,29 +5406,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="61072427-d75a-4223-9c19-a16332f893b3"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="341d71c7-dddc-460e-8826-e5e62de33757"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="74ba75f2-c2dd-4261-adbe-759fa02fc032"
             name="operacionAsociada"
             isLeaf="false"
@@ -5525,6 +5514,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="9bcab09f-9ad6-4502-8f7b-508a8ee9069a">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="33cf725c-9ba3-4738-9070-6bd60ee33d1e"
@@ -5557,29 +5555,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="21e7b05b-73de-42c7-b5da-4bc818ae756b"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f29e41bd-a825-4725-be94-fe999822fff1"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="81a95f82-f2be-4836-acb9-e38f2e72032b"
             name="agregarPersona"
@@ -5801,47 +5776,6 @@
               LastKnownLocation="alan_admin.uml" />
           </generalization>
         </generalsInternal>
-        <targetEnds>
-          <association
-            Id="f63591b5-cb6a-4899-ae8b-be88f53d20d0"
-            isDerived="false"
-            sourceEndRoleName="ClaseProductos"
-            targetEndRoleName="ClaseTipoUnidades"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="e06e428d-8a20-4137-ae0c-0642e4235248"
-              LastKnownName="ClaseTipoUnidades"
-              LastKnownLocation="alan_admin.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="667dc8fa-3688-48f8-adad-71181819e3f9"
-                  name="ClaseProductos"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="94fcaad4-7c27-43a3-8541-24e21dbfbd36"
-                  name="ClaseTipoUnidades"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="c3fb1329-5cfe-4332-b245-54b0f0e2cd26"
@@ -5986,30 +5920,6 @@
             concurrency="Sequential"
             isQuery="false">
             <description>Si se marca el check de precios con IVA hay que calcular el subtotal</description>
-          </operation>
-          <operation
-            Id="ca5f085f-cd46-405b-b41e-013f2baa5304"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <description>Validar que el producto no exista, etc...</description>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="952816b9-5884-4a5d-b06b-1e4d7f25d9d2"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
           </operation>
           <operation
             Id="ee99ecc2-daea-4a02-817d-52f0a2f4a916"
@@ -6419,29 +6329,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="bc4703b5-3c3e-4938-842f-25579885564a"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2c825e15-5f34-4868-9487-359984e664da"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="c57b7d5d-d29b-4c85-a525-bb56a98c0169"
             name="agregarPersona"
             isLeaf="false"
@@ -6614,6 +6501,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="6f68182e-3d97-4978-961d-07c824f1cc52">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="bb8ecc3a-7d83-4ebc-b8a6-015dc5c0b4d7"
@@ -6645,29 +6541,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="b4aec7cb-0df2-4721-af00-d3a434de6e28"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="aa89963b-54e3-43a5-a1c1-3499108dc0f7"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="68d991b9-9f92-45c5-8704-62f246c13595"
             name="agregarDatos"
@@ -6800,6 +6673,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8b16ccec-7741-4794-b378-8c376bc54570">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="e823bbc9-1822-44b6-9ea7-9b820f0c716a"
@@ -6944,29 +6826,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="13e15d2f-bd36-4d0f-b6f5-c209544d09ed"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9a928552-af73-4c7d-924d-add84cb24eef"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="2ace4cc0-ca9c-4cc2-8104-01d975a58db7"
             name="operacionAsociada"
             isLeaf="false"
@@ -7000,6 +6859,29 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="51283355-ca3f-4818-9df3-2279c47d01dc">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="92a172d9-560b-4420-8506-3117e47b9574">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="936fd86c-0798-4a5c-88cf-297e05dc716d">
+            <classMoniker
+              Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+              LastKnownName="ClaseParametros"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="6cd7cc48-2b9d-4552-8417-655d57e31a50"
@@ -7021,7 +6903,15 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <description>Indicar cuanto se debe de la factura cuando se haga la parte de cobros</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -7032,6 +6922,7 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <description>Al momento de guardar se debe actualizar el saldo del cliente</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -7049,7 +6940,7 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="a17bb25a-ba7c-49ed-b0ea-230c54bcd0af"
-                  name="xNumero"
+                  name="xControl"
                   direction="In">
                   <type_NamedElement>
                     <undefinedTypeMoniker
@@ -7218,6 +7109,19 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="6d9691c4-912b-471c-bf43-a80fe874036d"
+                  name="xAnulado"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="227ca825-8688-4bba-9994-121783e38921"
                   name="xComentario"
                   direction="In">
                   <type_NamedElement>
@@ -7230,7 +7134,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="227ca825-8688-4bba-9994-121783e38921"
+                  Id="aee0920e-ede7-47a1-800b-50c30513adec"
                   name="xRefProducto"
                   direction="In">
                   <type_NamedElement>
@@ -7243,7 +7147,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="aee0920e-ede7-47a1-800b-50c30513adec"
+                  Id="d02d30a1-a3af-440f-8bfe-3086961073d2"
                   name="xPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -7256,7 +7160,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d02d30a1-a3af-440f-8bfe-3086961073d2"
+                  Id="7d000ba5-a047-45f8-a45c-009c117aa0fa"
                   name="xUnidadItem"
                   direction="In">
                   <type_NamedElement>
@@ -7269,7 +7173,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7d000ba5-a047-45f8-a45c-009c117aa0fa"
+                  Id="fe53f68a-50c3-4f56-b20f-81a81e9620ff"
                   name="xRefTipoUnidad"
                   direction="In">
                   <type_NamedElement>
@@ -7282,7 +7186,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fe53f68a-50c3-4f56-b20f-81a81e9620ff"
+                  Id="2b10b314-5082-4c64-8ad0-742f6e8bdbc9"
                   name="xTipoPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -7295,7 +7199,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2b10b314-5082-4c64-8ad0-742f6e8bdbc9"
+                  Id="8433dbf7-5359-416f-a022-086cfbb7b482"
                   name="xSubtotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -7308,7 +7212,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8433dbf7-5359-416f-a022-086cfbb7b482"
+                  Id="3cf61da7-a944-4092-89b0-0f718e0ba2cf"
                   name="xPorIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -7321,7 +7225,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3cf61da7-a944-4092-89b0-0f718e0ba2cf"
+                  Id="b63176c5-d12d-4f0a-960b-b2d631370373"
                   name="xIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -7334,13 +7238,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b63176c5-d12d-4f0a-960b-b2d631370373"
+                  Id="2b9a48b9-f285-4e7b-bc62-171d073f1cdf"
                   name="xPorDescuentoItem"
                   direction="In" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2b9a48b9-f285-4e7b-bc62-171d073f1cdf"
+                  Id="b6668bcd-c4b3-4953-ab69-0b8d086f05b0"
                   name="xDescuentoItem"
                   direction="In">
                   <type_NamedElement>
@@ -7353,7 +7257,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b6668bcd-c4b3-4953-ab69-0b8d086f05b0"
+                  Id="291f53f0-3e2c-4b1b-92ab-baf768f31916"
                   name="xTotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -7366,7 +7270,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="291f53f0-3e2c-4b1b-92ab-baf768f31916"
+                  Id="3d1c6d7f-d60b-4ca7-9c8d-e88bbb2e0e6f"
                   name="xComentarioItem"
                   direction="In">
                   <type_NamedElement>
@@ -7379,7 +7283,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3d1c6d7f-d60b-4ca7-9c8d-e88bbb2e0e6f"
+                  Id="8e3d3fb1-f653-4a6b-b238-e15663a5ac7b"
                   name="xFilaOrigen"
                   direction="In">
                   <description>Indica el numero de la importacion</description>
@@ -7387,6 +7291,46 @@
                     <undefinedTypeMoniker
                       Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
                       LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28b370a6-0204-4542-9523-4776f4023934"
+                  name="xPendiente"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ebe984a5-cc8e-4436-87eb-fee68b3153a7"
+                  name="xSaldoActual"
+                  direction="In">
+                  <description>Indicar cuanto se debe de la factura</description>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5f6e632-81e9-4875-a1b3-65c1eb28d883"
+                  name="xRefUsuario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -7425,31 +7369,6 @@
                     <primitiveTypeMoniker
                       Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
                       LastKnownName="String"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="be35dd89-26c6-431e-a804-12caa154e0fd"
-            name="anular"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="238b9361-3bcd-4eb0-a1ae-48fab338b2e3"
-                  name="xRef"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
-                      LastKnownName="Long"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -7543,29 +7462,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="b770bb60-70a2-45cf-9f04-3f541ae3f416"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="65d48676-7c0c-4a26-99fd-a8ef4136eeee"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -7576,6 +7472,29 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="48e4db38-21be-4b53-b63b-6d8a934eea2b">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="1b80dc2f-b10f-4218-8e0b-a9e183000340">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="94364e57-3d44-4b8d-9a9e-741b95387a2d">
+            <classMoniker
+              Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+              LastKnownName="ClaseParametros"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="4aa1b55c-b291-4ecf-b5ae-b9b7a1383d4c"
@@ -7586,123 +7505,7 @@
               LastKnownLocation="alan_admin.uml" />
           </generalization>
         </generalsInternal>
-        <targetEnds>
-          <association
-            Id="1f1e459f-7471-4b58-aeca-0f1dbeec2c9c"
-            isDerived="false"
-            sourceEndRoleName="ClasePresupuesto"
-            targetEndRoleName="ClaseCliente"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
-              LastKnownName="ClaseCliente"
-              LastKnownLocation="alan_admin.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="41daa2b1-5420-412a-a965-ca3df49d49e7"
-                  name="ClasePresupuesto"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d3713257-a81e-4c9c-be38-72435e8eaccb"
-                  name="ClaseCliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="07ed834b-89fb-4ff3-82c7-4b603b3a6973"
-            isDerived="false"
-            sourceEndRoleName="ClasePresupuesto"
-            targetEndRoleName="ClaseProductos"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5500a375-01d6-4077-bce5-315e40a013f1"
-              LastKnownName="ClaseProductos"
-              LastKnownLocation="alan_admin.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0d846fbe-066c-4156-863d-d8341fda76a5"
-                  name="ClasePresupuesto"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f15c3cef-b202-4b6a-94d6-0f500fadea75"
-                  name="ClaseProductos"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="063b00ee-76be-408a-b454-c9b5a04c2514"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b9a209e1-1949-42a7-aa40-3d58b23fed2a"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedOperationsInternal>
-          <operation
-            Id="0807ce3f-2ddf-429f-b444-6ffdd80ac8e6"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1042930b-0914-4e7b-b6e6-8a0bf7357ac1"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="760f15be-e3d1-4ea1-8a7b-88acf570fdd6"
             name="agregarProcesos"
@@ -7711,6 +7514,7 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <description>Tambien se utilizara para anular</description>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -7728,7 +7532,7 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="ce3a6d2c-c27e-44d5-9982-f9cec07b78f7"
-                  name="xNumero"
+                  name="xControl"
                   direction="In">
                   <type_NamedElement>
                     <undefinedTypeMoniker
@@ -7897,6 +7701,20 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="3226f757-6ddc-4f44-9cf7-f385a05a9cb2"
+                  name="xAnulado"
+                  direction="In">
+                  <description>Indica si el documento esta anulado</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b06a062d-3598-42c3-a506-aca3c160e601"
                   name="xComentario"
                   direction="In">
                   <type_NamedElement>
@@ -7909,7 +7727,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b06a062d-3598-42c3-a506-aca3c160e601"
+                  Id="5910c814-5a9e-4379-8bb2-3172acbc76cc"
                   name="xRefProducto"
                   direction="In">
                   <type_NamedElement>
@@ -7922,7 +7740,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5910c814-5a9e-4379-8bb2-3172acbc76cc"
+                  Id="db0958f0-7ebb-4eb8-b915-631a6a58e579"
                   name="xPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -7935,7 +7753,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="db0958f0-7ebb-4eb8-b915-631a6a58e579"
+                  Id="d3046886-ecb0-4499-a1a4-8d5ffb7ddedf"
                   name="xUnidadItem"
                   direction="In">
                   <type_NamedElement>
@@ -7948,7 +7766,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d3046886-ecb0-4499-a1a4-8d5ffb7ddedf"
+                  Id="a79fdff4-0994-4a93-8bad-8101397e50ff"
                   name="xRefTipoUnidad"
                   direction="In">
                   <type_NamedElement>
@@ -7961,7 +7779,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a79fdff4-0994-4a93-8bad-8101397e50ff"
+                  Id="273038d4-a5d5-4cce-bc3c-95bb53bbf3ec"
                   name="xTipoPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -7974,7 +7792,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="273038d4-a5d5-4cce-bc3c-95bb53bbf3ec"
+                  Id="cf5e4875-e811-4e7c-9f83-d2cbbcf237c2"
                   name="xSubtotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -7987,7 +7805,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cf5e4875-e811-4e7c-9f83-d2cbbcf237c2"
+                  Id="1a06ea2c-54aa-494e-8d2b-46c6ae4caf15"
                   name="xPorIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -8000,7 +7818,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1a06ea2c-54aa-494e-8d2b-46c6ae4caf15"
+                  Id="ad3ec093-d515-4787-812d-17264112e8c8"
                   name="xIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -8013,13 +7831,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ad3ec093-d515-4787-812d-17264112e8c8"
+                  Id="cc2d3b65-3f53-421d-b475-7e7271037983"
                   name="xPorDescuentoItem"
                   direction="In" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cc2d3b65-3f53-421d-b475-7e7271037983"
+                  Id="a5f72815-4a86-496e-b89a-19e061d1eb79"
                   name="xDescuentoItem"
                   direction="In">
                   <type_NamedElement>
@@ -8032,7 +7850,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a5f72815-4a86-496e-b89a-19e061d1eb79"
+                  Id="d460b0e4-60a4-4774-b9ce-a95c75ac93eb"
                   name="xTotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -8045,7 +7863,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d460b0e4-60a4-4774-b9ce-a95c75ac93eb"
+                  Id="24566145-7e13-4146-8b46-aba1d99ddfec"
                   name="xComentarioItem"
                   direction="In">
                   <type_NamedElement>
@@ -8058,7 +7876,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="24566145-7e13-4146-8b46-aba1d99ddfec"
+                  Id="6eb7c0cc-517f-4c66-ab03-17f9fe68536f"
                   name="xFilaOrigen"
                   direction="In">
                   <description>Indica el numero de la importacion</description>
@@ -8070,27 +7888,29 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="8aeceb2a-090a-4c46-8609-8c176462d0a9"
-            name="anular"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e94e6da4-ee18-41a2-92d6-375bf6268c35"
-                  name="xRef"
-                  direction="In"
-                  isUnique="false">
+                  Id="026cffd6-4ef6-476e-ab09-bf42182ae3a0"
+                  name="xPendiente"
+                  direction="In">
+                  <description>Las cantidades de productos que estan pendientes por procesar, es decir por hacer la nota de entrega p facturar</description>
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
-                      LastKnownName="Long"
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b2bf0363-6911-4032-9e05-6192ad197d8c"
+                  name="xRefUsuario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -8232,6 +8052,29 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="88d3b3ec-9b52-4bdb-860f-b53695800507">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="29670d2b-7d31-44fd-a127-d717b7a2510b">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="c090ddb5-9288-4cab-9db5-225bbb871a4e">
+            <classMoniker
+              Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+              LastKnownName="ClaseParametros"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="ced412a8-93fe-4330-a966-fc1b195a571b"
@@ -8243,29 +8086,6 @@
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="3f6b4248-bb10-4f0c-bbc4-411f9e3e4a14"
-            name="validaciones"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d7c078ad-a706-4bc4-a39a-af76fc3f3e07"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="alan_admin.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="3fc9b0e8-4308-4cc7-b226-b0ae4d024b1a"
             name="actualizarStatus"
@@ -8329,7 +8149,7 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="242b5d8d-dc71-48c0-b011-a2a1c16384d9"
-                  name="xNumero"
+                  name="xControl"
                   direction="In">
                   <type_NamedElement>
                     <undefinedTypeMoniker
@@ -8498,6 +8318,19 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="38a67c72-be2c-4be7-bfd6-414a41b2fb83"
+                  name="xAnulado"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f9e8553-3d90-4974-ba49-d158cb889189"
                   name="xComentario"
                   direction="In">
                   <type_NamedElement>
@@ -8510,7 +8343,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1f9e8553-3d90-4974-ba49-d158cb889189"
+                  Id="1e50c238-4b60-4f17-a543-53e3dc621001"
                   name="xRefProducto"
                   direction="In">
                   <type_NamedElement>
@@ -8523,7 +8356,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1e50c238-4b60-4f17-a543-53e3dc621001"
+                  Id="0141caa4-95dc-44f3-9178-c9a90d4b87f7"
                   name="xPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -8536,7 +8369,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="0141caa4-95dc-44f3-9178-c9a90d4b87f7"
+                  Id="ed830b49-3b41-4af7-a24f-562ca172e947"
                   name="xUnidadItem"
                   direction="In">
                   <type_NamedElement>
@@ -8549,7 +8382,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ed830b49-3b41-4af7-a24f-562ca172e947"
+                  Id="e380d43e-d1e8-4974-8655-04930aedba68"
                   name="xRefTipoUnidad"
                   direction="In">
                   <type_NamedElement>
@@ -8562,7 +8395,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e380d43e-d1e8-4974-8655-04930aedba68"
+                  Id="298e2123-22d1-4644-ad18-9cee7fd4441c"
                   name="xTipoPrecio"
                   direction="In">
                   <type_NamedElement>
@@ -8575,7 +8408,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="298e2123-22d1-4644-ad18-9cee7fd4441c"
+                  Id="2a05aa27-ed9f-4ee4-b469-0a9f57725030"
                   name="xSubtotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -8588,7 +8421,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2a05aa27-ed9f-4ee4-b469-0a9f57725030"
+                  Id="fd424d8f-0dcc-4097-a485-ed4a22887920"
                   name="xPorIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -8601,7 +8434,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fd424d8f-0dcc-4097-a485-ed4a22887920"
+                  Id="d3ef4a0f-ce0b-4acb-b5ad-701c08c17003"
                   name="xIVAItem"
                   direction="In">
                   <type_NamedElement>
@@ -8614,13 +8447,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d3ef4a0f-ce0b-4acb-b5ad-701c08c17003"
+                  Id="c73a5479-da2f-4396-8cea-d2abb6194c08"
                   name="xPorDescuentoItem"
                   direction="In" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c73a5479-da2f-4396-8cea-d2abb6194c08"
+                  Id="6cf634df-3e65-4c25-8122-30973156282b"
                   name="xDescuentoItem"
                   direction="In">
                   <type_NamedElement>
@@ -8633,7 +8466,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6cf634df-3e65-4c25-8122-30973156282b"
+                  Id="7536b940-cd1e-4a75-b4c7-0de5cddbe931"
                   name="xTotalItem"
                   direction="In">
                   <type_NamedElement>
@@ -8646,7 +8479,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7536b940-cd1e-4a75-b4c7-0de5cddbe931"
+                  Id="1dc2acaa-9c8b-4400-b856-0657ebfd4aac"
                   name="xComentarioItem"
                   direction="In">
                   <type_NamedElement>
@@ -8659,7 +8492,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1dc2acaa-9c8b-4400-b856-0657ebfd4aac"
+                  Id="648cd765-72f1-4ef2-b299-c051c6fbb913"
                   name="xFilaOrigen"
                   direction="In">
                   <description>Indica el numero de la importacion</description>
@@ -8671,27 +8504,28 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="55f26f9f-d1a4-47a0-a127-835e6700eda0"
-            name="anular"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e3f4af09-ba93-47d7-938f-47a64e5a6ee1"
-                  name="xRef"
-                  direction="In"
-                  isUnique="false">
+                  Id="a9d33ee6-ede4-4d3b-b725-8f46b51d8cdb"
+                  name="xPendiente"
+                  direction="In">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
-                      LastKnownName="Long"
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa0cded3-7e3c-402e-9de1-73e34a377ea3"
+                  name="xRefUsuario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -8795,6 +8629,29 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="df2004fc-f967-482c-b8a2-83eb6a73e496">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="03745694-d142-4b41-b886-b10179cab76f">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="31b68bfa-d26d-4ad7-9182-3836a056c682">
+            <classMoniker
+              Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+              LastKnownName="ClaseParametros"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="3602c385-a995-43d8-9b01-49fb72754641"
@@ -8805,10 +8662,387 @@
               LastKnownLocation="alan_admin.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="caba1e37-5050-43ec-b2fa-740f0c5ce375"
+            name="vControlNC"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="88f4138b-c13b-4afe-85ae-1033f65214cb"
-            name="validaciones"
+            Id="53c6cd0e-668e-45f5-bebe-49790d0d680f"
+            name="agregarProcesos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Al momento de guardar se debe actualizar el saldo del cliente</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="102dc501-c7d8-4a83-a476-95e27ff5795c"
+                  name="xRef"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7784ddd-b02d-4241-af76-7badf133be9d"
+                  name="xControlNC"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e872201-5212-475d-ac77-8ff985d702d4"
+                  name="xDocOrigen"
+                  direction="In">
+                  <description>En este caso no sera la fila sino que mostrara el numero del documento padre</description>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5b4280c-a22a-46cb-b270-b6cc6ba68ca6"
+                  name="xFecha"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                      LastKnownName="Date"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6dd42945-c0dd-4c09-a225-4f817be0fa36"
+                  name="xRefCliente"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="239b52e7-9b65-4783-8a50-d833f929e3bb"
+                  name="xRefVendedor"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e0e92c7-4b8e-4bcc-87ad-31632a6c09f7"
+                  name="xSubtotal"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="44b518b4-3e48-424d-96c3-b9b9555a2045"
+                  name="xPorIVA"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bcd39c87-06f4-4a6a-ad54-0d486306ae08"
+                  name="xIVA"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="291a2ada-1e03-45bd-a954-83964882c560"
+                  name="xPorDescuento"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30f6b846-f554-4f19-b0b0-9d6122e56942"
+                  name="xDescuento"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf2aa982-9e78-4ed3-b6bf-b0cfefd49a4b"
+                  name="xTotal"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b7a285c-04fb-4f33-95c4-84d511040da2"
+                  name="xAnulado"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ed243c36-295e-4baf-b11f-d2028c9f1e5f"
+                  name="xComentario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d6c913e-69d7-4b7c-b959-620ce120cd4d"
+                  name="xRefProducto"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbf1b402-075e-4aee-8c8e-e2f0c3d09549"
+                  name="xPrecio"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="21c5a28e-9831-43af-a427-ea271d66e807"
+                  name="xUnidadItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9cd14f41-2a85-403f-b142-c900479d886f"
+                  name="xRefTipoUnidad"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a1c55d0c-9114-4ef1-bb03-e4d76328c885"
+                  name="xTipoPrecio"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="02b408d6-950a-485c-bc8a-d620ef8b63c5"
+                  name="xSubtotalItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73c47345-f11e-4460-9d8c-6ab9a1680101"
+                  name="xPorIVAItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9de1821c-007e-4fa7-b2d9-f29679499e19"
+                  name="xIVAItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9004fd0-b829-40da-a589-b21948b643c0"
+                  name="xPorDescuentoItem"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e7a6e6e6-ab1b-4a10-92ae-281b20e76eae"
+                  name="xDescuentoItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ae3698e0-4128-4f4d-95cc-6ca2b98c5564"
+                  name="xTotalItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="468077bf-0b60-489d-9ddf-801c4aa79052"
+                  name="xComentarioItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cba36d0e-d75d-4052-a57b-03f4586f369a"
+                  name="xRefUsuario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a5c7b91a-0fa5-4fb8-9aca-14e283c8f9cb"
+            name="buscarProcesos"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -8817,12 +9051,76 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3eda9145-838e-43e9-8ef2-4577f4b2c512"
-                  direction="Return">
+                  Id="28a1d5a9-92ed-4b34-a744-b35bda238045"
+                  name="xRef"
+                  direction="In">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5b759985-8f4d-4615-9b42-5031cd728d27"
+                  name="xControl"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="af1271d1-b3ce-4dc3-afa0-2c1d7188f1a7"
+                  name="xRefCliente"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e4a3353e-4b2a-4026-8763-afd2434c34eb"
+                  name="xRefProducto"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bf143f52-80f4-468f-a912-9d0b0025eae1"
+            name="eliminarProcesos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5844c6e9-08ff-4ce8-8f38-b0893f56411e"
+                  name="xRef"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -8839,6 +9137,29 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="0f6e859f-01fb-455b-8c31-f284d9dd973f">
+            <classMoniker
+              Id="5500a375-01d6-4077-bce5-315e40a013f1"
+              LastKnownName="ClaseProductos"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="6fcb276b-c2e6-427e-8221-255b0edf8b89">
+            <classMoniker
+              Id="0b5722f0-354e-47be-8fde-7e9508d916fa"
+              LastKnownName="ClaseCliente"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+          <dependency
+            Id="96e9e250-10fc-4d9f-9af6-a3a352110ca8">
+            <classMoniker
+              Id="89fdea0e-518d-4b74-942c-b9f772d78fde"
+              LastKnownName="ClaseParametros"
+              LastKnownLocation="alan_admin.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="3387acdc-a60c-490e-9bc9-5e838e8d1d75"
@@ -8849,10 +9170,450 @@
               LastKnownLocation="alan_admin.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f0317e82-cfc2-46ae-92fd-07ae29bb970b"
+            name="vControlND"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                LastKnownName="Long"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cf31a940-33b4-4a75-a5a4-73644e51f1ae"
+            name="vPorcRecargo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d2f15b5-059e-4fa4-b233-02c14c232050"
+            name="vRecargo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                LastKnownName="Decimal"
+                LastKnownLocation="alan_admin.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="7b8aab59-a3ea-4dd0-8317-23845218022b"
-            name="validaciones"
+            Id="915d6487-5df2-4ad5-960d-7ee5a955ea14"
+            name="agregarProcesos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Al momento de guardar se debe actualizar el saldo del cliente</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b8bd453c-5d74-4534-8833-e5e9fcd2a925"
+                  name="xRef"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9272c6dc-dd5f-4df4-85ea-467ae5fdc49b"
+                  name="xControlND"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aad872b4-3f13-484b-8cad-7e3aa687604e"
+                  name="xDocOrigen"
+                  direction="In">
+                  <description>En este caso no sera la fila sino que mostrara el numero del documento padre</description>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="40d2c05c-f4ec-4e09-a41a-d32582d11660"
+                  name="xFecha"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="be8a24e2-b7c1-4d41-b4ee-7bcabb8e0a93"
+                      LastKnownName="Date"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="312e0526-381b-4fbc-ae2e-3786a4012a3d"
+                  name="xRefCliente"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="405d084b-2f6b-4b11-9dc2-6b31fd3c1b34"
+                  name="xRefVendedor"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="367c93a0-f766-48a6-a754-8f78b5e6beb2"
+                  name="xSubtotal"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a3d546b1-e283-43b0-8784-07459efb23fd"
+                  name="xPorIVA"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36b10cc1-294e-4ab3-9c22-dc327afce44d"
+                  name="xIVA"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="efec8f9d-7745-4a35-ad5a-bfd856ad7216"
+                  name="xPorDescuento"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34834a50-eae5-4446-af7f-905eb7e07371"
+                  name="xDescuento"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d995c45-9885-4143-8985-b6c0d2ec8580"
+                  name="xPorcRecargo"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e87e5b1-18e6-4ad0-adda-ebe590a8bbcb"
+                  name="xRecargo"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75d19faa-e110-47f3-835f-24b71f8324d5"
+                  name="xTotal"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d4d934a-4b0c-49ea-932f-b63ec4568f86"
+                  name="xAnulado"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbc9045f-33d0-4f1a-a43e-8d19784be7b6"
+                  name="xComentario"
+                  direction="In">
+                  <description>En este caso funcionara como la descripcion de la nota de debito</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="40a0dd10-ffe8-4034-938c-20f5be6213ad"
+                  name="xRefProducto"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="349edab3-059a-408b-bc70-4560868a6512"
+                  name="xPrecio"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a0553e27-a917-4a0b-971c-49a50aa01e91"
+                  name="xUnidadItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b0b7a5d8-4965-4aea-a345-28212296102a"
+                  name="xRefTipoUnidad"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0ea926f-e6fa-4ca1-a7df-cb0e0d40a897"
+                  name="xTipoPrecio"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="21bd60b3-e1cd-4d89-be6a-3efec04494ef"
+                  name="xSubtotalItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11644a7d-f726-4fd1-a1d7-82f483f51b06"
+                  name="xPorIVAItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a508b494-003f-4fe3-bcf9-f66667cff780"
+                  name="xIVAItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fd72bf44-883e-4b60-b9bc-0980baa511ee"
+                  name="xPorDescuentoItem"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="744015e5-7885-442c-9706-9849afed4abd"
+                  name="xDescuentoItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7cb5d991-7162-48b1-86ab-c39ac8965d8d"
+                  name="xTotalItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a652d346-46d0-4e99-96bc-91ab945827d2"
+                      LastKnownName="Decimal"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ae51a3f6-e829-4223-934f-11ed24e0c636"
+                  name="xComentarioItem"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da1522d8-a154-4bb4-a867-fbc540f66054"
+                  name="xRefUsuario"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d19aa940-c1c8-41cd-8929-1eac4681e174"
+            name="buscarProcesos"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -8861,12 +9622,76 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c1202e7c-4164-4b28-b17a-21054a0c2189"
-                  direction="Return">
+                  Id="42e0e2fc-076b-4b0e-bb6a-8f473944ec4d"
+                  name="xRef"
+                  direction="In">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0dc6751-e11c-48b7-b3b7-fa36b20fef19"
+                  name="xControl"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9e3c6a4-0223-41ac-bf45-fafd076510fa"
+                  name="xRefCliente"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5447f4d0-fba4-455d-ada6-876522de5930"
+                  name="xRefProducto"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
+                      LastKnownLocation="alan_admin.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9b7663a0-84e9-4563-90d0-274a7c26b18e"
+            name="eliminarProcesos"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16e3e537-ba8e-46f4-885d-fc5353e0416b"
+                  name="xRef"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2a7f8f70-a3b5-4dc1-85e9-e1ea1ec8941d"
+                      LastKnownName="Long"
                       LastKnownLocation="alan_admin.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -8909,7 +9734,18 @@
         name="ClaseReportes"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="c4091ac7-6b32-4258-84f8-eff5ece75b35"
+            name="reporte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
@@ -8960,6 +9796,2110 @@
       <undefinedType
         Id="f0e0b395-f7f8-4ecd-bf9c-158c2a576876"
         name="GridView" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="9113bb26-2cd9-42cf-9e96-8f7bcd9884b5"
+        name="Usuario"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f6525d37-d4f3-47ec-a58b-d8cf85ea31ff"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Agregar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bd2c3fd4-93ab-4cdf-95ed-a0c771a00b7f"
+              LastKnownName="Agregar"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d497d5f8-ebcf-4de8-b0a6-8ebf63650cda"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2629cbee-de95-4fab-8f4e-a0c91735c772"
+                  name="Agregar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="795202ad-e2fc-479f-a302-1cb541750e24"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Editar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="125794f9-fa03-4093-ad5a-aa91eb0d6698"
+              LastKnownName="Editar"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f19a7ba-49d4-45e1-a2a4-d9883137a7e8"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2cb20bd-af15-410d-9b03-e71604202bf7"
+                  name="Editar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6d2d2b3b-5be5-4450-aa7f-d020c15daa70"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Buscar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ee4e2cdf-dce7-47d8-86a2-02ef984c22bf"
+              LastKnownName="Buscar"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b934d98-48f7-48f4-a423-320135c165fa"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e2182c4-63a4-4cee-aede-8a48b5629cd3"
+                  name="Buscar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c11c7986-f7b9-4595-bf5c-a8dbee98e9c0"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Borrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3cc81ea2-4f65-4603-8f60-5b04f7faf611"
+              LastKnownName="Borrar"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4990c4e0-a78d-47b6-9325-28dee7cfa6b0"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="205c12dc-48f0-43ad-a9d7-e2df384e4fea"
+                  name="Borrar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bd2c3fd4-93ab-4cdf-95ed-a0c771a00b7f"
+        name="Agregar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="cb64d04a-ca21-41fb-ace7-e56430f5451c">
+            <useCaseMoniker
+              Id="81d62231-d906-427a-909a-0f6cbad5b472"
+              LastKnownName="Si el rif del cliente no existe"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="125794f9-fa03-4093-ad5a-aa91eb0d6698"
+        name="Editar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0f726b79-9e67-46c5-a3ef-d3c8fae64172">
+            <useCaseMoniker
+              Id="215aafbd-cf48-44e7-9d9d-173b9885f623"
+              LastKnownName="Si existe"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ee4e2cdf-dce7-47d8-86a2-02ef984c22bf"
+        name="Buscar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="40a910bb-60b4-4b18-b9bc-c624c6bba1d3">
+            <useCaseMoniker
+              Id="f001ec55-7cf8-4bd9-a8dc-956ab5337465"
+              LastKnownName="Si existe1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3cc81ea2-4f65-4603-8f60-5b04f7faf611"
+        name="Borrar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="1ea8ef58-dcb2-43e5-abd9-5482b7169b90">
+            <useCaseMoniker
+              Id="87314798-487b-4fc0-b7c6-d3a195235432"
+              LastKnownName="Si existe2"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0f1f0057-e803-4b14-ae02-3c1fe7f5aa56"
+        name="rif cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="81d62231-d906-427a-909a-0f6cbad5b472"
+        name="Si el rif del cliente no existe"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ae575262-62e4-4f93-a501-c5cf1292a737">
+            <useCaseMoniker
+              Id="0f1f0057-e803-4b14-ae02-3c1fe7f5aa56"
+              LastKnownName="rif cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="c3faca9b-94a2-4470-9b31-246f456811fb">
+            <useCaseMoniker
+              Id="89e115d9-ca8b-4ccc-9aa6-fc99aa432265"
+              LastKnownName="nombre cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="0fbd6cc5-97d9-4569-bd06-c209d59385d1">
+            <useCaseMoniker
+              Id="7914a7e7-dd93-4ba6-aa56-9317c72c38ce"
+              LastKnownName="nit cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="5cce2c79-ab2c-4d05-af25-9314016c6b7c">
+            <useCaseMoniker
+              Id="cff53439-5be8-431f-8d20-66137d752c02"
+              LastKnownName="direccion"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="73e453c4-2185-4f4a-a88a-4f0174fd3a57">
+            <useCaseMoniker
+              Id="6aa9ae50-ab8a-4d00-b072-9eeda90b235b"
+              LastKnownName="telefono1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="bee10077-6f3b-4744-8065-941c6b864820">
+            <useCaseMoniker
+              Id="05d78c50-996b-4c77-8f75-2339a92783a4"
+              LastKnownName="telefono2"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="b10219d6-baa4-4a9c-bf1b-4f0b6ff44f6d">
+            <useCaseMoniker
+              Id="f2bf8e8c-74ae-4abc-9ccb-6983e3b4715c"
+              LastKnownName="telefono3"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="b40d0b4d-abdf-4a6b-be19-460f229f4045">
+            <useCaseMoniker
+              Id="674802de-9714-41e7-bb70-4a39b3f6da26"
+              LastKnownName="fax"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="a1e7cd84-1e58-4cbc-8ee7-7bfce72a79ac">
+            <useCaseMoniker
+              Id="aed713e3-3228-45a1-85b8-83971522db4c"
+              LastKnownName="email"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="777f73c6-5068-408f-856f-f952a1f79531">
+            <useCaseMoniker
+              Id="4b3430e1-8bae-48f1-9933-0663786c0258"
+              LastKnownName="persona contacto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="badc22b0-7641-4040-a432-8e20c7e5f83f">
+            <useCaseMoniker
+              Id="b94dd6ab-00fc-45f7-b620-d199d58d4382"
+              LastKnownName="telefono persona contacto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="d19673f7-71ed-4769-8333-9ce4536f2373">
+            <useCaseMoniker
+              Id="e2df7ba7-1654-4a9e-ad0d-af87c0517d43"
+              LastKnownName="extension persona contacto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="cefac267-fe72-485c-b234-6208953e37aa">
+            <useCaseMoniker
+              Id="0e8bff2b-e8b9-4584-8cf0-e1b29d611a86"
+              LastKnownName="vendedor"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="9b56cd20-5c9a-4ba8-982e-46e9a433be44">
+            <useCaseMoniker
+              Id="6a05fb6c-d33a-4d0c-b27b-db37ec576eb0"
+              LastKnownName="dias de credito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="89e115d9-ca8b-4ccc-9aa6-fc99aa432265"
+        name="nombre cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7914a7e7-dd93-4ba6-aa56-9317c72c38ce"
+        name="nit cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cff53439-5be8-431f-8d20-66137d752c02"
+        name="direccion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6aa9ae50-ab8a-4d00-b072-9eeda90b235b"
+        name="telefono1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="05d78c50-996b-4c77-8f75-2339a92783a4"
+        name="telefono2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f2bf8e8c-74ae-4abc-9ccb-6983e3b4715c"
+        name="telefono3"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="674802de-9714-41e7-bb70-4a39b3f6da26"
+        name="fax"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aed713e3-3228-45a1-85b8-83971522db4c"
+        name="email"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4b3430e1-8bae-48f1-9933-0663786c0258"
+        name="persona contacto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b94dd6ab-00fc-45f7-b620-d199d58d4382"
+        name="telefono persona contacto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e2df7ba7-1654-4a9e-ad0d-af87c0517d43"
+        name="extension persona contacto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6a05fb6c-d33a-4d0c-b27b-db37ec576eb0"
+        name="dias de credito"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0e8bff2b-e8b9-4584-8cf0-e1b29d611a86"
+        name="vendedor"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="215aafbd-cf48-44e7-9d9d-173b9885f623"
+        name="Si existe"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0220790c-52c1-417b-8409-f2fad36b4865">
+            <useCaseMoniker
+              Id="a54f3055-baee-4586-8e32-d497c36a763f"
+              LastKnownName="Selecciono el cliente que se va a editar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a54f3055-baee-4586-8e32-d497c36a763f"
+        name="Selecciono el cliente que se va a editar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f001ec55-7cf8-4bd9-a8dc-956ab5337465"
+        name="Si existe1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e1566526-1fdd-41b5-ab2b-f403381f19ef">
+            <useCaseMoniker
+              Id="75892ddb-50ab-4111-85b3-206587b7f982"
+              LastKnownName="rif o nombre"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="75892ddb-50ab-4111-85b3-206587b7f982"
+        name="rif o nombre"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="87314798-487b-4fc0-b7c6-d3a195235432"
+        name="Si existe2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="fdf81308-157f-453c-90bd-440841819365">
+            <useCaseMoniker
+              Id="3050d7d9-6fe9-4236-a076-9ab4e546a5ea"
+              LastKnownName="selecciono el cliente que se va a borrar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3050d7d9-6fe9-4236-a076-9ab4e546a5ea"
+        name="selecciono el cliente que se va a borrar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="14ba872c-95f6-4f86-b2a2-27e94d7c3de6"
+        name="tipo Precio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="22d26d0b-a51c-489b-ab99-7d8df2670ba7"
+        name="Descuento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="42f98b68-7ee0-4b3c-90cb-2bfc59ca6c64"
+        name="Usuario1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e14d272b-4608-4fd1-bda1-452e998c3293"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Agregar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2bf73411-5e12-4bb2-a5bb-6f0179bfaee3"
+              LastKnownName="Agregar1"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f4edefb-7453-4ae7-99db-725faa4439b6"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="924c1044-064c-433f-8625-1853660c8450"
+                  name="Agregar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0cb4d151-476b-4be4-a48a-51e4bb7736aa"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Editar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51bfb059-75a6-4007-89f9-6e5189c3a288"
+              LastKnownName="Editar1"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="921591be-a1c8-4bcd-8559-0ad1ad5587ce"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7fb021f1-e838-4ea5-8139-53b6fe2d9200"
+                  name="Editar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a4871732-5521-4a25-b4a0-23d0a86d1374"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Buscar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="93f36ced-a98e-4290-9ba6-3f72b3094920"
+              LastKnownName="Seleccionar"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a24b2be1-5d90-4240-af56-b0c074d80003"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b67a839-c7f5-4482-bd0d-8b4f26c60688"
+                  name="Buscar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e93cae2b-adb3-4e5e-8381-66dd83b84f15"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Borrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b400c40d-25da-4073-b8d7-147d48041980"
+              LastKnownName="Borrar1"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22956c50-dc8e-483a-a5c5-768f0bf57a88"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c8b53a8-1419-4395-a795-50bd921dfeb6"
+                  name="Borrar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2bf73411-5e12-4bb2-a5bb-6f0179bfaee3"
+        name="Agregar1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e7199ec5-7f5b-421c-901c-706c19896148">
+            <useCaseMoniker
+              Id="9b6d6cb3-e7ab-447c-b1c3-3811621e6b5c"
+              LastKnownName="Si no existe"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51bfb059-75a6-4007-89f9-6e5189c3a288"
+        name="Editar1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4f6050ec-60af-4542-b3c7-b7f7b5aa6043">
+            <useCaseMoniker
+              Id="58c63321-ff7c-4249-b639-5eb62df56512"
+              LastKnownName="Si existe seleccionando el valor de los dias"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="93f36ced-a98e-4290-9ba6-3f72b3094920"
+        name="Seleccionar"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4b673c7f-f572-47d2-8e5e-96e67d033274">
+            <useCaseMoniker
+              Id="58c63321-ff7c-4249-b639-5eb62df56512"
+              LastKnownName="Si existe seleccionando el valor de los dias"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b400c40d-25da-4073-b8d7-147d48041980"
+        name="Borrar1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="31deddb0-62f9-4418-b012-593c2f7a6cd2">
+            <useCaseMoniker
+              Id="58c63321-ff7c-4249-b639-5eb62df56512"
+              LastKnownName="Si existe seleccionando el valor de los dias"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="214ddb5e-199f-4600-b701-be319125d1e2">
+            <useCaseMoniker
+              Id="e4d15a03-cc00-4211-97d8-a46da7df20b5"
+              LastKnownName="No puede estar en el cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9b6d6cb3-e7ab-447c-b1c3-3811621e6b5c"
+        name="Si no existe"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="443f87af-d78d-48bd-a516-9aae8eb20f7d">
+            <useCaseMoniker
+              Id="637f162a-9e3e-45d9-bb4f-30b2b8add8ed"
+              LastKnownName="Ingreso la cantidad de dias"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="637f162a-9e3e-45d9-bb4f-30b2b8add8ed"
+        name="Ingreso la cantidad de dias"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58c63321-ff7c-4249-b639-5eb62df56512"
+        name="Si existe seleccionando el valor de los dias"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e4d15a03-cc00-4211-97d8-a46da7df20b5"
+        name="No puede estar en el cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1752eafd-4e06-40ea-9555-823beabd1b4a"
+        name="Usuario11"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="19cb87d5-af0c-4d13-aa81-44460e11778a"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Agregar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f5443754-0eae-4995-bcdc-b9d237f96f65"
+              LastKnownName="Agregar2"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25316fde-80b6-4b49-9f70-df1e2d40675e"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c354e650-1282-4e42-a8f6-6a8f3fcd801f"
+                  name="Agregar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b060ab63-4769-4fa7-8a6b-cc1dd1fe6bc9"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Editar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="974daa3a-28c4-4843-93e7-4ca0c7de1602"
+              LastKnownName="Editar2"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85f98bcf-92dc-423d-8373-259826f23ab8"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8eeed85f-6a36-4323-9392-02980ce3b3bd"
+                  name="Editar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e6634e12-799b-4664-bb26-e97f50f8b550"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Buscar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f1787f06-f60e-4321-95ec-b3403fe142fa"
+              LastKnownName="Buscar1"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35636649-f29e-4a4f-a8b7-d411ac771c8b"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50b7e648-0864-49c5-bd3a-535fdc4f4709"
+                  name="Buscar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="46db5e6d-3a83-4634-a5e5-622e1a4968a3"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Borrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d08b1ea8-fbce-48f7-b45f-c5e5cca19fbe"
+              LastKnownName="Borrar2"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f0b01881-a4f0-4bc7-9dbb-d1f0a8b7c611"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="409c0762-a4cb-42e9-a722-21de58a17d51"
+                  name="Borrar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5443754-0eae-4995-bcdc-b9d237f96f65"
+        name="Agregar2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="09dc4a9c-f3af-498d-9705-b96468e35d2e">
+            <useCaseMoniker
+              Id="b8950852-e0c5-4fa5-8965-6f615224befe"
+              LastKnownName="Si la nota de credito no existe y la factura existe"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="974daa3a-28c4-4843-93e7-4ca0c7de1602"
+        name="Editar2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="f23f1a84-4353-41fc-8916-81c63b5c560a">
+            <useCaseMoniker
+              Id="46e99de7-ce93-47dd-8cc9-5c2994b6ba55"
+              LastKnownName="Si existe3"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f1787f06-f60e-4321-95ec-b3403fe142fa"
+        name="Buscar1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d4a8de57-41f1-44f8-91fb-29a346af5199">
+            <useCaseMoniker
+              Id="78bf3943-c1ff-4c06-ae50-b297330e5308"
+              LastKnownName="Si existe4"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d08b1ea8-fbce-48f7-b45f-c5e5cca19fbe"
+        name="Borrar2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="b9a26764-1d28-44c9-a8db-2e907129a946">
+            <useCaseMoniker
+              Id="e54c9d54-b4ec-4187-922b-c4aea1046936"
+              LastKnownName="Si existe5"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8df50bf1-1709-406f-a4ec-1d12792373d5"
+        name="numero nota credito"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b8950852-e0c5-4fa5-8965-6f615224befe"
+        name="Si la nota de credito no existe y la factura existe"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c19ab3c6-2011-404a-94a1-bd967b2ea4fe">
+            <useCaseMoniker
+              Id="8df50bf1-1709-406f-a4ec-1d12792373d5"
+              LastKnownName="numero nota credito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="cf721a18-91f4-4f80-80ad-8662e067e749">
+            <useCaseMoniker
+              Id="4df7f594-fc67-485b-b59a-165a7eb5c235"
+              LastKnownName="fecha"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="c782efe0-e836-47f8-ae6a-5027d0812d47">
+            <useCaseMoniker
+              Id="4a0bd57f-6ac1-4a48-ac43-888bb153306f"
+              LastKnownName="rif cliente1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="a78c68b1-b664-4281-bd5b-e34b698d7756">
+            <useCaseMoniker
+              Id="630b664b-75e8-43c8-862e-dfd9735581ea"
+              LastKnownName="cliente"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="8b2af1f8-10f1-436d-91ad-cce01d131199">
+            <useCaseMoniker
+              Id="cb8faece-c9df-4468-b3be-edc6d202924a"
+              LastKnownName="codigo producto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="3cd85871-a77a-4c9f-8ae2-b9bf19826ce3">
+            <useCaseMoniker
+              Id="8e80be9d-1a38-4dbd-b815-fe95cedaff31"
+              LastKnownName="descripcion"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="12aade2f-e920-40e1-ba48-77323fbab30c">
+            <useCaseMoniker
+              Id="aade8974-8886-40ca-b5fb-2dd5c6033449"
+              LastKnownName="precio unitario"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="dc964e15-39ab-4548-8e51-190b2906a872">
+            <useCaseMoniker
+              Id="66e8db17-16ff-45cf-9b90-834b709d1649"
+              LastKnownName="subtotal item"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="904043d7-ffa2-4da3-ab33-32b8b00981db">
+            <useCaseMoniker
+              Id="079acf52-8291-4815-b64b-fc02e3a624f0"
+              LastKnownName="porcentaje iva"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="071547f4-56cb-46b4-8b92-a41eac2a8290">
+            <useCaseMoniker
+              Id="9c7a80f2-f719-45df-9fc5-855a87b5ca97"
+              LastKnownName="base imponible"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="2127f26d-2f34-422a-b8aa-fe80214eec77">
+            <useCaseMoniker
+              Id="1d472332-a2b7-418a-9193-7ebd7196f33f"
+              LastKnownName="exento"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="e108a5a6-e752-406a-b791-e2407a15fc3f">
+            <useCaseMoniker
+              Id="2e7ec643-575c-4d96-a737-597984d68e25"
+              LastKnownName="IVA"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="a4ae0699-2377-4d80-bc6e-784fa0485dd7">
+            <useCaseMoniker
+              Id="fda6f47c-67ed-4b28-9ae0-de5c430f79dd"
+              LastKnownName="total"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="f1b1de96-0f34-48e0-a252-db12778d9433">
+            <useCaseMoniker
+              Id="36454b1b-0fcb-4b60-a8aa-58fffa977354"
+              LastKnownName="numero factura"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4df7f594-fc67-485b-b59a-165a7eb5c235"
+        name="fecha"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4a0bd57f-6ac1-4a48-ac43-888bb153306f"
+        name="rif cliente1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="630b664b-75e8-43c8-862e-dfd9735581ea"
+        name="cliente"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb8faece-c9df-4468-b3be-edc6d202924a"
+        name="codigo producto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8e80be9d-1a38-4dbd-b815-fe95cedaff31"
+        name="descripcion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aade8974-8886-40ca-b5fb-2dd5c6033449"
+        name="precio unitario"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="66e8db17-16ff-45cf-9b90-834b709d1649"
+        name="subtotal item"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="079acf52-8291-4815-b64b-fc02e3a624f0"
+        name="porcentaje iva"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c7a80f2-f719-45df-9fc5-855a87b5ca97"
+        name="base imponible"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1d472332-a2b7-418a-9193-7ebd7196f33f"
+        name="exento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e7ec643-575c-4d96-a737-597984d68e25"
+        name="IVA"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fda6f47c-67ed-4b28-9ae0-de5c430f79dd"
+        name="total"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="46e99de7-ce93-47dd-8cc9-5c2994b6ba55"
+        name="Si existe3"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6f7c5a9e-0752-4206-8d29-2216786b220b">
+            <useCaseMoniker
+              Id="4fcaaf75-b62c-4962-9ef4-abc254c58145"
+              LastKnownName="Selecciono la nota credito que se va a editar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4fcaaf75-b62c-4962-9ef4-abc254c58145"
+        name="Selecciono la nota credito que se va a editar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="78bf3943-c1ff-4c06-ae50-b297330e5308"
+        name="Si existe4"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="20e429fb-ccd8-4da5-a558-2f8b3d348c6b">
+            <useCaseMoniker
+              Id="ec5f4565-f002-468f-80a2-f516953b7808"
+              LastKnownName="rango de fecha o por numero nota credito"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ec5f4565-f002-468f-80a2-f516953b7808"
+        name="rango de fecha o por numero nota credito"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e54c9d54-b4ec-4187-922b-c4aea1046936"
+        name="Si existe5"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="8bfec938-c474-452a-a9f4-371695137c97">
+            <useCaseMoniker
+              Id="1368a16c-7d26-4a3f-a0ca-ef2e82f2fe03"
+              LastKnownName="selecciono la nota credito que se va a borrar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1368a16c-7d26-4a3f-a0ca-ef2e82f2fe03"
+        name="selecciono la nota credito que se va a borrar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="36454b1b-0fcb-4b60-a8aa-58fffa977354"
+        name="numero factura"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fb99f41f-c8ab-4fd5-8f5f-7e4d3fa843e9"
+        name="Usuario2"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8329e9e7-6a47-4c4e-9b0c-c11cb8b6a568"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Agregar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dbe25cf6-3ff1-4d5a-a902-55681e13ca90"
+              LastKnownName="Agregar3"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a880374d-f840-467f-bb0c-2f0cb3bc0ea0"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e7ba19f-1135-44d6-9eb9-8e28c1e92054"
+                  name="Agregar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f79a53fc-374f-43c6-bd4c-ad0abcbb6f08"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Editar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="411e71e0-c149-489b-8778-eb4726fe456f"
+              LastKnownName="Editar3"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="930c83c4-1db8-4518-97db-4a5b25035a3a"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b079c5a1-30b2-4ca0-850e-410fafbfec4f"
+                  name="Editar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d3361a09-4790-4623-b867-e2d5d8283d55"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Buscar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7a953a8c-d63e-4330-be75-dec5639a7b1f"
+              LastKnownName="Buscar2"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58bab83b-186a-45c0-9f12-3775a8260c12"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b67f83e5-35ac-4ac9-bf1e-0bc5c9d70852"
+                  name="Buscar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="94997e63-2ad2-4d4c-9d7e-81cdb5136d8f"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Borrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4f325f19-7324-440e-be46-460557125684"
+              LastKnownName="Borrar3"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="888bfb0c-f4fe-4b17-a59d-164a659a7458"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="541622b9-ab09-41b7-be97-96a39d899526"
+                  name="Borrar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dbe25cf6-3ff1-4d5a-a902-55681e13ca90"
+        name="Agregar3"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7c6e6dbb-5a19-4fe9-8cb5-b203c981856d">
+            <useCaseMoniker
+              Id="7cd959fc-0849-4310-8c15-f61bffae31c2"
+              LastKnownName="Si no existe1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="411e71e0-c149-489b-8778-eb4726fe456f"
+        name="Editar3"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d7670cd7-8c52-4db2-aa52-04913cb11ffc">
+            <useCaseMoniker
+              Id="99b49c1f-be6d-47f1-8372-968496fc7f6c"
+              LastKnownName="Si existe6"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7a953a8c-d63e-4330-be75-dec5639a7b1f"
+        name="Buscar2"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6ff61833-5fd8-4261-a48a-e33c9509dab0">
+            <useCaseMoniker
+              Id="99b49c1f-be6d-47f1-8372-968496fc7f6c"
+              LastKnownName="Si existe6"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4f325f19-7324-440e-be46-460557125684"
+        name="Borrar3"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9a3c7aa4-e358-4a8b-af29-4ef54ec11832">
+            <useCaseMoniker
+              Id="99b49c1f-be6d-47f1-8372-968496fc7f6c"
+              LastKnownName="Si existe6"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7cd959fc-0849-4310-8c15-f61bffae31c2"
+        name="Si no existe1"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="b8035144-4961-4207-aa83-27085f50afa0">
+            <useCaseMoniker
+              Id="49e32961-c1fa-4932-be5d-8077099befd9"
+              LastKnownName="Ingreso el porcentaje IVA"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="49e32961-c1fa-4932-be5d-8077099befd9"
+        name="Ingreso el porcentaje IVA"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="99b49c1f-be6d-47f1-8372-968496fc7f6c"
+        name="Si existe6"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="50ff7042-b539-47d3-af24-5d7de2e33e4a">
+            <useCaseMoniker
+              Id="119e653f-91e2-44d1-b3dc-a25cf3035c43"
+              LastKnownName="Selecciono el porcentaje IVA"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="119e653f-91e2-44d1-b3dc-a25cf3035c43"
+        name="Selecciono el porcentaje IVA"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="71928ace-0ca8-4b41-b795-4630ec880016"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="753eda96-a4b8-4a90-98ed-acc3149a9952"
+        name="Usuario3"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e5b694d9-ed65-441b-af7b-07f9e665d41f"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Agregar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="95b87f99-8be4-4ac6-8392-0749173b55b6"
+              LastKnownName="Agregar4"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f756b85-c370-4ca3-afed-d3abe97bb5eb"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3f89578-403d-4347-a9ff-dea4de6d48e8"
+                  name="Agregar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b95a69b5-a20c-4c13-a36d-2329aafeaac4"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Editar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3e0de0d0-4aa8-4f6d-bab1-49dcf92ef384"
+              LastKnownName="Editar4"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4e95848-0276-4063-b655-715573b7a044"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e42f1d1-3a1a-481f-b61b-3a923affcab9"
+                  name="Editar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d3a9536b-9b0b-4b8f-8ae3-ddab0a31bb38"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Buscar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1aa1c06e-59f6-475e-98dd-ade8299eab4d"
+              LastKnownName="Buscar3"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f1a92b66-a43c-40fd-b032-dea8777c5b3e"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37bbdc99-4bfe-45af-9e79-36d4cfa9b875"
+                  name="Buscar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="42ea72e0-f1ef-408d-bdb4-1e1624962406"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Borrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="02ae94ed-2291-4e71-8668-41782f5d5c15"
+              LastKnownName="Borrar4"
+              LastKnownLocation="alan_admin.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3851b92-ad60-4c02-802d-2e3e905b77cb"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="949b6d6e-1305-4886-92fd-305ab1fd548a"
+                  name="Borrar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="95b87f99-8be4-4ac6-8392-0749173b55b6"
+        name="Agregar4"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="f04c7991-cd98-4d95-8578-f27d735472bf">
+            <useCaseMoniker
+              Id="f794c161-e703-401b-9754-58f78b70cf07"
+              LastKnownName="Si el presupuesto no existe"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3e0de0d0-4aa8-4f6d-bab1-49dcf92ef384"
+        name="Editar4"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9171bcd9-16df-4457-9fda-6f2ad93990c5">
+            <useCaseMoniker
+              Id="edeb377d-a829-4337-8a22-37c6d61335f6"
+              LastKnownName="Si existe7"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1aa1c06e-59f6-475e-98dd-ade8299eab4d"
+        name="Buscar3"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="42e54762-fbd5-46ab-a001-a7631f02b731">
+            <useCaseMoniker
+              Id="cec81634-1f93-4972-9a48-01c7f558a08f"
+              LastKnownName="Si existe8"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="02ae94ed-2291-4e71-8668-41782f5d5c15"
+        name="Borrar4"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5ab9ec16-0233-4846-baef-b46611bd4b16">
+            <useCaseMoniker
+              Id="3e76aac6-70b0-4229-8f24-19ef7bea3bf0"
+              LastKnownName="Si existe9"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d5cf9d02-fe82-4fad-a71f-e478b92b576d"
+        name="numero presupuesto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f794c161-e703-401b-9754-58f78b70cf07"
+        name="Si el presupuesto no existe"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c27a8f81-114c-47c4-9bd2-9ac9effb0c77">
+            <useCaseMoniker
+              Id="d5cf9d02-fe82-4fad-a71f-e478b92b576d"
+              LastKnownName="numero presupuesto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="8f61f1b9-3ac0-4147-9856-ad07ab320b3c">
+            <useCaseMoniker
+              Id="077b3bf1-d1c4-478f-8d8a-2b211421de5a"
+              LastKnownName="fecha1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="6f87822d-e3a4-4b50-a206-23a59860e41c">
+            <useCaseMoniker
+              Id="814d9111-3f5f-4556-8173-0c3a97311e7b"
+              LastKnownName="rif cliente2"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="8ee3ad77-7943-4241-bd94-8233d70129a8">
+            <useCaseMoniker
+              Id="1e41facc-21e1-40ee-b244-f0bde9a72cae"
+              LastKnownName="cliente1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="33f23d05-51dc-4251-b976-556158eacfa0">
+            <useCaseMoniker
+              Id="8245fbc8-8fab-44bf-afb4-e59a8ca5e79a"
+              LastKnownName="codigo producto1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="991061ac-bbad-4b57-a879-00d5dec6e86c">
+            <useCaseMoniker
+              Id="cd4ba9a7-3f86-4ca8-9c45-c681b7c7a45d"
+              LastKnownName="descripcion1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="3aea9419-f98e-41d2-bb73-972f3c83248a">
+            <useCaseMoniker
+              Id="a38cc413-6040-4020-9d74-2421eaf95720"
+              LastKnownName="precio unitario1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="db64f24f-3bd8-44e5-b9b5-f7ab7b96d7ca">
+            <useCaseMoniker
+              Id="b7d7e0d9-6684-451a-b249-6090ddd11383"
+              LastKnownName="subtotal item1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="615dc386-cd2f-4079-ac2b-901da0aefde1">
+            <useCaseMoniker
+              Id="fcc09762-d404-4f93-9e10-68e5803ec194"
+              LastKnownName="porcentaje iva1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="af3c94cc-7a79-428f-abc8-0c88e9dbdd81">
+            <useCaseMoniker
+              Id="3c9f301e-cb7c-464e-bcbb-7b2fabd21fde"
+              LastKnownName="base imponible1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="b0b16bff-70c6-4745-a3f7-a5d53bd45df1">
+            <useCaseMoniker
+              Id="97475183-f6c9-40ed-9044-4adc68561b51"
+              LastKnownName="exento1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="95fe6933-0948-4539-9eba-bcd5b1da4e5d">
+            <useCaseMoniker
+              Id="b4baa0d2-8033-4b66-9953-2f22c43b856e"
+              LastKnownName="IVA1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+          <include
+            Id="9327bf42-5366-4a18-a2ef-5bbb6eca58e2">
+            <useCaseMoniker
+              Id="b831b73a-711b-4bdf-a3ac-4e6c4765d67b"
+              LastKnownName="total1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="077b3bf1-d1c4-478f-8d8a-2b211421de5a"
+        name="fecha1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="814d9111-3f5f-4556-8173-0c3a97311e7b"
+        name="rif cliente2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1e41facc-21e1-40ee-b244-f0bde9a72cae"
+        name="cliente1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8245fbc8-8fab-44bf-afb4-e59a8ca5e79a"
+        name="codigo producto1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cd4ba9a7-3f86-4ca8-9c45-c681b7c7a45d"
+        name="descripcion1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a38cc413-6040-4020-9d74-2421eaf95720"
+        name="precio unitario1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b7d7e0d9-6684-451a-b249-6090ddd11383"
+        name="subtotal item1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fcc09762-d404-4f93-9e10-68e5803ec194"
+        name="porcentaje iva1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c9f301e-cb7c-464e-bcbb-7b2fabd21fde"
+        name="base imponible1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="97475183-f6c9-40ed-9044-4adc68561b51"
+        name="exento1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b4baa0d2-8033-4b66-9953-2f22c43b856e"
+        name="IVA1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b831b73a-711b-4bdf-a3ac-4e6c4765d67b"
+        name="total1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="edeb377d-a829-4337-8a22-37c6d61335f6"
+        name="Si existe7"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="68be3398-03dc-44e5-a56e-bbd0a8443547">
+            <useCaseMoniker
+              Id="1bee53b4-b657-4d9c-b078-30f511e83a55"
+              LastKnownName="Selecciono el cliente que se va a editar1"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1bee53b4-b657-4d9c-b078-30f511e83a55"
+        name="Selecciono el cliente que se va a editar1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cec81634-1f93-4972-9a48-01c7f558a08f"
+        name="Si existe8"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="42b6dc58-4dcb-456b-9309-0a28c531a30e">
+            <useCaseMoniker
+              Id="745a1ab5-f0a1-4c89-ab92-18b301225431"
+              LastKnownName="rango de fecha o por numero presupuesto"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="745a1ab5-f0a1-4c89-ab92-18b301225431"
+        name="rango de fecha o por numero presupuesto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3e76aac6-70b0-4229-8f24-19ef7bea3bf0"
+        name="Si existe9"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5af81bc0-615b-4886-a1de-88aafb574547">
+            <useCaseMoniker
+              Id="e34f5678-658a-4d8f-a49c-2eb9de8f32b5"
+              LastKnownName="selecciono el presupuesto que se va a borrar"
+              LastKnownLocation="alan_admin.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e34f5678-658a-4d8f-a49c-2eb9de8f32b5"
+        name="selecciono el presupuesto que se va a borrar"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

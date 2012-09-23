@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="064669c6-3a64-4039-acd5-9b2eaf14d94d" name="DCondicionPago" linkedPackageId="d90d8d59-25e9-494d-a62d-e832556f6b60" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="641382be-f64d-4a5f-9f12-ff9bb7759ddd">
+      <profileInstance Id="6f17ec2d-ac6b-4d07-8eb3-d18979210765" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2879f0ee-ac09-43a1-b626-3639481cebd6">
+      <profileInstance Id="0ab675e2-8530-40fb-bf3f-70c29ae7985d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="bec7f77c-1cf1-47e8-b311-c67533e93eb7" name="Usuario1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="42f98b68-7ee0-4b3c-90cb-2bfc59ca6c64" />
+        <targetEnds>
+          <association Id="460d39ef-a9ae-4e40-b34d-848e75175e7d" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Agregar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9aae61be-d10d-40b6-a482-50ca61d02214" LastKnownName="Agregar1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="99b105f5-6e54-4147-a8ac-a7afd3718904" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3f4edefb-7453-4ae7-99db-725faa4439b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="587a757e-16ec-471c-9e8d-308524390a54" name="Agregar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="924c1044-064c-433f-8625-1853660c8450" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e14d272b-4608-4fd1-bda1-452e998c3293" />
+          </association>
+          <association Id="df0b0c2f-8d85-432a-a734-c2dab5fa9b64" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Editar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0da04ef2-7110-4c8d-aca8-e42f880e1d57" LastKnownName="Editar1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d98765d2-b7be-487b-89d8-827360e52025" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="921591be-a1c8-4bcd-8559-0ad1ad5587ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fce6e746-3c32-40c0-b65f-4a033b79e7cc" name="Editar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7fb021f1-e838-4ea5-8139-53b6fe2d9200" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0cb4d151-476b-4be4-a48a-51e4bb7736aa" />
+          </association>
+          <association Id="308555d1-f924-45d2-a8eb-9dd6b5c6c278" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Buscar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="23058e6f-fe01-452b-ba94-d805410e22ae" LastKnownName="Seleccionar" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b955390-82de-45df-80fb-f2987d366b88" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a24b2be1-5d90-4240-af56-b0c074d80003" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5a3b8c36-707e-4bf7-8387-b51806e49b5e" name="Buscar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6b67a839-c7f5-4482-bd0d-8b4f26c60688" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a4871732-5521-4a25-b4a0-23d0a86d1374" />
+          </association>
+          <association Id="3c5a3991-de26-432d-ac2c-5652725f51af" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Borrar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b31d821b-c8cd-4ee2-831c-964b7c3b6857" LastKnownName="Borrar1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="604a285e-0b42-455b-ac00-bbd1e227aa09" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="22956c50-dc8e-483a-a5c5-768f0bf57a88" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28e05d8e-d1d6-4ccc-8acf-b7b56789bdf9" name="Borrar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6c8b53a8-1419-4395-a795-50bd921dfeb6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e93cae2b-adb3-4e5e-8381-66dd83b84f15" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9aae61be-d10d-40b6-a482-50ca61d02214" name="Agregar1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2bf73411-5e12-4bb2-a5bb-6f0179bfaee3" />
+        <additions>
+          <include Id="2135fcd1-0d28-4514-aae4-fc1ea3ba1977">
+            <useCaseMoniker Id="a8ec8e45-9a70-40f8-aad4-9a40a1fd5647" LastKnownName="Si no existe" />
+            <elementDefinition Id="e7199ec5-7f5b-421c-901c-706c19896148" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0da04ef2-7110-4c8d-aca8-e42f880e1d57" name="Editar1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="51bfb059-75a6-4007-89f9-6e5189c3a288" />
+        <additions>
+          <include Id="a5f5dd0e-69aa-4dbc-a7d7-7bba1e71dd5c">
+            <useCaseMoniker Id="b05b15fe-5301-4ab9-858e-191d071d8880" LastKnownName="Si existe seleccionando el valor de los dias" />
+            <elementDefinition Id="4f6050ec-60af-4542-b3c7-b7f7b5aa6043" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="23058e6f-fe01-452b-ba94-d805410e22ae" name="Seleccionar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="93f36ced-a98e-4290-9ba6-3f72b3094920" />
+        <additions>
+          <include Id="361e6c0d-fa9e-4038-9ccf-d1cd5c68fdda">
+            <useCaseMoniker Id="b05b15fe-5301-4ab9-858e-191d071d8880" LastKnownName="Si existe seleccionando el valor de los dias" />
+            <elementDefinition Id="4b673c7f-f572-47d2-8e5e-96e67d033274" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b31d821b-c8cd-4ee2-831c-964b7c3b6857" name="Borrar1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b400c40d-25da-4073-b8d7-147d48041980" />
+        <additions>
+          <include Id="84079cd7-cc2d-4cad-b617-0bd9c4a016d5">
+            <useCaseMoniker Id="b05b15fe-5301-4ab9-858e-191d071d8880" LastKnownName="Si existe seleccionando el valor de los dias" />
+            <elementDefinition Id="31deddb0-62f9-4418-b012-593c2f7a6cd2" />
+          </include>
+          <include Id="fb80f33d-f1be-4242-a143-2050ec9f1e43">
+            <useCaseMoniker Id="8eef1852-1fed-47eb-a163-39d961667634" LastKnownName="No puede estar en el cliente" />
+            <elementDefinition Id="214ddb5e-199f-4600-b701-be319125d1e2" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a8ec8e45-9a70-40f8-aad4-9a40a1fd5647" name="Si no existe" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b6d6cb3-e7ab-447c-b1c3-3811621e6b5c" />
+        <additions>
+          <include Id="55bb6388-bded-4fe4-ab46-fd9ba9a530e8">
+            <useCaseMoniker Id="46af09aa-7c04-4aa3-b535-0bb0a875c77d" LastKnownName="Ingreso la cantidad de dias" />
+            <elementDefinition Id="443f87af-d78d-48bd-a516-9aae8eb20f7d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="46af09aa-7c04-4aa3-b535-0bb0a875c77d" name="Ingreso la cantidad de dias" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="637f162a-9e3e-45d9-bb4f-30b2b8add8ed" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b05b15fe-5301-4ab9-858e-191d071d8880" name="Si existe seleccionando el valor de los dias" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58c63321-ff7c-4249-b639-5eb62df56512" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8eef1852-1fed-47eb-a163-39d961667634" name="No puede estar en el cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4d15a03-cc00-4211-97d8-a46da7df20b5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d90d8d59-25e9-494d-a62d-e832556f6b60" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>

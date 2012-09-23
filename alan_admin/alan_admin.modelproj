@@ -29,6 +29,27 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagramasUML\Calses\VentasYCXC\VentasYCXC.classdiagram</DependentUpon>
     </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DClientes.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DClientes.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DClientes.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DCondicionPago.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DCondicionPago.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DCondicionPago.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DParametros.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DParametros.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\DParametros.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\DProductos.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -64,6 +85,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PFacturacion.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeCredito.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeCredito.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeCredito.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeDebito.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -77,6 +105,13 @@
     <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeEntrega.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PNotaDeEntrega.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PPresupuesto.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagramasUML\CasosDeUso\VentasYCXC\PPresupuesto.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramasUML\CasosDeUso\VentasYCXC\PPresupuesto.usecasediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\alan_admin.uml">
       <SubType>Content</SubType>

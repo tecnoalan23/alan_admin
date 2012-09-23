@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="491eaf3a-1089-422f-b7a4-8c055bb62a93" name="DParametros" linkedPackageId="3e1e949c-8480-42fa-a501-73022db0646d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="2f07be74-552d-4ee6-a2e1-52eb3f37e6c8">
+      <profileInstance Id="5a8a1def-0837-4b76-a3e5-b5e7262e16d1" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d15097b3-a6ea-4cac-8085-c07dd4944db5">
+      <profileInstance Id="52a70cb2-147f-4e44-a67f-c2b5600d22b1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="879f14a4-8c79-4040-9160-e48370f1b050" name="Usuario2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb99f41f-c8ab-4fd5-8f5f-7e4d3fa843e9" />
+        <targetEnds>
+          <association Id="5b46b2cb-9151-42c8-bd53-6d7be15ec9aa" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Agregar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b583571a-a8df-4902-b917-24eb2ee8308e" LastKnownName="Agregar3" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94dc01a6-2451-476a-affa-f59614f21eb2" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a880374d-f840-467f-bb0c-2f0cb3bc0ea0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="23d97d50-1139-4a7d-9f16-00835d9d5620" name="Agregar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7e7ba19f-1135-44d6-9eb9-8e28c1e92054" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8329e9e7-6a47-4c4e-9b0c-c11cb8b6a568" />
+          </association>
+          <association Id="c1e57e9a-4a74-4c18-b5c0-13cf8d83d147" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Editar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="769350b2-1102-4c9e-a8b1-324e13d9e9b0" LastKnownName="Editar3" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27ada5cc-fd75-459c-bc50-2d37cbcd1252" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="930c83c4-1db8-4518-97db-4a5b25035a3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5aedcc67-1bce-479b-95d1-e7a5b6e789fe" name="Editar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b079c5a1-30b2-4ca0-850e-410fafbfec4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f79a53fc-374f-43c6-bd4c-ad0abcbb6f08" />
+          </association>
+          <association Id="6a29bd24-d847-4997-a37c-40d4369e5909" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Buscar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c503451e-e60d-4b88-9126-aa786e7f3276" LastKnownName="Buscar2" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9d509cc-3565-4318-9156-7c1eee477af2" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58bab83b-186a-45c0-9f12-3775a8260c12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7caaf2a4-211f-4978-b84c-d01dedece735" name="Buscar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b67f83e5-35ac-4ac9-bf1e-0bc5c9d70852" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d3361a09-4790-4623-b867-e2d5d8283d55" />
+          </association>
+          <association Id="bbb096bd-6d7a-4b99-8aba-9c54a1b32fce" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Borrar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a96de06b-20be-4e57-8938-9e5d4fff2b85" LastKnownName="Borrar3" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9290ce94-571d-4755-8c4c-af6c64135f90" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="888bfb0c-f4fe-4b17-a59d-164a659a7458" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c089c50e-9687-45db-98e7-b8f3e71705c2" name="Borrar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="541622b9-ab09-41b7-be97-96a39d899526" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="94997e63-2ad2-4d4c-9d7e-81cdb5136d8f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b583571a-a8df-4902-b917-24eb2ee8308e" name="Agregar3" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dbe25cf6-3ff1-4d5a-a902-55681e13ca90" />
+        <additions>
+          <include Id="23d5cac1-9438-4fa0-8dab-5259943cea87">
+            <useCaseMoniker Id="6767cab7-cfad-4da0-9033-f61e08cade2a" LastKnownName="Si no existe1" />
+            <elementDefinition Id="7c6e6dbb-5a19-4fe9-8cb5-b203c981856d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="769350b2-1102-4c9e-a8b1-324e13d9e9b0" name="Editar3" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="411e71e0-c149-489b-8778-eb4726fe456f" />
+        <additions>
+          <include Id="5b0c9016-6be3-4d80-a2e9-dd722b47ee9d">
+            <useCaseMoniker Id="fc68e789-dbb9-4d7f-8c40-9b594e3709f8" LastKnownName="Si existe6" />
+            <elementDefinition Id="d7670cd7-8c52-4db2-aa52-04913cb11ffc" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c503451e-e60d-4b88-9126-aa786e7f3276" name="Buscar2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a953a8c-d63e-4330-be75-dec5639a7b1f" />
+        <additions>
+          <include Id="54730e2a-9cc9-4854-9244-1727a316224b">
+            <useCaseMoniker Id="fc68e789-dbb9-4d7f-8c40-9b594e3709f8" LastKnownName="Si existe6" />
+            <elementDefinition Id="6ff61833-5fd8-4261-a48a-e33c9509dab0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a96de06b-20be-4e57-8938-9e5d4fff2b85" name="Borrar3" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4f325f19-7324-440e-be46-460557125684" />
+        <additions>
+          <include Id="4a291858-96ad-4e95-ae43-d75b139d9877">
+            <useCaseMoniker Id="fc68e789-dbb9-4d7f-8c40-9b594e3709f8" LastKnownName="Si existe6" />
+            <elementDefinition Id="9a3c7aa4-e358-4a8b-af29-4ef54ec11832" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6767cab7-cfad-4da0-9033-f61e08cade2a" name="Si no existe1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7cd959fc-0849-4310-8c15-f61bffae31c2" />
+        <additions>
+          <include Id="811cc537-0ef1-4391-8013-900f726d6f0a">
+            <useCaseMoniker Id="65ed39b3-d8bb-4ca9-854b-a93a30672a05" LastKnownName="Ingreso el porcentaje IVA" />
+            <elementDefinition Id="b8035144-4961-4207-aa83-27085f50afa0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="65ed39b3-d8bb-4ca9-854b-a93a30672a05" name="Ingreso el porcentaje IVA" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49e32961-c1fa-4932-be5d-8077099befd9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fc68e789-dbb9-4d7f-8c40-9b594e3709f8" name="Si existe6" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99b49c1f-be6d-47f1-8372-968496fc7f6c" />
+        <additions>
+          <include Id="7fabf3d9-362d-4ed9-b658-3add4f19955b">
+            <useCaseMoniker Id="4588d1de-d3cf-48ea-812a-10cb49de1664" LastKnownName="Selecciono el porcentaje IVA" />
+            <elementDefinition Id="50ff7042-b539-47d3-af24-5d7de2e33e4a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4588d1de-d3cf-48ea-812a-10cb49de1664" name="Selecciono el porcentaje IVA" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="119e653f-91e2-44d1-b3dc-a25cf3035c43" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ab8620e6-e872-47c5-b3e7-e43a3fef994c" name="UseCase2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71928ace-0ca8-4b41-b795-4630ec880016" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="3e1e949c-8480-42fa-a501-73022db0646d" name="alan_admin">
+    <elementDefinition Id="dc776d9d-203a-4c97-8961-7fbe79ca3710" />
+  </package>
+</useCaseModelRoot>
